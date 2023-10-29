@@ -1,4 +1,4 @@
-#include "CustomerComposite.h"
+#include "CustomerComponent.h"
 #include "Node.h"
 
 class GroupIterator {
@@ -12,7 +12,7 @@ public:
 
     bool hasNext();
 
-    Group getCurrent();
+    CustomerComponent* getCurrent();
 
     void next();
 };

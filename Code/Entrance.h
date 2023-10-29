@@ -1,11 +1,11 @@
 #include "LinkedList.h"
-#include "CustomerComposite.h"
+#include "GroupIterator.h"
 
 class Entrance {
 private:
     LinkedList queue;
     
 public:
-    void addGroup(Group group);
-    void removeGroup(Group group);
+    void addGroup(CustomerComponent* group);
+    void removeGroup(CustomerComponent* group);
 };

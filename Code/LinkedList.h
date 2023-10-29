@@ -1,5 +1,5 @@
 #include "GroupIterator.h"
-#include "CustomerComposite.h"
+#include "CustomerComponent.h"
 #include "Node.h"
 
 class LinkedList {
@@ -12,8 +12,8 @@ public:
     GroupIterator getIterator() {
         return GroupIterator(head);
     }
-    void add(Group group) {
+    void add(CustomerComponent* group) {
     }
-    void remove(Group group) {
+    void remove(CustomerComponent* group) {
     }
 };

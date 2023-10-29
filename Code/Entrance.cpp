@@ -1,8 +1,8 @@
 #include "Entrance.h"
 
-void Entrance::addGroup(Group group) {
+void Entrance::addGroup(CustomerComponent* group) {
         queue.add(group);
     }
-    void Entrance::removeGroup(Group group) {
+    void Entrance::removeGroup(CustomerComponent* group) {
         queue.remove(group);
     }

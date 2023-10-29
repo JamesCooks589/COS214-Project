@@ -1,12 +1,12 @@
 #include "Node.h"
 
-Node::Node(Group group, Node* next) : group(group), next(next) {}
+Node::Node(CustomerComponent* group, Node* next) : group(group), next(next) {}
 
 Node::~Node() {
     delete next;
 }
 
-Group Node::getGroup() const {
+CustomerComponent* Node::getGroup() const {
     return group;
 }
 

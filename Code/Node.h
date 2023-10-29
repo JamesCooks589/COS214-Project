@@ -1,16 +1,16 @@
-#include "CustomerComposite.h"
+#include "CustomerComponent.h"
 
 class Node {
 
 private:
-    Group group;
+    CustomerComponent* group;
     Node* next;
     
 public:
-    Node(Group group, Node* next = nullptr);
+    Node(CustomerComponent* group, Node* next = nullptr);
     ~Node();
 
-    Group getGroup() const;
+    CustomerComponent* getGroup() const;
 
     Node* getNext() const;
 
