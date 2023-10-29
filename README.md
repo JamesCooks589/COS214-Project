@@ -10,3 +10,5 @@ This C++ project simulates a restaurant environment.
 ## Coding Standards
 Please refer to [standards.md](standards.md) for detailed coding standards and Git guidelines.
 
+## Testing Standards
+Please refer to [standards.md](testing.md) for detailed testing standards.
