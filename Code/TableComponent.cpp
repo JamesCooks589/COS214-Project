@@ -1,4 +1,5 @@
 #include "TableComponent.h"
+#include <iostream>
 
 TableComponent::TableComponent(int id){
     this->id = id;
@@ -13,9 +14,17 @@ bool TableComponent::isOccupied(){
 }
 
 void TableComponent::occupy(CustomerComponent* Customers){
-    if(Customers != nullptr){
-        this->Customers = Customers;
-        occupied = true;
+    if(this->Customers == nullptr && Customers != nullptr){
+        if(Customers->getSize() <= this->getCapacity()){
+            this->Customers = Customers;
+            occupied = true;
+        }
+        else{
+            std::cout << "Customers greater than capacity" << std::endl;
+        }
+    }
+    else{
+        std::cout << "Table is occupied" << std::endl;
     }
 }
 

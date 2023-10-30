@@ -8,8 +8,11 @@ void TableGroup::addToGroup(TableComponent* tableToAdd){
 
 int TableGroup::getCapacity(){
     int capacity = 0;
-    for(int i = 0; i < tables.size(); i++){
-        capacity = tables[i]->getCapacity();
+    // for(int i = 0; i < tables.size(); i++){
+    //     capacity = tables[i]->getCapacity();
+    // }
+    for(TableComponent* table : tables){
+        capacity += table->getCapacity();
     }
     return capacity;
 }
