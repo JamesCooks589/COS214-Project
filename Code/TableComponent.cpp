@@ -1,5 +1,13 @@
 #include "TableComponent.h"
 
+TableComponent::TableComponent(int id){
+    this->id = id;
+}
+
+int TableComponent::getID(){
+    return id;
+}
+
 bool TableComponent::isOccupied(){
     return occupied;
 }
