@@ -19,7 +19,7 @@ GroupIterator LinkedList::getIterator() {
     return GroupIterator(head);
 }
 
-void LinkedList::add(CustomerComponent* group) {
+void LinkedList::add(CustomerGroup* group) {
     Node* newNode = new Node(group);
     if (head == nullptr) {
         head = newNode;
@@ -32,7 +32,7 @@ void LinkedList::add(CustomerComponent* group) {
     }
 }
 
-void LinkedList::remove(CustomerComponent* group) {
+void LinkedList::remove(CustomerGroup* group) {
     if (head == nullptr) {
         return;
     }
