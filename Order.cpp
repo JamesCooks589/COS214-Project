@@ -11,7 +11,3 @@ void Order::printOrder() {
         cout << food << endl;
     }
 }
-
-void Order::addOrderItem(vector<string> item) {
-    orderDetails_.push_back(item);
-}
