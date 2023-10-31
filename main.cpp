@@ -7,6 +7,8 @@ int main() {
     //Create kitchen
     Kitchen* kitchen = new Kitchen();
 
+    //SIMULATING AN ORDER FROM A TABLE
+
     //Create order
     vector<vector<string>> customerOrders = vector<vector<string>>();
     
