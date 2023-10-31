@@ -3,5 +3,6 @@
 
 class Nonvegan : public PizzaCreator {
 public:
-    void createPizza() const override;
+    Nonvegan() {}
+    virtual void cookFood(vector<string> orderDetails, Plate* plate) {}
 };

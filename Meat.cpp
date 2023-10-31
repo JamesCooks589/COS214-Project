@@ -1,6 +1,27 @@
 #include "Meat.h"
 #include <iostream>
 
-void Meat::addMeat() const {
-    std::cout << "Adding meat to create a non-vegan pizza." << std::endl;
+using namespace std;
+
+Meat::Meat(/* args */)
+{
 }
+
+void Meat::cookFood(vector<string> orderDetails, Plate* plate){
+    for (string food : orderDetails)
+    {
+        if(food == "Meat"){
+            plate->addFood("Meat");
+            cout << "Meat added to plate." << endl;
+        }
+    }
+    if (next != nullptr)
+    {
+        next->cookFood(orderDetails, plate);
+    }
+    else{
+        plate->printPlate();
+    }
+    
+}
+

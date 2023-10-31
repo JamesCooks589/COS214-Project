@@ -1,6 +1,9 @@
 #pragma once
 
-class Cheese {
+#include "Nonvegan.h"
+
+class Cheese : public Nonvegan{
 public:
-    void addCheese() const;
+    Cheese();
+    virtual void cookFood(vector<string> orderDetails, Plate* plate) override;
 };

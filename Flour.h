@@ -1,8 +1,10 @@
 // Flour.h - Header for Flour class
-
 #pragma once
 
-class Flour {
+#include "Vegan.h"
+
+class Flour: public Vegan{
 public:
-    void prepareBase() const;
+    Flour();
+    virtual void cookFood(vector<string> orderDetails, Plate* plate);
 };

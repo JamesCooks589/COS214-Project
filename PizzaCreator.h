@@ -1,6 +1,11 @@
 #pragma once
 
-class PizzaCreator {
+#include "Chef.h"
+
+using namespace std;
+
+class PizzaCreator: public Chef{
 public:
-    virtual void createPizza() const = 0;
+    PizzaCreator(){}
+    virtual void cookFood(vector<string> orderDetails, Plate* plate){}
 };

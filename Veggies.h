@@ -1,6 +1,9 @@
 #pragma once
 
-class Veggies {
+#include "Vegan.h"
+
+class Veggies: public Vegan{
 public:
-    void addVeggies() const;
+    Veggies();
+    virtual void cookFood(vector<string> orderDetails, Plate* plate);
 };

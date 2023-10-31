@@ -1,8 +1,9 @@
 #pragma once
 #include "PizzaCreator.h"
+#include "Chef.h"
 
 class ChefCreator {
 public:
-    virtual PizzaCreator* createVeganPizza() = 0;
-    virtual PizzaCreator* createNonveganPizza() = 0;
+    virtual Chef* createVeganPizza() = 0;
+    virtual Chef* createNonveganPizza() = 0;
 };

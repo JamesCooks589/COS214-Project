@@ -4,18 +4,10 @@
 #include "Vegan.h"
 #include "Nonvegan.h"
 
-PizzaCreator* ToppingChef::createVeganPizza() {
-    Veggies veggies;
-
-    veggies.addVeggies();
-
-    return new Vegan();
+Chef* ToppingChef::createVeganPizza() {
+    return new Veggies();
 }
 
-PizzaCreator* ToppingChef::createNonveganPizza() {
-    Meat meat;
-
-    meat.addMeat();
-
-    return new Nonvegan();
+Chef* ToppingChef::createNonveganPizza() {
+    return new Meat();
 }

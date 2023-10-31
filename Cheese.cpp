@@ -1,6 +1,27 @@
 #include "Cheese.h"
 #include <iostream>
 
-void Cheese::addCheese() const {
-    std::cout << "Adding cheese to create a non-vegan pizza." << std::endl;
+using namespace std;
+
+Cheese::Cheese(/* args */)
+{
+}
+
+void Cheese::cookFood(vector<string> orderDetails, Plate* plate){
+    for (string food : orderDetails)
+    {
+        if(food == "Cheese"){
+            plate->addFood("Cheese");
+            cout << "Cheese added to plate." << endl;
+        }
+    }
+    if (next != nullptr)
+    {
+        next->cookFood(orderDetails, plate);
+    }
+    else{
+        plate->printPlate();
+    }
+    
+    
 }
