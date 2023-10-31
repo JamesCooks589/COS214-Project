@@ -11,17 +11,27 @@ int main() {
     vector<vector<string>> customerOrders = vector<vector<string>>();
     
     //Create customer orders
-    for (size_t i = 0; i < 2; ++i) {
         vector<string> customerOrder = vector<string>();
-        customerOrder.push_back("CUSTOMER " + to_string(i + 1));
+        customerOrder.push_back("CUSTOMER 1");
         customerOrder.push_back("Flour");
         customerOrder.push_back("Cheese");
         customerOrder.push_back("Meat");
         customerOrders.push_back(customerOrder);
-    }
+
+        //Clear customer order
+        customerOrder.clear();
+
+        //New order
+        customerOrder.push_back("CUSTOMER 2");
+        customerOrder.push_back("Flour");
+        customerOrder.push_back("Cheese");
+        customerOrder.push_back("Veggies");
+        customerOrders.push_back(customerOrder);
 
     Order* order = new Order(1, customerOrders, "Extra cheese");
 
+
+    //YOU USE THIS TO SEND IN AN ORDER OBJECT TO THE KITCHEN and it will cook the food and send all of it to the plate vector which can be returned to customers
     //Set order
     kitchen->setOrder(order);
 
