@@ -5,6 +5,7 @@
 
 class OrderMemento {
 public:
+    OrderMemento() = default;
     OrderMemento(int orderId, std::string orderState);
     std::string getOrderState() const;
 
