@@ -1,21 +1,17 @@
-CXX = g++
-CXXFLAGS = -std=c++11 -Wall
+all: pizza
 
-TARGET = main
-
-SRC = $(wildcard *.cpp)
-OBJ = $(SRC:.cpp=.o)
-
-all: $(TARGET)
-
-$(TARGET): $(OBJ)
-    $(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJ)
-
+pizza: *.o 
+	g++ $^ -o $@
+	
 %.o: %.cpp
-    $(CXX) $(CXXFLAGS) -c $< -o $@
+	g++ -g -W -Wall -Werror -Wextra -pedantic -c $^
+	
+run: 
+	make clean
+	make
+	./pizza
 
-clean:
-    rm -f $(OBJ) $(TARGET)
-
-run:
-    ./main
+clean: 
+	rm *.o pizza
+	
+	#
