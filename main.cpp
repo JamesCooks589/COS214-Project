@@ -2,6 +2,8 @@
 #include "Kitchen.h"
 
 int main() {
+    //Seed rand()
+    srand(static_cast<unsigned>(time(0)));
     //Create kitchen
     Kitchen* kitchen = new Kitchen();
 

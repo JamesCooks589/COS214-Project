@@ -11,6 +11,7 @@ void Flour::cookFood(vector<string> orderDetails, Plate* plate){
     for (string food : orderDetails)
     {
         if(food == "Flour"){
+            //Seed current unix time to rand()
             int quality = rand() % 10 + 1;
             //If quality is 0...1, then the food is burnt so food(burnt)
             //If quality is 4...6, then the food is fine so food(fine)
