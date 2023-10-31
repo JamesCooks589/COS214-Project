@@ -8,35 +8,32 @@ int main() {
     Kitchen* kitchen = new Kitchen();
 
     //SIMULATING AN ORDER FROM A TABLE
+    //SIMULATING HOW AN ORDER IS MADE YOUR WAITERS WOULD DO ALL OF THIS
 
     //Create order
     vector<vector<string>> customerOrders = vector<vector<string>>();
     
     //Create customer orders
-        vector<string> customerOrder = vector<string>();
-        customerOrder.push_back("CUSTOMER 1");
-        customerOrder.push_back("Flour");
-        customerOrder.push_back("Cheese");
-        customerOrder.push_back("Meat");
-        customerOrders.push_back(customerOrder);
+    vector<string> customerOrder1 = vector<string>();
+    customerOrder1.push_back("Customer 1");
+    customerOrder1.push_back("Flour");
+    customerOrder1.push_back("Cheese");
+    customerOrders.push_back(customerOrder1);
 
-        //Clear customer order
-        customerOrder.clear();
+    vector<string> customerOrder2 = vector<string>();
+    customerOrder2.push_back("Customer 2");
+    customerOrder2.push_back("Flour");
+    customerOrder2.push_back("Meat");
+    customerOrders.push_back(customerOrder2);
 
-        //New order
-        customerOrder.push_back("CUSTOMER 2");
-        customerOrder.push_back("Flour");
-        customerOrder.push_back("Cheese");
-        customerOrder.push_back("Veggies");
-        customerOrders.push_back(customerOrder);
+    //Create order
+    Order* order = new Order(1, customerOrders);
 
-    Order* order = new Order(1, customerOrders, "Extra cheese");
-
-
-    //YOU USE THIS TO SEND IN AN ORDER OBJECT TO THE KITCHEN and it will cook the food and send all of it to the plate vector which can be returned to customers
-    //Set order
+    //Add order to kitchen
+    //HERE IS WHERE U INTERACT WITH THE KITCHEN USING YOUR WAITERS
+    //Simply send in a pointer to the order and my kitchen makes everything and then just fetch the vector of plates to send to customers
     kitchen->setOrder(order);
-
+    
     return 0;
 
 }

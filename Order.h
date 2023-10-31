@@ -7,7 +7,7 @@ using namespace std;
 class Order {
 public:
     // Constructor to create an order
-    Order(int tableNumber, vector<vector<string>> customerOrders, string orderDetails);
+    Order(int tableNumber, vector<vector<string>> customerOrders);
     // Method to print order details
     void printOrder();
     // Method to get table number
@@ -17,9 +17,11 @@ public:
     // Method to get order details
     string getOrderDetails();
 
-private:
-    int tableNumber_;
-    vector<vector<string>> customerOrders_;
-    string orderDetails_;
-};
+    bool IsValidOrderDetails(vector<string> customerOrder);
+    string trim(const string& str);
 
+private:
+    int tableNumber;
+    vector<vector<string>> customerOrders;
+    string orderDetails;
+};

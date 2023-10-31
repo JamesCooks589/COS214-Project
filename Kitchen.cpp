@@ -60,7 +60,7 @@ void Kitchen::setOrder(Order* order) {
 //HELPER FUNCTIONS
 
 void Kitchen::createPlates() {
-    //Create plate for each row in order and assign name and table number
+    //Create plate for each row(customer) in order and assign name and table number
     for (size_t i = 0; i < this->order->getCustomerOrders().size(); ++i) {
         this->plates.push_back(new Plate(this->order->getTableNumber(), this->order->getCustomerOrders()[i][0]));
     }
