@@ -9,8 +9,10 @@ class Plate
 {
 private:
     vector<string> food;
+    int tableID;
+    string customerName;
 public:
-    Plate();
+    Plate(int tableID, string customerName);
     
     void addFood(string food);
     void printPlate();

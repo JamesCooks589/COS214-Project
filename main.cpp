@@ -1,43 +1,28 @@
 /*Comment out the pizza we are not creating*/
-#include "BaseChef.h"
-#include "ToppingChef.h"
+#include "Kitchen.h"
 
 int main() {
-    //Create factories
-    ChefCreator* baseChefFactory = new BaseChef();
-    ChefCreator* toppingChefFactory = new ToppingChef();
-
-    //Create chain of responsibility
-    //Head of chain
-    Chef* chefChain = baseChefFactory->createVeganPizza();
-    //Add to chain
-    chefChain->Add(toppingChefFactory->createVeganPizza());
-    chefChain->Add(baseChefFactory->createNonveganPizza());
-    chefChain->Add(toppingChefFactory->createNonveganPizza());
-
-    //Create plate
-    Plate* plate = new Plate();
+    //Create kitchen
+    Kitchen* kitchen = new Kitchen();
 
     //Create order
-    vector<string> orderDetails = vector<string>();
-
-    //Add order details
-    orderDetails.push_back("Flour");
-    orderDetails.push_back("Cheese");
-    orderDetails.push_back("Cheese");
-    orderDetails.push_back("Meat");
-    orderDetails.push_back("Meat");
-
-    //Cook pizza
-    chefChain->cookFood(orderDetails, plate);  
-
-    //Delete chain
-    delete chefChain;
-
-    //Delete factories
-    delete baseChefFactory;
-    delete toppingChefFactory;
+    vector<vector<string>> customerOrders = vector<vector<string>>();
     
+    //Create customer orders
+    for (size_t i = 0; i < 2; ++i) {
+        vector<string> customerOrder = vector<string>();
+        customerOrder.push_back("CUSTOMER " + to_string(i + 1));
+        customerOrder.push_back("Flour");
+        customerOrder.push_back("Cheese");
+        customerOrder.push_back("Meat");
+        customerOrders.push_back(customerOrder);
+    }
+
+    Order* order = new Order(1, customerOrders, "Extra cheese");
+
+    //Set order
+    kitchen->setOrder(order);
 
     return 0;
+
 }
