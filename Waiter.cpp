@@ -2,6 +2,7 @@
 #include "Menu.h" 
 #include "Order.h" 
 #include "Kitchen.h"
+#include "Bill.h"
 
 Waiter::Waiter(std::shared_ptr<Mediator> mediator, Menu* menu, Kitchen* kitchen) : mediator(mediator), menu(menu), kitchen(kitchen) {}
 
@@ -29,6 +30,11 @@ void Waiter::orderSignal(int tableID, Order* order) {
 
 void Waiter::billSignal(int tableID) {
     std::cout << "Waiter " << this << ": Received signal to deliver bill to table " << tableID << "." << std::endl;
+    Order* order = tableOrders[tableID];
+    Bill bill(order->getOrderID());
+    
+    bill.calculateTotalAmount();
+    bill.printBill();
     
     mediator->communicate("deliver bill", this);
 }
