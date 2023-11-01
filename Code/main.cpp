@@ -19,7 +19,9 @@
 
         for(int i = 0; i < 11; i++){
             //add 11 customers to the group
-            cstGrp->addToGroup(new Customer("Customer-"+i+1, i+1));
+            std::string name = "Customer-" + std::to_string(i + 1);
+            Customer* cust = new Customer(name, i+1);
+            cstGrp->addToGroup(cust);
         }
 
         std::cout << "Customer Group size: "<< cstGrp->getSize() << std::endl;
@@ -41,6 +43,17 @@
         //Test that it can successfully occupy
         tblGrp->occupy(newEmptyGroup);
 
+        Order* order = cstGrp->getOrder();
+        order->printOrder();
+
+        Customer* cust = new Customer("Bob", 20);
+        cust->setTableID(1);
+        Order* order2 = cust->getOrder();
+        order2->printOrder();
+
+        delete order;
+        delete order2;
+        delete cust;
         delete cstGrp;
         delete tblGrp;
         return 0;

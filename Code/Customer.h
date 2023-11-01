@@ -2,6 +2,7 @@
 
 #include "CustomerComponent.h"
 #include <string>
+#include <random>
 
 class Customer : public CustomerComponent{
     private:
@@ -11,4 +12,5 @@ class Customer : public CustomerComponent{
         std::string getName();
         int getSize();
         Order* getOrder();    
+        void setTableID(int id);
 };

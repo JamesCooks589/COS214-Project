@@ -25,16 +25,18 @@ Order* CustomerGroup::getOrder(){
     }
 
     //Set up the list of orders to pack into one
-    std::vector<Order*> orderVector;
+    std::vector<Order*> orderVector = std::vector<Order*>();
     for(CustomerComponent* ptr : customers){
         //Gets a vector of all orders from customers to pack into a single order
+        Order* order = ptr->getOrder();
         orderVector.push_back(ptr->getOrder());
+        delete order;
     }
-
+    std::vector<vector<string>> bigOrder = std::vector<std::vector<string>>();
     for(Order* ptr : orderVector){
         //Starts to unpack the orders into a single order
-        //Not yet implemented, format of order not yet known
-        //Currently, just deletes the order objects to not lose them
+        std::vector<std::vector<string>> order = ptr->getCustomerOrders();
+        bigOrder.push_back(order[0]);
         delete ptr;
     }
 
@@ -42,7 +44,7 @@ Order* CustomerGroup::getOrder(){
     orderVector.clear();
 
     //Dummy return until fully implemented
-    return new Order();
+    return new Order(this->getTableID(), bigOrder);
 }
 
 int CustomerGroup::getSize(){
@@ -58,4 +60,11 @@ int CustomerGroup::getSize(){
     }
 
     return size;
+}
+
+void CustomerGroup::setTableID(int id){
+    this->tableID = id;
+    for(CustomerComponent* customer : customers){
+        customer->setTableID(id);
+    }
 }

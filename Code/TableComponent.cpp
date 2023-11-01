@@ -18,6 +18,7 @@ void TableComponent::occupy(CustomerComponent* Customers){
         if(Customers->getSize() <= this->getCapacity()){
             this->Customers = Customers;
             occupied = true;
+            this->Customers->setTableID(this->getID());
         }
         else{
             std::cout << "Customers greater than capacity" << std::endl;

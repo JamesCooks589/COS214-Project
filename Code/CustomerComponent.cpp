@@ -29,3 +29,7 @@ void CustomerComponent::signalForBill(){
 CustomerComponent::~CustomerComponent(){
     // Waiter deletion to be done upon restaurant destruction
 }
+
+int CustomerComponent::getTableID(){
+    return tableID;
+}

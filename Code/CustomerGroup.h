@@ -10,6 +10,7 @@ class CustomerGroup : public CustomerComponent{
         CustomerGroup(int id);
         ~CustomerGroup();
         void addToGroup(CustomerComponent* customer);
+        void setTableID(int id);
         Order* getOrder();
         int getSize();
 };
