@@ -10,7 +10,9 @@ class CustomerGroup : public CustomerComponent{
         CustomerGroup(int id);
         ~CustomerGroup();
         void addToGroup(CustomerComponent* customer);
+        void givePlate(Plate* plate);
         void setTableID(int id);
+        std::string printHappiness();
         Order* getOrder();
         int getSize();
 };

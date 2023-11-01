@@ -31,3 +31,11 @@ void Plate::printPlate(){
     }
     cout << endl;
 }
+
+string Plate::getCustomerName(){
+    return this->customerName;
+}
+
+vector<string> Plate::getFood(){
+    return food;
+}

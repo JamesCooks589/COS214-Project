@@ -13,7 +13,8 @@ private:
     string customerName;
 public:
     Plate(int tableID, string customerName);
-    
+    string getCustomerName();
+    vector<string> getFood();
     void addFood(string food);
     void printPlate();
 };

@@ -68,3 +68,20 @@ void CustomerGroup::setTableID(int id){
         customer->setTableID(id);
     }
 }
+
+void CustomerGroup::givePlate(Plate* plate){
+    for(CustomerComponent* customer : customers){
+        if(plate->getCustomerName() == customer->getName()){
+            customer->givePlate(plate);
+            return;
+        }
+    }
+}
+
+std::string CustomerGroup::printHappiness(){
+    std::string print = "";
+    for(CustomerComponent* customer : customers){
+        print += customer->printHappiness() + "\n";
+    }
+    return print;
+}

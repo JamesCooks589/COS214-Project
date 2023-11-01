@@ -33,3 +33,7 @@ CustomerComponent::~CustomerComponent(){
 int CustomerComponent::getTableID(){
     return tableID;
 }
+
+std::string CustomerComponent::getName(){
+    return "Not Applicable";
+}

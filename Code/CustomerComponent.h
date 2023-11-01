@@ -2,6 +2,7 @@
 
 #include "Waiter.h"
 #include "Order.h"
+#include "Plate.h"
 
 class CustomerComponent{
     private:
@@ -16,8 +17,11 @@ class CustomerComponent{
         int getID();
         int getTableID();
         virtual void setTableID(int id) = 0;
+        virtual void givePlate(Plate* plate) = 0;
+        virtual std::string getName();
         virtual Order* getOrder() = 0;
         virtual int getSize() = 0;
+        virtual std::string printHappiness() = 0;
         void attachWaiter(Waiter* waiter);
         void detachWaiter();
         void signalToOrder();
