@@ -11,12 +11,17 @@
 
 class Waiter;
 
+class Prototype {
+public:
+    virtual std::unique_ptr<Prototype> clone() = 0;
+};
+
 class Mediator {
 public:
     virtual void communicate(std::string, Waiter*) = 0;
 };
 
-class Waiter {
+class Waiter : public Prototype{
 private:
     std::shared_ptr<Mediator> mediator;
     Menu* menu;
@@ -32,4 +37,4 @@ public:
     void deliverOrder(CustomerComponent* customer);
 };
 
-#endif // WAITER_H
+#endif
