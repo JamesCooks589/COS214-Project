@@ -1,6 +1,4 @@
-#ifndef ORDERMEMENTO_H
-#define ORDERMEMENTO_H
-
+#pragma once
 #include <vector>
 #include <string>
 
@@ -17,4 +15,3 @@ private:
     std::string orderDetails;
 };
 
-#endif // ORDERMEMENTO_H

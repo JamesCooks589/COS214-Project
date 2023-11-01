@@ -14,15 +14,19 @@ Bill::Bill(int orderId) : orderId(orderId), totalAmount(0.0) {
 }
 
 void Bill::calculateTotalAmount() {
-    // Assume each food item costs R10.00 for simplicity
-    totalAmount = foodItems.size() * 10.0 + 50;
+    totalAmount = 50; // Base cost
+    for (const auto& itemName : foodItems) {
+        Ingredient* ingredient = IngredientFactory::getIngredient(itemName, 0.0); // Get ingredient with price 0.0
+        totalAmount += ingredient->getPrice();
+    }
 }
 
 void Bill::printBill() {
     std::cout << "Order ID: " << orderId << std::endl;
     std::cout << "Food Items:" << std::endl;
-    for (const auto& item : foodItems) {
-        std::cout << "- " << item << std::endl;
+    for (const auto& itemName : foodItems) {
+        Ingredient* ingredient = IngredientFactory::getIngredient(itemName, 0.0); // Get ingredient with price 0.0
+        std::cout << "- " << ingredient->getName() << " (R" << ingredient->getPrice() << ")" << std::endl;
     }
     std::cout << "Total Amount: R" << totalAmount << std::endl;
 }

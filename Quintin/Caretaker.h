@@ -1,6 +1,4 @@
-#ifndef CARETAKER_H
-#define CARETAKER_H
-
+#pragma once
 #include "OrderMemento.h"
 #include <map>
 
@@ -14,4 +12,3 @@ private:
     std::vector<OrderMemento> mementos;
 };
 
-#endif // CARETAKER_H
