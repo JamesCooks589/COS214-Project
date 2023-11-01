@@ -7,11 +7,11 @@
 class Caretaker {
 public:
     static Caretaker& getInstance();
-    void addMemento(int id, const OrderMemento& memento);
+    void addMemento(const OrderMemento& memento);
     OrderMemento getMemento(int id);
 
 private:
-    std::map<int, OrderMemento> mementos;
+    std::vector<OrderMemento> mementos;
 };
 
 #endif // CARETAKER_H
