@@ -7,7 +7,7 @@ private:
     Node* next;
     
 public:
-    Node(CustomerComponent* group, Node* next = nullptr);
+    Node(CustomerComponent* group);
     ~Node();
 
     CustomerComponent* getGroup() const;

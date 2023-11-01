@@ -1,6 +1,9 @@
 #include "Node.h"
 
-Node::Node(CustomerComponent* group, Node* next) : group(group), next(next) {}
+Node::Node(CustomerComponent* group){
+    this->group = group;
+    this->next = nullptr;
+}
 
 Node::~Node() {
     delete next;
