@@ -11,48 +11,45 @@ std::unique_ptr<Prototype> Waiter::clone() {
 }
 
 void Waiter::update(std::string message) {
-    if(message == "customer ready to order") {
-        orderSignal();
-    } else if(message == "deliver bill") {
-        billSignal();
-    } else if(message == "food ready") {
-        deliverOrder();
-    }
+    // implement if we want to update what the waiter should do using an update method with a passed in msg
 }
-
 void Waiter::orderSignal(int tableID, Order* order) {
     std::cout << "Waiter " << this << ": Received signal to take order from table " << tableID << "." << std::endl;
-
+    
     tableOrders[tableID] = order;
+
     kitchen->setOrder(order);
+
     mediator->communicate("take order", this);
 }
 
 void Waiter::billSignal(int tableID) {
     std::cout << "Waiter " << this << ": Received signal to deliver bill to table " << tableID << "." << std::endl;
+    
     Order* order = tableOrders[tableID];
-    Bill bill(order->getOrderID());
     
-    bill.calculateTotalAmount();
-    bill.printBill();
+    if (order != nullptr) {
+        Bill bill(order->getTableNumber());
     
-    mediator->communicate("deliver bill", this);
+        bill.calculateTotalAmount();
+        bill.printBill();
+    
+        mediator->communicate("deliver bill", this);
+    } else {
+        std::cout << "Error: No order found for this table." << std::endl;
+    }
 }
 
-void Waiter::deliverOrder(int orderID) {
-    int tableID = -1;
-    for (const auto& pair : tableOrders) {
-        if (pair.second->getOrderID() == orderID) { 
-            tableID = pair.first;
-            break;
-        }
-    }
-
-    if (tableID != -1) {
-        std::cout << "Waiter " << this << ": Delivering order " << orderID << " to table " << tableID << "." << std::endl;
+void Waiter::deliverOrder(int tableID) {
+    Order* order = tableOrders[tableID];
+    
+    if (order != nullptr) {
+        std::cout << "Waiter " << this << ": Delivering order to table " << tableID << "." << std::endl;
+        
+        //what should we do once delivered
         
         mediator->communicate("deliver food", this);
     } else {
-        std::cout << "Error: Order not found." << std::endl;
+        std::cout << "Error: No order found for this table." << std::endl;
     }
 }

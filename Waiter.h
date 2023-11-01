@@ -25,7 +25,7 @@ public:
     void update(std::string message) override;
     void orderSignal(int tableID, Order* order);
     void billSignal(int tableID);
-    void deliverOrder(int orderID); 
+    void deliverOrder(int tableID); 
 };
 
 class Mediator{
