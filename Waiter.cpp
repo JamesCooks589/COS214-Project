@@ -3,6 +3,7 @@
 #include "Order.h" 
 #include "Kitchen.h"
 #include "Bill.h"
+#include "CustomerComponent.h"
 
 Waiter::Waiter(std::shared_ptr<Mediator> mediator, Menu* menu, Kitchen* kitchen) : mediator(mediator), menu(menu), kitchen(kitchen) {}
 
@@ -13,20 +14,22 @@ std::unique_ptr<Prototype> Waiter::clone() {
 void Waiter::update(std::string message) {
     // implement if we want to update what the waiter should do using an update method with a passed in msg
 }
-void Waiter::orderSignal(int tableID, Order* order) {
-    std::cout << "Waiter " << this << ": Received signal to take order from table " << tableID << "." << std::endl;
+
+void Waiter::orderSignal(CustomerComponent* customer) {
+    std::cout << "Waiter " << this << ": Received signal to take order from table " << customer->getTableID() << "." << std::endl;
     
-    tableOrders[tableID] = order;
+    Order* order = customer->getOrder();
+    tableOrders[customer->getTableID()] = order;
 
     kitchen->setOrder(order);
 
     mediator->communicate("take order", this);
 }
 
-void Waiter::billSignal(int tableID) {
-    std::cout << "Waiter " << this << ": Received signal to deliver bill to table " << tableID << "." << std::endl;
+void Waiter::billSignal(CustomerComponent* customer) {
+    std::cout << "Waiter " << this << ": Received signal to deliver bill to table " << customer->getTableID() << "." << std::endl;
     
-    Order* order = tableOrders[tableID];
+    Order* order = tableOrders[customer->getTableID()];
     
     if (order != nullptr) {
         Bill bill(order->getTableNumber());
@@ -40,11 +43,11 @@ void Waiter::billSignal(int tableID) {
     }
 }
 
-void Waiter::deliverOrder(int tableID) {
-    Order* order = tableOrders[tableID];
+void Waiter::deliverOrder(CustomerComponent* customer) {
+    Order* order = tableOrders[customer->getTableID()];
     
     if (order != nullptr) {
-        std::cout << "Waiter " << this << ": Delivering order to table " << tableID << "." << std::endl;
+        std::cout << "Waiter " << this << ": Delivering order to table " << customer->getTableID() << "." << std::endl;
         
         //what should we do once delivered
         
