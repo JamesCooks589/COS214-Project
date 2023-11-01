@@ -6,8 +6,9 @@ class Mediator;
 class Observer;
 class Menu;
 class Order;
+class Kitchen; 
 
-class Prototype{
+class Prototype {
 public:
     virtual std::unique_ptr<Prototype> clone() = 0;
 };
@@ -15,15 +16,16 @@ public:
 class Waiter : public Prototype, public Observer {
 private:
     std::shared_ptr<Mediator> mediator;
-    std::map<int, int> tableOrders; //keeping track of orders by table ID
-    Menu* menu; //menu object
+    std::map<int, Order*> tableOrders; 
+    Menu* menu;
+    Kitchen* kitchen;
 public:
-    Waiter(std::shared_ptr<Mediator> mediator, Menu* menu);
+    Waiter(std::shared_ptr<Mediator> mediator, Menu* menu, Kitchen* kitchen);
     std::unique_ptr<Prototype> clone() override;
     void update(std::string message) override;
     void orderSignal(int tableID, Order* order);
-    void billSignal(int tableID); 
-    void deliverOrder(int orderID);
+    void billSignal(int tableID);
+    void deliverOrder(int orderID); 
 };
 
 class Mediator{
