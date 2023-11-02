@@ -1,7 +1,7 @@
-#ifndef BILL_H
-#define BILL_H
+#pragma once
 
 #include "Caretaker.h"
+#include "IngredientFactory.h"
 #include <vector>
 #include <string>
 
@@ -16,5 +16,3 @@ private:
     std::vector<std::string> foodItems;
     double totalAmount;
 };
-
-#endif // BILL_H
