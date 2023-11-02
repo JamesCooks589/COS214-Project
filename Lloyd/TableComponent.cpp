@@ -45,3 +45,7 @@ TableComponent::~TableComponent(){
         delete Customers;
     }
 }
+
+CustomerComponent* TableComponent::getCustomers(){
+    return this->Customers;
+}

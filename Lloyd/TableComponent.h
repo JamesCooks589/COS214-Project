@@ -15,6 +15,7 @@ class TableComponent{
         int getID();
         bool isOccupied();
         void occupy(CustomerComponent* Customers);
+        CustomerComponent* getCustomers();
         CustomerComponent* vacate();
         virtual ~TableComponent();
 };
