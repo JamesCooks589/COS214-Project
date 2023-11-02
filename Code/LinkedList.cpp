@@ -37,17 +37,14 @@ void LinkedList::remove(CustomerComponent* group) {
         return;
     }
     if (head->getGroup()->getID() == group->getID()) {
-        Node* temp = head;
         head = head->getNext();
-        delete temp;
         return;
     }
     Node* current = head;
     while (current->getNext() != nullptr) {
         if (current->getNext()->getGroup()->getID() == group->getID()) {
             Node* temp = current->getNext();
-            current->setNext(current->getNext()->getNext());
-            delete temp;
+            current->setNext(temp->getNext());
             return;
         }
         current = current->getNext();

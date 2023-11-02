@@ -17,7 +17,7 @@ CustomerComponent* GroupIterator::getCurrent() {
 }
 
 void GroupIterator::next() {
-    if (current != nullptr){
+    if (hasNext()){
     current = current->getNext();
     }
 }

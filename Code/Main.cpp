@@ -55,7 +55,10 @@ int main() {
     std::cout << std::endl;
 
     // Remove the 3rd component
-    customerList->remove(group3);
+    customerList->remove(group1);
+    customerList->remove(group4);
+    customerList->printList();
+    it = customerList->getIterator();
 
     // Print the list again
     std::cout << "List after removing group 3:" << std::endl;
@@ -65,12 +68,6 @@ int main() {
     }
     std::cout << it->getCurrent()->getID();
     std::cout << std::endl;
-
-    // Clean up memory
-    delete group1;
-    delete group2;
-    delete group3;
-    delete group4;
 
     return 0;
 }
