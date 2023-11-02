@@ -4,7 +4,7 @@
 
 class BaseChef : public ChefCreator {
 public:
-    Chef* createVeganPizza() override;
-    Chef* createNonveganPizza() override;
+    virtual Chef* createVeganPizza() override;
+    virtual Chef* createNonveganPizza() override;
     
 };

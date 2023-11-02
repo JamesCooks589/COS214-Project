@@ -33,6 +33,14 @@ int main() {
     //HERE IS WHERE U INTERACT WITH THE KITCHEN USING YOUR WAITERS
     //Simply send in a pointer to the order and my kitchen makes everything and then just fetch the vector of plates to send to customers
     kitchen->setOrder(order);
+    vector<Plate*> plates = kitchen->getPlates();
+
+    cout << "-------------------------------" << endl;
+
+    //Print plates
+    for (size_t i = 0; i < plates.size(); ++i) {
+        plates[i]->printPlate();
+    }
     
     return 0;
 

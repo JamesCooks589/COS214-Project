@@ -13,6 +13,8 @@ private:
     string customerName;
 public:
     Plate(int tableID, string customerName);
+    //Copy constructor
+    Plate(const Plate& plate);
     
     void addFood(string food);
     void printPlate();

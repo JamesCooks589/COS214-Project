@@ -8,6 +8,15 @@ Plate::Plate(int tableID, string customerName){
     
 }
 
+//Copy constructor for deep copy
+Plate::Plate(const Plate& plate){
+    //Copy food vector
+    this->food = plate.food;
+    this->tableID = plate.tableID;
+    this->customerName = plate.customerName;
+}
+
+
 void Plate::addFood(string food){
     //Add food to plate
     this->food.push_back(food);
