@@ -23,7 +23,7 @@ void Waiter::orderSignal(CustomerComponent* customer) {
     Order* order = customer->getOrder();
 
     kitchen->setOrder(order);
-    plates = kitchen->getPlates();
+    this.plates = kitchen->getPlates();
 
 }
 
