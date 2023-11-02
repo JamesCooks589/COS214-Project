@@ -59,7 +59,7 @@ int main() {
     customerList->remove(group4);
     it = customerList->getIterator();
     // Print the list again
-    std::cout << "List after removing group 3:" << std::endl;
+    std::cout << "List after removing group 1 and 4:" << std::endl;
     while (it->hasNext()) {
         std::cout << it->getCurrent()->getID() << "->";
         it->next();
