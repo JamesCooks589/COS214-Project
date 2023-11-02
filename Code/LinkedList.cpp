@@ -54,7 +54,7 @@ void LinkedList::remove(CustomerComponent* group) {
 void LinkedList::printList(){
     Node* current = head;
     while (current != nullptr) {
-        current->getGroup()->getID();
+        std::cout << current->getGroup()->getID();
         current = current->getNext();
     }
 }

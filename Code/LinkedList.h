@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include "GroupIterator.h"
 #include "CustomerGroup.h"
 #include "Node.h"

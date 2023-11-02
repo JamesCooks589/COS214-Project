@@ -57,9 +57,7 @@ int main() {
     // Remove the 3rd component
     customerList->remove(group1);
     customerList->remove(group4);
-    customerList->printList();
     it = customerList->getIterator();
-
     // Print the list again
     std::cout << "List after removing group 3:" << std::endl;
     while (it->hasNext()) {
