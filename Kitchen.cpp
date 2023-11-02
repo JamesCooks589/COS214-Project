@@ -57,6 +57,18 @@ void Kitchen::setOrder(Order* order) {
 
 }
 
+//Get plates
+vector<Plate*> Kitchen::getPlates() {
+    //Deep copy plates
+    vector<Plate*> platesCopy = vector<Plate*>();
+    for (size_t i = 0; i < this->plates.size(); ++i) {
+        platesCopy.push_back(new Plate(*this->plates[i]));
+    }
+    //Clear plates
+    this->plates.clear();
+    return platesCopy;
+}
+
 //HELPER FUNCTIONS
 
 void Kitchen::createPlates() {

@@ -16,7 +16,7 @@ public:
     Kitchen();
     ~Kitchen();
     void setOrder(Order* order);
-    void cookPizza();
+    vector<Plate*> getPlates();
     vector<string> splitOrder(int currentRow);
     void createPlates();
 };
