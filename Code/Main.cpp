@@ -4,7 +4,7 @@
 #include "Customer.h"
 
 int main() {
-    LinkedList customerList;
+    LinkedList* customerList = new LinkedList();
 
     //Create a group of customers
     CustomerGroup* group1 = new CustomerGroup(1);
@@ -37,13 +37,13 @@ int main() {
     group4->addToGroup(customer10);
 
     //add the groups to the list
-    customerList.add(group1);
-    customerList.add(group2);
-    customerList.add(group3);
-    customerList.add(group4);
+    customerList->add(group1);
+    customerList->add(group2);
+    customerList->add(group3);
+    customerList->add(group4);
 
     // Create an iterator
-    GroupIterator it = customerList.getIterator();
+    GroupIterator it = customerList->getIterator();
 
     // Print the list
     std::cout << "List after adding components:" << std::endl;
@@ -53,8 +53,8 @@ int main() {
     }
     std::cout << std::endl;
 
-    // Remove the second component
-    customerList.remove(group3);
+    /*// Remove the 3rd component
+    customerList->remove(group3);
 
     // Print the list again
     std::cout << "List after removing group 3:" << std::endl;
@@ -62,7 +62,7 @@ int main() {
         it.next();
         std::cout << it.getCurrent()->getID() << "->";
     }
-    std::cout << std::endl;
+    std::cout << std::endl;*/
 
     // Clean up memory
     delete group1;

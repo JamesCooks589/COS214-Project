@@ -1,4 +1,8 @@
+#pragma once
+
 #include "CustomerComponent.h"
+
+
 
 class Node {
 

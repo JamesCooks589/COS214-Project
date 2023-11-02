@@ -1,3 +1,5 @@
+#pragma once
+
 #include "CustomerComponent.h"
 #include "Node.h"
 

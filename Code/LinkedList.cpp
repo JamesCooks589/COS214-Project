@@ -3,6 +3,7 @@
 
 LinkedList::LinkedList() {
     head = nullptr;
+    iterator = new GroupIterator(head);
 }
 
 LinkedList::~LinkedList() {
@@ -15,11 +16,11 @@ LinkedList::~LinkedList() {
     delete current;
 }
 
-GroupIterator LinkedList::getIterator() {
-    return GroupIterator(head);
+GroupIterator* LinkedList::getIterator() {
+    return iterator;
 }
 
-void LinkedList::add(CustomerGroup* group) {
+void LinkedList::add(CustomerComponent* group) {
     Node* newNode = new Node(group);
     if (head == nullptr) {
         head = newNode;
@@ -32,7 +33,7 @@ void LinkedList::add(CustomerGroup* group) {
     }
 }
 
-void LinkedList::remove(CustomerGroup* group) {
+void LinkedList::remove(CustomerComponent* group) {
     if (head == nullptr) {
         return;
     }
@@ -50,6 +51,14 @@ void LinkedList::remove(CustomerGroup* group) {
             delete temp;
             return;
         }
+        current = current->getNext();
+    }
+}
+
+void LinkedList::printList(){
+    Node* current = head;
+    while (current != nullptr) {
+        current->getGroup()->getID();
         current = current->getNext();
     }
 }
