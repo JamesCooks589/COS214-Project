@@ -4,11 +4,13 @@
 #include "Kitchen.h"
 #include "Bill.h"
 #include "CustomerComponent.h"
+#include "floor.h"
+#include <vector>
 
-Waiter::Waiter(std::shared_ptr<Mediator> mediator, Menu* menu, Kitchen* kitchen) : mediator(mediator), menu(menu), kitchen(kitchen) {}
+Waiter::Waiter(Menu* menu, Kitchen* kitchen) : menu(menu), kitchen(kitchen) {}
 
 std::unique_ptr<Prototype> Waiter::clone() {
-    return std::make_unique<Waiter>(mediator, menu, kitchen);
+    return std::make_unique<Waiter>(menu, kitchen);
 }
 
 void Waiter::update(std::string message) {
@@ -19,40 +21,48 @@ void Waiter::orderSignal(CustomerComponent* customer) {
     std::cout << "Waiter " << this << ": Received signal to take order from table " << customer->getTableID() << "." << std::endl;
     
     Order* order = customer->getOrder();
-    tableOrders[customer->getTableID()] = order;
 
     kitchen->setOrder(order);
+    plates = kitchen->getPlates();
 
-    mediator->communicate("take order", this);
 }
 
 void Waiter::billSignal(CustomerComponent* customer) {
     std::cout << "Waiter " << this << ": Received signal to deliver bill to table " << customer->getTableID() << "." << std::endl;
     
-    Order* order = tableOrders[customer->getTableID()];
+    Order* order = customer->getOrder();
     
     if (order != nullptr) {
         Bill bill(order->getTableNumber());
     
         bill.calculateTotalAmount();
         bill.printBill();
-    
-        mediator->communicate("deliver bill", this);
-    } else {
+    } 
+    else {
         std::cout << "Error: No order found for this table." << std::endl;
     }
 }
 
-void Waiter::deliverOrder(CustomerComponent* customer) {
-    Order* order = tableOrders[customer->getTableID()];
+void Waiter::deliverOrder(Plate* p) {
+    int tableID = p->getID();
+
+    TableComponent* table = floor->getTable(tableID);
     
-    if (order != nullptr) {
-        std::cout << "Waiter " << this << ": Delivering order to table " << customer->getTableID() << "." << std::endl;
+    if (table != nullptr && table->isOccupied()) {
+        std::cout << "Waiter " << this << ": Delivering order to table " << tableID << "." << std::endl;
+        for(Plate* pp : plates){
+            if(pp == p){
+                CustomerComponent* customer = table->getCustomers();
+                customer->givePlate(pp);
+
+                plates.erase(std::remove(plates.begin(), plates.end(), pp), plates.end());
+
+                break;
+            }
+        }
         
-        //what should we do once delivered
-        
-        mediator->communicate("deliver food", this);
-    } else {
-        std::cout << "Error: No order found for this table." << std::endl;
+    } 
+    else {
+        std::cout << "Error: No occupied table found with this ID." << std::endl;
     }
 }
