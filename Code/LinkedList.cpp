@@ -3,7 +3,6 @@
 
 LinkedList::LinkedList() {
     head = nullptr;
-    iterator = new GroupIterator(head);
 }
 
 LinkedList::~LinkedList() {
@@ -17,7 +16,7 @@ LinkedList::~LinkedList() {
 }
 
 GroupIterator* LinkedList::getIterator() {
-    return iterator;
+    return iterator = new GroupIterator(head);
 }
 
 void LinkedList::add(CustomerComponent* group) {

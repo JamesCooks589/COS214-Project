@@ -43,26 +43,28 @@ int main() {
     customerList->add(group4);
 
     // Create an iterator
-    GroupIterator it = customerList->getIterator();
+    GroupIterator* it = customerList->getIterator();
 
     // Print the list
     std::cout << "List after adding components:" << std::endl;
-    while (it.hasNext()) {
-        it.next();
-        std::cout << it.getCurrent()->getID() << "->";
+    while (it->hasNext()) {
+        std::cout << it->getCurrent()->getID() << "->";
+        it->next();
     }
+    std::cout << it->getCurrent()->getID();
     std::cout << std::endl;
 
-    /*// Remove the 3rd component
+    // Remove the 3rd component
     customerList->remove(group3);
 
     // Print the list again
     std::cout << "List after removing group 3:" << std::endl;
-    while (it.hasNext()) {
-        it.next();
-        std::cout << it.getCurrent()->getID() << "->";
+    while (it->hasNext()) {
+        std::cout << it->getCurrent()->getID() << "->";
+        it->next();
     }
-    std::cout << std::endl;*/
+    std::cout << it->getCurrent()->getID();
+    std::cout << std::endl;
 
     // Clean up memory
     delete group1;

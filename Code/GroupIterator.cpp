@@ -9,7 +9,7 @@ GroupIterator::~GroupIterator() {
 }
 
 bool GroupIterator::hasNext() {
-    return current != nullptr;
+    return current->getNext() != nullptr;
 }
 
 CustomerComponent* GroupIterator::getCurrent() {
@@ -17,5 +17,7 @@ CustomerComponent* GroupIterator::getCurrent() {
 }
 
 void GroupIterator::next() {
+    if (current != nullptr){
     current = current->getNext();
+    }
 }
