@@ -15,6 +15,7 @@ public:
     Plate(int tableID, string customerName);
     string getCustomerName();
     vector<string> getFood();
+    int getID();
     void addFood(string food);
     void printPlate();
 };

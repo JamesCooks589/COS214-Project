@@ -63,10 +63,10 @@ string Order::trim(const string& str) {
 
 // Method to print order details
 void Order::printOrder() {
-    cout << "Order from Table " << tableNumber << ":\n";
-    for(int i = 0; i < customerOrders.size(); i++){
+     cout << "Order from Table " << tableNumber << ":\n";
+    for (std::vector<std::vector<std::string>>::size_type i = 0; i < customerOrders.size(); i++) {
         cout << customerOrders[i][0] <<" ordered: ";
-        for(int j = 1; j < customerOrders[i].size(); j++){
+        for (std::vector<std::string>::size_type j = 1; j < customerOrders[i].size(); j++) {
             cout << customerOrders[i][j];
             if(j != customerOrders[i].size() - 1){
                 cout << ", ";                
@@ -92,3 +92,14 @@ vector<vector<string>> Order::getCustomerOrders() {
 string Order::getOrderDetails() {
     return orderDetails;
 }
+
+OrderMemento Order::createMemento() {
+    return OrderMemento(tableNumber, customerOrders, orderDetails);
+}
+
+void Order::restoreFromMemento(const OrderMemento& memento) {
+    tableNumber = memento.getTableNumber();
+    customerOrders = memento.getCustomerOrders();
+    orderDetails = memento.getOrderDetails();
+}
+

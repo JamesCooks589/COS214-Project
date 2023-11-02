@@ -39,3 +39,7 @@ string Plate::getCustomerName(){
 vector<string> Plate::getFood(){
     return food;
 }
+
+int Plate::getID(){
+    return tableID;
+}

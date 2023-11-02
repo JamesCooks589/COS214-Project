@@ -1,51 +1,62 @@
 #include "Customer.h"
+#include "IngredientFactory.h"
 
 Customer::Customer(std::string name, int id) : CustomerComponent(id){
     this->name = name;
 }
 
-Order* Customer::getOrder(){
-    //Will be a single row in the vector simply to match the order structure
-    std::vector<std::vector<string>> orderDetails = std::vector<std::vector<string>>();
-    std::vector<string> myOrder = std::vector<string>();
+Order* Customer::getOrder() {
+    std::vector<std::vector<std::string>> orderDetails;
+    std::vector<std::string> myOrder;
     myOrder.push_back(name);
+
+    // Base ingredient
     int baseNum = std::rand() % 2;
-    switch(baseNum){
+    std::string baseIngredientName;
+    switch(baseNum) {
         case 0:
-            myOrder.push_back("Flour");
+            baseIngredientName = "Flour";
             break;
         case 1:
-            myOrder.push_back("Cheese");
+            baseIngredientName = "Cheese";
             break;
         default:
-            myOrder.push_back("Flour");
+            baseIngredientName = "Flour";
             break;
     }
-    //Generates a random number of toppings, from 1 to 6, can also add up on base ingredients
+    Ingredient* baseIngredient = IngredientFactory::getIngredient(baseIngredientName, 5.0);
+    myOrder.push_back(baseIngredient->getName());
+
+    // Generates a random number of toppings, from 1 to 6, can also add up on base ingredients
     int numToppings = std::rand() % 5 + 1;
-    for(int i = 0; i < numToppings; i++){
+    for(int i = 0; i < numToppings; i++) {
         int toppingNum = std::rand() % 4;
-        switch (toppingNum){
+        std::string toppingName;
+        switch(toppingNum) {
             case 0:
-                myOrder.push_back("Flour");
+                toppingName = "Flour";
                 break;
             case 1:
-                myOrder.push_back("Cheese");
+                toppingName = "Cheese";
                 break;
             case 2:
-                myOrder.push_back("Veggies");
+                toppingName = "Veggies";
                 break;
             case 3:
-                myOrder.push_back("Meat");
+                toppingName = "Meat";
                 break;
             default:
-                //Should not be reachable
+                // Should not be reachable
                 break;
         }
+        Ingredient* toppingIngredient = IngredientFactory::getIngredient(toppingName, 2.0);
+        myOrder.push_back(toppingIngredient->getName());
     }
+    
     orderDetails.push_back(myOrder);
     return new Order(this->getTableID(), orderDetails);
 }
+
 
 int Customer::getSize(){
     //Size of 1 customer, atomic leaf
