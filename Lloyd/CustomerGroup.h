@@ -12,7 +12,9 @@ class CustomerGroup : public CustomerComponent{
         void addToGroup(CustomerComponent* customer);
         void givePlate(Plate* plate);
         void setTableID(int id);
-        std::string printHappiness();
+        int getHappiness();
         Order* getOrder();
         int getSize();
+        void payBill(double amount, bool split);
+        void split(double total);
 };

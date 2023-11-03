@@ -78,10 +78,39 @@ void CustomerGroup::givePlate(Plate* plate){
     }
 }
 
-std::string CustomerGroup::printHappiness(){
-    std::string print = "";
+std::string CustomerGroup::getHappiness(){
+    int happiness = 0;
     for(CustomerComponent* customer : customers){
-        print += customer->printHappiness() + "\n";
+        happiness += customer->getHappiness();
     }
-    return print;
+    return happiness;
+}
+
+void CustomerGroup::payBill(double amount, bool split){
+    if(split){
+        this->split(amount);
+    }    
+    else{
+        //Adding this for a whole group to pay bill
+        int overallHappiness = this->getHappiness();
+        int happiness = overallHappiness/this->getSize();
+        if(happiness > 200){
+            happiness = 200;
+        }
+        if(happiness < 0){
+            happiness = 0;
+        }
+        double tipModifier = happiness/800;
+        double tip = amount * tipModifier;
+        double total = amount + tipModifier;
+        std::cout << "Customers at table: " << this->getTableID() << " have paid in total: " << std::to_string(total) << " including the tip of: " << std::to_string(tip) << std::endl;
+    }
+}
+
+void CustomerGroup::split(double total){
+    int size = this->getSize();
+    int actualTotal = total/this->getSize();
+    for(CustomerComponent* customer : customers){
+        customer->payBill(total, true);
+    }
 }

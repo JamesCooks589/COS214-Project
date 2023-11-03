@@ -5,7 +5,7 @@
 #include "CustomerComponent.h"
 #include "floor.h"
 #include <vector>
-
+#include <random>
 Waiter::Waiter(Kitchen* kitchen, std::string name){
     this->kitchen = kitchen;
     this->name = name;
@@ -38,9 +38,17 @@ void Waiter::billSignal(CustomerComponent* customer) {
     
     int id = customer->getTableID();    
     try{
-        Bill bill((id));
-        bill.calculateTotalAmount();
-        bill.printBill();
+        Bill* bill =  new Bill(id);
+        int choice = rand() % 2;
+        if(choice == 0){
+            std::cout << "Customers at table " << std::to_string(customer->getTableID) << " chose to split the bill." << std::endl;
+            customer->payBill(bill->calculateTotalAmount(), true);
+        }
+        else{
+            std::cout << "Customers at table " << std::to_string(customer->getTableID) << " chose not to split the bill." << std::endl;
+            customer->payBill(bill->calculateTotalAmount(), false);
+        }
+        customer->payBill();
     }
     catch(std::runtime_error e){        
         std::cout << "Error: No order found for this table." << std::endl;
