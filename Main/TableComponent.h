@@ -18,4 +18,7 @@ class TableComponent{
         CustomerComponent* getCustomers();
         CustomerComponent* vacate();
         virtual ~TableComponent();
+        virtual void addToGroup(TableComponent* tableToAdd);
+        virtual TableComponent* removeFromGroup();
+        virtual bool isEmpty();
 };

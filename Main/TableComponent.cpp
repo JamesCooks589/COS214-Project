@@ -49,3 +49,16 @@ TableComponent::~TableComponent(){
 CustomerComponent* TableComponent::getCustomers(){
     return this->Customers;
 }
+
+void TableComponent::addToGroup(TableComponent* tableToAdd){
+    std::cout << "Not supported" << std::endl;
+}
+
+TableComponent* TableComponent::removeFromGroup(){
+    std::cout << "Not supported" << std::endl;
+    return nullptr;
+}
+
+bool TableComponent::isEmpty(){
+    return true;
+}

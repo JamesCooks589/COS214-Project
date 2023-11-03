@@ -17,4 +17,5 @@ public:
     void add(CustomerComponent* group);
     void remove(CustomerComponent* group);
     void printList();
+    Node* getHead();
 };

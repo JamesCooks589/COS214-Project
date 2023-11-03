@@ -1,6 +1,9 @@
 /*Comment out the pizza we are not creating*/
 #include "Kitchen.h"
-
+#include "floor.h"
+#include "Table.h"
+#include <iostream>
+using namespace std;
 int main() {
     //Seed rand()
     srand(static_cast<unsigned>(time(0)));
@@ -40,6 +43,32 @@ int main() {
     //Print plates
     for (size_t i = 0; i < plates.size(); ++i) {
         plates[i]->printPlate();
+    }
+
+    //Test tables*
+    Floor* floor = new Floor();
+
+    //Create 2 tables
+    // Eventually create in a loop
+    // For i: new Table(i);
+    vector<TableComponent*> tables = vector<TableComponent*>();
+    for (int i = 1; i <= 2; i++) {
+        TableComponent* table = new Table(i);
+        //TableComponent* table2 = new Table(2);
+
+        tables.push_back(table);
+        //tables.push_back(table2);
+    }
+
+    //Add merged tables to floor
+    floor->addTable(tables[0]);
+    floor->addTable(tables[1]);
+    cout << "merging" << endl;
+    floor->mergeTables(tables);
+
+    for (auto table: tables)
+    {
+        delete table;
     }
     
     return 0;

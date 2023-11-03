@@ -10,4 +10,5 @@ private:
 public:
     void addGroup(CustomerComponent* group);
     void removeGroup(CustomerComponent* group);
+    void seatGroup();
 };

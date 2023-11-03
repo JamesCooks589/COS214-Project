@@ -58,3 +58,7 @@ void LinkedList::printList(){
         current = current->getNext();
     }
 }
+
+Node* LinkedList::getHead(){
+    return head;
+}
