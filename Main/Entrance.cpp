@@ -7,6 +7,7 @@ Entrance::Entrance(Floor *floor)
 
 void Entrance::addGroup(CustomerComponent *group)
 {
+    cout << "Customer group " << group->getID() << " added to queue" << endl;
     queue.add(group);
 }
 void Entrance::removeGroup(CustomerComponent *group)
@@ -47,10 +48,12 @@ bool Entrance::seatGroup()
             if(groupSize == vacantCapacity){
                 floor->setIsFull(true);
             }
+            cout << "Customer group " << current->getGroup()->getID() << " seated at table " << table->getID() << endl;
             queue.remove(current->getGroup());
             return true;
         }
         else{
+            cout << "Customer group " << current->getGroup()->getID() << " not seated" << endl;
             return false;
         }
     }
@@ -63,16 +66,19 @@ bool Entrance::seatGroup()
             if(groupSize == vacantCapacity){
                 floor->setIsFull(true);
             }
+            cout << "Customer group " << current->getGroup()->getID() << " seated at table " << table->getID() << endl;
             queue.remove(current->getGroup());
             return true;
         }
         else{
+            cout << "Customer group " << current->getGroup()->getID() << " not seated" << endl;
             return false;
         }
 
     }
     //If group size is greater than vacant capacity, return false
     else{
+        cout << "Customer group " << current->getGroup()->getID() << " not seated" << endl;
         return false;
     }
 }

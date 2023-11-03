@@ -93,7 +93,7 @@ int main() {
     
     cout << "Group " << group1->getID() << " created with size " << to_string(group1->getSize()) << endl;
     entrance->addGroup(group1);
-    cout << "Group " << group1->getID() << " added to entrance queue" << endl;
+    
     
     CustomerComponent* group2 = new CustomerGroup(2);
     for(int i = 1; i <= 4; i++){
@@ -103,21 +103,9 @@ int main() {
 
     cout << "Group " << group2->getID() << " created with size " << to_string(group2->getSize()) << endl;
     entrance->addGroup(group2);
-    cout << "Group " << group2->getID() << " added to entrance queue" << endl;
 
-    if(entrance->seatGroup()){
-        cout << "Group " << group1->getID() << " seated" << endl;
-    }
-    else{
-        cout << "Group " << group1->getID() << " not seated" << endl;
-    }
-
-    if(entrance->seatGroup()){
-        cout << "Group " << group2->getID() << " seated" << endl;
-    }
-    else{
-        cout << "Group " << group2->getID() << " not seated" << endl;
-    }
+    entrance->seatGroup();
+    entrance->seatGroup();
 
 
 
