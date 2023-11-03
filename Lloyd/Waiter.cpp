@@ -33,17 +33,14 @@ void Waiter::orderSignal(CustomerComponent* customer) {
 void Waiter::billSignal(CustomerComponent* customer) {
     std::cout << "Waiter " << this << ": Received signal to deliver bill to table " << customer->getTableID() << "." << std::endl;
     
-    Order* order = customer->getOrder();
+    int id = customer->getTableID();
     
-    if (order != nullptr) {
-        Bill bill(order->getTableNumber());
-    
+        Bill bill((id));
+
+        //Gonna change when I have bill object, so that I can check if there was an order.    
         bill.calculateTotalAmount();
         bill.printBill();
-    } 
-    else {
         std::cout << "Error: No order found for this table." << std::endl;
-    }
 }
 
 void Waiter::deliverOrder(Plate* p) {
