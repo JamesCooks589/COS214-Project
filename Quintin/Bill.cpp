@@ -18,12 +18,14 @@ Bill::Bill(int orderId) : orderId(orderId), totalAmount(0.0) {
     }
 }
 
-void Bill::calculateTotalAmount() {
+double Bill::calculateTotalAmount() {
     totalAmount = 50; // Base cost
     for (const auto& itemName : foodItems) {
         Ingredient* ingredient = IngredientFactory::getIngredient(itemName, 0.0); // Get ingredient with price 0.0
         totalAmount += ingredient->getPrice();
     }
+
+    return totalAmount;
 }
 
 void Bill::printBill() {

@@ -8,7 +8,7 @@
 class Bill {
 public:
     Bill(int orderId);
-    void calculateTotalAmount();
+    double calculateTotalAmount();
     void printBill();
 
 private:

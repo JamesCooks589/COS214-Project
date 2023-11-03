@@ -4,7 +4,7 @@
 #include "Cheese.h"
 #include "Vegan.h"
 #include "Nonvegan.h"
-//hey bae
+
 Chef* BaseChef::createVeganPizza() {
     return new Flour();
 }
