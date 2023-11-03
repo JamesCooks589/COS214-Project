@@ -22,6 +22,7 @@ void Floor::addTable(TableComponent* table) {
     if (tables.size() < MAX_TABLES) {
         tables.push_back(table);
         tableCount++;
+        vacantTables++;
     }
     else {
         std::cout << "Cannot add more tables." << std::endl;
@@ -33,75 +34,87 @@ void Floor::removeTable(TableComponent* table) {
         if (tables[i]->getID() == table->getID()) {
             tables.erase(tables.begin() + i);
             tableCount--;
+            vacantTables--;
         }
     }
 }
 
-
-void Floor::splitTable(TableComponent* table){
-    vector<TableComponent*> tablesToAdd;
-    while(!table->isEmpty()){
-        tablesToAdd.push_back(table->removeFromGroup());
+TableComponent* Floor::mergeTables(int groupSize) {
+    if(groupSize > this->getVacantCapacity()){
+        return nullptr;
     }
-    if(!tablesToAdd.empty()){
-        //Remove table from floor
-        //Find table in tables
-        for(int i = 0; i < tables.size(); i++){
-            if(tables[i] == table){
-                tables.erase(tables.begin() + i);
+    TableComponent* group = nullptr;
+    auto it = tables.begin();
+    while(it != tables.end()){
+        if(group != nullptr){
+            if(group->getCapacity() >= groupSize){
+                break;
             }
         }
-        for(TableComponent* tableT : tablesToAdd){
-            tables.push_back(tableT);
+        if(!(*it)->isOccupied()){
+            if(group == nullptr){
+                group = new TableGroup((*it)->getID());
+                group->addToGroup(*it);
+                it = tables.erase(it);
+                cout << "Added table " << group->getID() << " to group " << group->getID() << endl;
+            }
+            else{
+                 group->addToGroup(*it);
+                 cout << "Added table " << (*it)->getID() << " to group " << group->getID() << endl;
+                 it = tables.erase(it);
+            }
+            
         }
+        else{
+            it++;
+        }
+    }
+    if(group != nullptr){
+        this->tables.push_back(group);
+        cout << "Group " << group->getID() << " created" << endl;
+        return group;
     }
 }
 
-/*void Floor::mergeTables(vector<TableComponent*> tablesToMerge){
-    TableComponent* table = new TableGroup(tablesToMerge[0]->getID());
-    for(TableComponent* tableT : tablesToMerge){
-        for(int i = 0; i < tables.size(); i++){
-            if(tables[i] == tableT){
-                tables.erase(tables.begin() + i);
+void Floor::splitTables(int id){
+    TableComponent* group = nullptr;
+    // for(TableComponent* table : tables){
+    //     if(table->getID() == id){
+    //         group = table;
+    //         break;
+    //     }
+    // }
+    auto it = tables.begin();
+    while(it != tables.end()){
+        if((*it)->getID() == id){
+            group = *it;
+            if(group != nullptr){
+                it = tables.erase(it);
             }
+            break;
         }
-        table->addToGroup(table);
+        it++;
     }
-    tables.push_back(table);
-}*/
-
-void Floor::mergeTables(vector<TableComponent*> tablesToMerge) {
-    // Create a new TableGroup object
-    cout << "0";
-    TableComponent* table = new TableGroup(1);
-    cout << "1";
-    // Iterate through tablesToMerge and remove matching tables from the 'tables' vector
-    tables.erase(std::remove_if(tables.begin(), tables.end(), [&](TableComponent* t) {
-        for (TableComponent* tableT : tablesToMerge) {
-            if (t->getID() == tableT->getID()) {
-                // Add the matched table to the new TableGroup
-                cout << "2";
-                table->addToGroup(t);
-                // Note: You may want to handle ownership using smart pointers for better memory management
-                return true; // Remove this table from the 'tables' vector
-            }
+    if(group != nullptr){
+        vector<TableComponent*> tablesToAdd = group->splitGroup();
+        for(TableComponent* table : tablesToAdd){
+            this->tables.push_back(table);
+            cout << "Table " << table->getID() << " added to floor" << endl;
         }
-        return false; // Keep this table in the 'tables' vector
-    }), tables.end());
+        cout << "Group " << group->getID() << " split" << endl;
+        delete group;
 
-    cout << "3";
-    // Add the new TableGroup to the 'tables' vector
-    tables.push_back(table);
+    }
 }
 
-int Floor::getVacantTables() {
-    int vacantTables = 0;
+int Floor::getVacantCapacity() {
+    int vacantCapacity = 0;
     for (TableComponent* table : tables) {
         if (!table->isOccupied()) {
-            vacantTables += table->getCapacity();
+            vacantCapacity += table->getCapacity();
         }
     }
-    return vacantTables;
+    return vacantCapacity;
 }
 
 void Floor::setVacantTables(int vacantTables) {
@@ -114,4 +127,10 @@ bool Floor::getIsFull() {
 
 void Floor::setIsFull(bool isFull) {
     this->isFull = isFull;
+}
+
+void Floor::printTables() {
+    for (TableComponent* table : tables) {
+        cout << "Table " << table->getID() << " has capacity " << table->getCapacity() << endl;
+    }
 }

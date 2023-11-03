@@ -63,8 +63,11 @@ int main() {
     //Add merged tables to floor
     floor->addTable(tables[0]);
     floor->addTable(tables[1]);
-    cout << "merging" << endl;
-    floor->mergeTables(tables);
+    floor->printTables();
+    TableComponent* group = floor->mergeTables(3);
+    floor->printTables();
+    floor->splitTables(group->getID());
+    floor->printTables();
 
     for (auto table: tables)
     {

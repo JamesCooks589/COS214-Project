@@ -18,4 +18,5 @@ public:
     void remove(CustomerComponent* group);
     void printList();
     Node* getHead();
+    bool isEmpty();
 };

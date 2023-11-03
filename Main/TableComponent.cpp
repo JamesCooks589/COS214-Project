@@ -62,3 +62,8 @@ TableComponent* TableComponent::removeFromGroup(){
 bool TableComponent::isEmpty(){
     return true;
 }
+
+vector<TableComponent*> TableComponent::splitGroup(){
+    std::cout << "Not supported" << std::endl;
+    return vector<TableComponent*>();
+}

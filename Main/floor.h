@@ -21,10 +21,10 @@ public:
     TableComponent* getTable(int tableID);
     void addTable(TableComponent* table);
     void removeTable(TableComponent* table);
-    void splitTable(TableComponent* table);
-    void mergeTables(vector<TableComponent*> tables);
+    void splitTables(int id);
+    TableComponent* mergeTables(int groupSize);
     void printTables();
-    int getVacantTables();
+    int getVacantCapacity();
     void setVacantTables(int vacantTables);
     bool getIsFull();
     void setIsFull(bool isFull);

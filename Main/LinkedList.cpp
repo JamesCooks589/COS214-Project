@@ -62,3 +62,10 @@ void LinkedList::printList(){
 Node* LinkedList::getHead(){
     return head;
 }
+
+bool LinkedList::isEmpty(){
+    if(head == nullptr){
+        return true;
+    }
+    return false;
+}

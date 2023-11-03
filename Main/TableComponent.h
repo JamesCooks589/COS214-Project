@@ -19,6 +19,7 @@ class TableComponent{
         CustomerComponent* vacate();
         virtual ~TableComponent();
         virtual void addToGroup(TableComponent* tableToAdd);
+        virtual std::vector<TableComponent*> splitGroup();
         virtual TableComponent* removeFromGroup();
         virtual bool isEmpty();
 };
