@@ -19,11 +19,11 @@ void CustomerComponent::detachWaiter(){
 }
 
 void CustomerComponent::signalToOrder(){
-    this->waiter->orderSignal();
+    this->waiter->orderSignal(this);
 }
 
 void CustomerComponent::signalForBill(){
-    this->waiter->billSignal();
+    this->waiter->billSignal(this);
 }
 
 CustomerComponent::~CustomerComponent(){
