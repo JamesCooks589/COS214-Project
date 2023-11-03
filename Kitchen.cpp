@@ -59,12 +59,12 @@ void Kitchen::setOrder(Order* order) {
 
 //Get plates
 vector<Plate*> Kitchen::getPlates() {
-    //Deep copy of plates to return using copy constructor
-    vector<Plate*> platesCopy = vector<Plate*>();
+    //Return plates using clone function
+    vector<Plate*> OutPlates = vector<Plate*>();
     for (size_t i = 0; i < this->plates.size(); ++i) {
-        platesCopy.push_back(new Plate(*this->plates[i]));
+        OutPlates.push_back(this->plates[i]->clone());
     }
-    return platesCopy;
+    return OutPlates;
 }
 
 //HELPER FUNCTIONS
