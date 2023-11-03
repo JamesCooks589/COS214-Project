@@ -13,8 +13,8 @@ private:
     string customerName;
 public:
     Plate(int tableID, string customerName);
-    //Copy constructor
-    Plate(const Plate& plate);
+    //Clone function
+    Plate* clone();
     
     void addFood(string food);
     void printPlate();

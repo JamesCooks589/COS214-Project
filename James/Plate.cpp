@@ -8,12 +8,13 @@ Plate::Plate(int tableID, string customerName){
     
 }
 
-//Copy constructor for deep copy
-Plate::Plate(const Plate& plate){
+//clone function
+Plate* Plate::clone(){
+    //Create new plate with same tableID and customerName
+    Plate* newPlate = new Plate(this->tableID, this->customerName);
     //Copy food vector
-    this->food = plate.food;
-    this->tableID = plate.tableID;
-    this->customerName = plate.customerName;
+    newPlate->food = this->food;
+    return newPlate;
 }
 
 
