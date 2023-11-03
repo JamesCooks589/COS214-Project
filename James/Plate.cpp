@@ -13,7 +13,10 @@ Plate* Plate::clone(){
     //Create new plate with same tableID and customerName
     Plate* newPlate = new Plate(this->tableID, this->customerName);
     //Copy food vector
-    newPlate->food = this->food;
+    for (string food : this->food)
+    {
+        newPlate->addFood(food);
+    }
     return newPlate;
 }
 
