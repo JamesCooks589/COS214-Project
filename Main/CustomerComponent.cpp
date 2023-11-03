@@ -37,3 +37,7 @@ int CustomerComponent::getTableID(){
 std::string CustomerComponent::getName(){
     return "Not Applicable";
 }
+
+void CustomerComponent::addToGroup(CustomerComponent* comp){
+    std::cout << "Not Applicable";
+}

@@ -74,6 +74,7 @@ TableComponent* Floor::mergeTables(int groupSize) {
         cout << "Group " << group->getID() << " created" << endl;
         return group;
     }
+    return nullptr;
 }
 
 void Floor::splitTables(int id){
@@ -117,10 +118,6 @@ int Floor::getVacantCapacity() {
     return vacantCapacity;
 }
 
-void Floor::setVacantTables(int vacantTables) {
-    this->vacantTables = vacantTables;
-}
-
 bool Floor::getIsFull() {
     return isFull;
 }
@@ -130,7 +127,31 @@ void Floor::setIsFull(bool isFull) {
 }
 
 void Floor::printTables() {
+    //Print all tables in ascending order
+    //Sort tables by ID
+    sort(tables.begin(), tables.end(), [](TableComponent* a, TableComponent* b) {
+        return a->getID() < b->getID();
+    });
+    
     for (TableComponent* table : tables) {
-        cout << "Table " << table->getID() << " has capacity " << table->getCapacity() << endl;
+        if(table->isOccupied()){
+            cout << "Table " << table->getID() << " has capacity " << table->getCapacity() << ": occupied by " << table->getCustomers()->getSize() << endl;
+        }
+        else{
+            cout << "Table " << table->getID() << " has capacity " << table->getCapacity() << ": vacant" << endl;
+        }
     }
+}
+
+TableComponent* Floor::getFirstVacantTable(){
+    for(TableComponent* table : tables){
+        if(!table->isOccupied()){
+            return table;
+        }
+    }
+    return nullptr;
+}
+
+int const Floor::getMAX_TABLES(){
+    return MAX_TABLES;
 }

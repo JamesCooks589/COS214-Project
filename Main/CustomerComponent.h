@@ -28,6 +28,7 @@ class CustomerComponent{
         void detachWaiter();
         void signalToOrder();
         void signalForBill();
+        virtual void addToGroup(CustomerComponent* comp);
         virtual void payBill(double amount, bool split) = 0;
         virtual ~CustomerComponent();
 };

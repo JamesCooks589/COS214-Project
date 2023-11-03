@@ -25,9 +25,10 @@ public:
     TableComponent* mergeTables(int groupSize);
     void printTables();
     int getVacantCapacity();
-    void setVacantTables(int vacantTables);
     bool getIsFull();
     void setIsFull(bool isFull);
+    TableComponent* getFirstVacantTable();
+    int const getMAX_TABLES();
 };
 
 #endif

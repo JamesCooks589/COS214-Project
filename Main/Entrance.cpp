@@ -37,4 +37,46 @@ bool Entrance::seatGroup()
         return false;
     }
 
-    
+    //If group size is 1 or 2, seat group at first vacant table
+    if (groupSize <= 2)
+    {
+        //Seat group at first vacant table
+        if(floor->getFirstVacantTable() != nullptr){
+            TableComponent* table = floor->getFirstVacantTable();
+            table->occupy(current->getGroup());
+            if(groupSize == vacantCapacity){
+                floor->setIsFull(true);
+            }
+            queue.remove(current->getGroup());
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    //If group is larger than 2, merge tables and seat group
+    else if(groupSize <= vacantCapacity){
+        //Merge tables and seat group
+        TableComponent* table = floor->mergeTables(groupSize);
+        if(table != nullptr){
+            table->occupy(current->getGroup());
+            if(groupSize == vacantCapacity){
+                floor->setIsFull(true);
+            }
+            queue.remove(current->getGroup());
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
+    //If group size is greater than vacant capacity, return false
+    else{
+        return false;
+    }
+}
+       
+        
+
+
