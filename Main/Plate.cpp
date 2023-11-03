@@ -20,7 +20,6 @@ Plate* Plate::clone(){
     return newPlate;
 }
 
-
 void Plate::addFood(string food){
     //Add food to plate
     this->food.push_back(food);
@@ -43,4 +42,16 @@ void Plate::printPlate(){
         
     }
     cout << endl;
+}
+
+string Plate::getCustomerName(){
+    return this->customerName;
+}
+
+vector<string> Plate::getFood(){
+    return food;
+}
+
+int Plate::getID(){
+    return tableID;
 }

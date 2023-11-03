@@ -1,20 +1,21 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <string>
+#include "OrderMemento.h"
 
 using namespace std;
 
 class Order {
 public:
-    // Constructor to create an order
     Order(int tableNumber, vector<vector<string>> customerOrders);
-    // Method to print order details
+    // Create a memento for the current order state
+    OrderMemento createMemento();
+    // Restore the order state from a memento
+    void restoreFromMemento(const OrderMemento& memento);
     void printOrder();
-    // Method to get table number
     int getTableNumber();
-    // Method to get customer orders
     vector<vector<string>> getCustomerOrders();
-    // Method to get order details
     string getOrderDetails();
 
     bool IsValidOrderDetails(vector<string> customerOrder);

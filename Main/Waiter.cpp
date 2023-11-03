@@ -41,14 +41,13 @@ void Waiter::billSignal(CustomerComponent* customer) {
         Bill* bill =  new Bill(id);
         int choice = rand() % 2;
         if(choice == 0){
-            std::cout << "Customers at table " << std::to_string(customer->getTableID) << " chose to split the bill." << std::endl;
+            std::cout << "Customers at table " << std::to_string(id) << " chose to split the bill." << std::endl;
             customer->payBill(bill->calculateTotalAmount(), true);
         }
         else{
-            std::cout << "Customers at table " << std::to_string(customer->getTableID) << " chose not to split the bill." << std::endl;
+            std::cout << "Customers at table " << std::to_string(id) << " chose not to split the bill." << std::endl;
             customer->payBill(bill->calculateTotalAmount(), false);
         }
-        customer->payBill();
     }
     catch(std::runtime_error e){        
         std::cout << "Error: No order found for this table." << std::endl;

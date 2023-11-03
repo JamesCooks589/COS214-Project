@@ -15,7 +15,9 @@ public:
     Plate(int tableID, string customerName);
     //Clone function
     Plate* clone();
-    
+    string getCustomerName();
+    vector<string> getFood();
+    int getID();
     void addFood(string food);
     void printPlate();
 };
