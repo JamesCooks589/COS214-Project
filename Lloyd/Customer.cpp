@@ -91,6 +91,13 @@ void Customer::givePlate(Plate* plate){
     delete plate;
 }
 
-std::string Customer::printHappiness(){
-    return this->name + " Happiness level: " + std::to_string(happiness);
+int Customer::getHappiness(){
+    return happiness;
+}
+
+void Customer::payBill(double amount, bool split){
+    double tipModifier = happiness/800;
+    double tip = amount * tipModifier;
+    double total = amount + tipModifier;
+    std::cout << "Customer" << name << " paid:" << total << " including tip: " << tip << "for their share of the bill." << std::endl;
 }

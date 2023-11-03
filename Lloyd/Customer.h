@@ -15,5 +15,6 @@ class Customer : public CustomerComponent{
         void givePlate(Plate* plate);
         std::string getName();
         void setTableID(int id);
-        std::string printHappiness();
+        int getHappiness();
+        void payBill(double amount, bool split);
 };

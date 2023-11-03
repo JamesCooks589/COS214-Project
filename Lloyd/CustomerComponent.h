@@ -21,10 +21,11 @@ class CustomerComponent{
         virtual std::string getName();
         virtual Order* getOrder() = 0;
         virtual int getSize() = 0;
-        virtual std::string printHappiness() = 0;
+        virtual int getHappiness() = 0;
         void attachWaiter(Waiter* waiter);
         void detachWaiter();
         void signalToOrder();
         void signalForBill();
+        virtual void payBill(double amount, bool split) = 0;
         virtual ~CustomerComponent();
 };
