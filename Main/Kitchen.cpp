@@ -31,7 +31,7 @@ Kitchen::~Kitchen() {
 }
 
 //Kitchen Handles one order at a time
-void Kitchen::setOrder(Order* order, Waiter* waiter) {
+void Kitchen::setOrder(Order* order, PrototypeWaiter* waiter) {
     if (this->order == nullptr)
     {      
         this->order = order;
@@ -71,6 +71,11 @@ vector<Plate*> Kitchen::getPlates() {
     for (size_t i = 0; i < this->plates.size(); ++i) {
         OutPlates.push_back(this->plates[i]->clone());
     }
+    //Delete plates
+    for (size_t i = 0; i < this->plates.size(); ++i) {
+        delete this->plates[i];
+    }
+    this->plates.clear();
     return OutPlates;
 }
 

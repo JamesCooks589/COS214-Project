@@ -18,6 +18,13 @@ TableComponent* Floor::getTable(int tableID) {
     return nullptr;
 }
 
+Floor::~Floor() {
+    for (TableComponent* table : tables) {
+        delete table;
+    }
+    this->tables.clear();
+}
+
 void Floor::addTable(TableComponent* table) {
     if (this->tables.size() < MAX_TABLES) {
         this->tables.push_back(table);
@@ -30,7 +37,7 @@ void Floor::addTable(TableComponent* table) {
 }
 
 void Floor::removeTable(TableComponent* table) {
-    for (int i = 0; i < tables.size(); i++) {
+    for (long unsigned int i = 0; i < tables.size(); i++) {
         if (tables[i]->getID() == table->getID()) {
             tables.erase(tables.begin() + i);
             tableCount--;
@@ -79,12 +86,6 @@ TableComponent* Floor::mergeTables(int groupSize) {
 
 void Floor::splitTables(int id){
     TableComponent* group = nullptr;
-    // for(TableComponent* table : tables){
-    //     if(table->getID() == id){
-    //         group = table;
-    //         break;
-    //     }
-    // }
     auto it = tables.begin();
     while(it != tables.end()){
         if((*it)->getID() == id){
@@ -154,4 +155,22 @@ TableComponent* Floor::getFirstVacantTable(){
 
 int const Floor::getMAX_TABLES(){
     return MAX_TABLES;
+}
+
+void Floor::vacateTable(int tableID){
+    for(TableComponent* table : tables){
+        if(table->getID() == tableID){
+            CustomerComponent* leavers = table->vacate();
+            int tableID = table->getID();
+            if(table->getCapacity() > 2){
+                this->splitTables(tableID);
+            }
+            cout << "Table " << tableID << " vacated" << endl;
+            if(isFull){
+                isFull = false;
+            }
+            delete leavers;
+            return;
+        }
+    }
 }

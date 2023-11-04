@@ -50,6 +50,7 @@ bool Entrance::seatGroup()
             }
             cout << "Customer group " << current->getGroup()->getID() << " seated at table " << table->getID() << endl;
             queue.remove(current->getGroup());
+            delete current;
             return true;
         }
         else{
@@ -68,6 +69,7 @@ bool Entrance::seatGroup()
             }
             cout << "Customer group " << current->getGroup()->getID() << " seated at table " << table->getID() << endl;
             queue.remove(current->getGroup());
+            delete current;
             return true;
         }
         else{

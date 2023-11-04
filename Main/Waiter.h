@@ -24,6 +24,7 @@ public:
         virtual void orderSignal(CustomerComponent* customer) = 0;
         virtual void billSignal(CustomerComponent* customer) = 0;
         virtual void signalReadyOrder() = 0;
+        virtual ~PrototypeWaiter(){}
 };
 
 class Waiter : public PrototypeWaiter{

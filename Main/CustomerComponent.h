@@ -4,11 +4,11 @@
 #include "Order.h"
 #include "Plate.h"
 
-class Waiter;
+class PrototypeWaiter;
 
 class CustomerComponent{
     private:
-        Waiter* waiter = nullptr;
+        PrototypeWaiter* waiter = nullptr;
         int id;
 
     protected:
@@ -24,7 +24,7 @@ class CustomerComponent{
         virtual Order* getOrder() = 0;
         virtual int getSize() = 0;
         virtual int getHappiness() = 0;
-        void attachWaiter(Waiter* waiter);
+        void attachWaiter(PrototypeWaiter* waiter);
         void detachWaiter();
         void signalToOrder();
         void signalForBill();

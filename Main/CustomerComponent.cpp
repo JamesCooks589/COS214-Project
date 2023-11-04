@@ -8,7 +8,7 @@ int CustomerComponent::getID(){
     return this->id;
 }
 
-void CustomerComponent::attachWaiter(Waiter* waiter){
+void CustomerComponent::attachWaiter(PrototypeWaiter* waiter){
     if(waiter != nullptr){
         this->waiter = waiter;
     }

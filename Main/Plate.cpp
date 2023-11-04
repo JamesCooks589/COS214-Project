@@ -27,7 +27,7 @@ void Plate::addFood(string food){
 
 void Plate::printPlate(){
     //Print plate contents
-    int i = 0;
+    long unsigned int i = 0;
     cout << "Plate for " << this->customerName << " at table " << this->tableID << ": ";
     for (string food : this->food)
     {        

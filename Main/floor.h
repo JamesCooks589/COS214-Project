@@ -11,13 +11,14 @@ class Floor {
 private:
     vector<TableComponent*> tables;
     int tableCount;
-    int const MAX_TABLES = 10;
+    const long unsigned int MAX_TABLES = 10;
     bool isFull;
     int vacantTables;
 
 
 public:
     Floor();
+    ~Floor();
     TableComponent* getTable(int tableID);
     void addTable(TableComponent* table);
     void removeTable(TableComponent* table);
@@ -28,6 +29,7 @@ public:
     bool getIsFull();
     void setIsFull(bool isFull);
     TableComponent* getFirstVacantTable();
+    void vacateTable(int tableID);
     int const getMAX_TABLES();
 };
 

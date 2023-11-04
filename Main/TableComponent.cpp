@@ -34,7 +34,7 @@ CustomerComponent* TableComponent::vacate(){
         occupied = false;
         return nullptr;
     }
-    CustomerComponent* temp = Customers;
+    CustomerComponent* temp = this->Customers;
     Customers = nullptr;
     occupied = false;
     return temp;

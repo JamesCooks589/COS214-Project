@@ -31,12 +31,6 @@ void Waiter::orderSignal(CustomerComponent* customer) {
     Order* order = customer->getOrder();
 
     kitchen->setOrder(order, this);
-    // this->plates = kitchen->getPlates();
-
-    // for(Plate* plate: plates){
-    //     customer->givePlate(plate);
-    // }
-
 }
 
 void Waiter::signalReadyOrder(){
@@ -56,10 +50,6 @@ void Waiter::signalReadyOrder(){
             }
         }
     }
-    
-    // for(Plate* plate: plates){
-    //     customer->givePlate(plate);
-    // }
 }
 
 void Waiter::billSignal(CustomerComponent* customer) {
@@ -77,9 +67,12 @@ void Waiter::billSignal(CustomerComponent* customer) {
             std::cout << "Customers at table " << std::to_string(id) << " chose not to split the bill." << std::endl;
             customer->payBill(bill->calculateTotalAmount(), false);
         }
+        floor->vacateTable(customer->getTableID());
+        delete bill;
     }
-    catch(std::runtime_error e){        
+    catch(std::runtime_error* e){        
         std::cout << "Error: No order found for this table." << std::endl;
+        delete e;
     }
 }
 

@@ -6,7 +6,7 @@
 #include "Waiter.h"
 
 //Forward declaration of waiter
-class Waiter;
+class PrototypeWaiter;
 
 class Kitchen
 {
@@ -19,7 +19,7 @@ private:
 public:
     Kitchen();
     ~Kitchen();
-    void setOrder(Order* order, Waiter* waiter);
+    void setOrder(Order* order, PrototypeWaiter* waiter);
     vector<Plate*> getPlates();
     vector<string> splitOrder(int currentRow);
     void createPlates();

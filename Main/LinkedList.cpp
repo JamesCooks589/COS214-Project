@@ -37,7 +37,9 @@ void LinkedList::remove(CustomerComponent* group) {
         return;
     }
     if (head->getGroup()->getID() == group->getID()) {
+        Node* temp = head;
         head = head->getNext();
+        temp->setNext(nullptr);
         return;
     }
     Node* current = head;
@@ -45,6 +47,7 @@ void LinkedList::remove(CustomerComponent* group) {
         if (current->getNext()->getGroup()->getID() == group->getID()) {
             Node* temp = current->getNext();
             current->setNext(temp->getNext());
+            temp->setNext(nullptr);
             return;
         }
         current = current->getNext();
