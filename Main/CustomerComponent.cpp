@@ -19,11 +19,20 @@ void CustomerComponent::detachWaiter(){
 }
 
 void CustomerComponent::signalToOrder(){
-    this->waiter->orderSignal(this);
+    if(this->waiter != nullptr){
+        this->waiter->orderSignal(this);
+    }
+    else{
+        std::cout << "WHO ARE YOU TALKING TO?????" << std::endl;
+    }
 }
 
 void CustomerComponent::signalForBill(){
-    this->waiter->billSignal(this);
+    if(this->waiter != nullptr){
+        this->waiter->billSignal(this);
+    }else{
+        std::cout << "WHO ARE YOU TALKING TO?????" << std::endl;
+    }
 }
 
 CustomerComponent::~CustomerComponent(){

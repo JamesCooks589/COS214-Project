@@ -30,7 +30,7 @@ void Meat::cookFood(vector<string> orderDetails, Plate* plate){
                 product = "Meat(great)";
             }
             plate->addFood(product);
-            cout << product << " added to plate." << endl;
+            //cout << product << " added to plate." << endl;
         }
     }
     if (next != nullptr)

@@ -13,7 +13,7 @@ Order::Order(int tableNumber, vector<vector<string>> customerOrders) {
                 cout << "Order details invalid\n";
                 break;
             }
-            cout << "Order will be processed shortly\n";
+            //cout << "Order will be processed shortly\n";
         }
     }
     else {

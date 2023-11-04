@@ -26,7 +26,7 @@ std::string Waiter::getName() {
 }
 
 void Waiter::orderSignal(CustomerComponent* customer) {
-    std::cout << "Waiter " << name << ": Received signal to take order from table " << customer->getTableID() << "." << std::endl;
+    std::cout << name << ": Received signal to take order from table " << customer->getTableID() << "." << std::endl;
     
     Order* order = customer->getOrder();
 
@@ -53,7 +53,7 @@ void Waiter::signalReadyOrder(){
 }
 
 void Waiter::billSignal(CustomerComponent* customer) {
-    std::cout << "Waiter " << name << ": Received signal to deliver bill to table " << customer->getTableID() << "." << std::endl;
+    std::cout << name << ": Received signal to deliver bill to table " << customer->getTableID() << "." << std::endl;
     
     int id = customer->getTableID();    
     try{

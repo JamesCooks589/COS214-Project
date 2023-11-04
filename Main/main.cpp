@@ -15,11 +15,12 @@ int main() {
     Kitchen* kitchen = new Kitchen();
 
     //Make floor
-    Floor* floor = new Floor();
+    Floor* floor = new Floor(10, kitchen);
 
     //Make waiter
     PrototypeWaiter* waiter = new Waiter(kitchen, "Bob", floor);
     PrototypeWaiter* waiter2 = waiter->clone();
+    waiter2->setName("Joe");
 
 
     for (int i = 1; i <= 10; i++) {
@@ -31,7 +32,7 @@ int main() {
     
 
     CustomerComponent* group1 = new CustomerGroup(1);
-    for(int i = 1; i <= 10; i++){
+    for(int i = 1; i <= 20; i++){
         string name = "Customer-" + to_string(i);
         group1->addToGroup(new Customer(name,i));
     }
@@ -50,11 +51,16 @@ int main() {
 
     entrance->seatGroup();
     entrance->seatGroup();
-
+    
     //Let customers order
-    group1->attachWaiter(waiter);
+    //group1->attachWaiter(waiter);
     group1->signalToOrder();
     group1->signalForBill();
+
+    
+    //group2->attachWaiter(waiter2);
+    group2->signalToOrder();
+    group2->signalForBill();
     
 
     floor->printTables();

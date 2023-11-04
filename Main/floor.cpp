@@ -3,10 +3,39 @@
 #include <iostream>
 
 using namespace std;
-Floor::Floor() {
+Floor::Floor(int numWaiters, Kitchen* kitchen) {
     this->tableCount = 0;
     this->vacantTables = 0;
     this->isFull = false;
+    this->kitchen = kitchen;
+    this->waiters = vector<PrototypeWaiter*>();
+    if (numWaiters > 0)
+    {
+        if (numWaiters == 1)
+        {   
+            PrototypeWaiter* waiter = new Waiter(kitchen, "Waiter-1", this);
+            this->waiters.push_back(waiter);
+        }
+        else
+        {
+            PrototypeWaiter* waiter = new Waiter(kitchen, "Waiter-1", this);
+            this->waiters.push_back(waiter);
+            for (int i = 2; i <= numWaiters; i++)
+            {
+                string name = "Waiter-" + to_string(i);
+                PrototypeWaiter* clone = waiter->clone();
+                clone->setName(name);
+                this->waiters.push_back(clone);
+                
+            }
+        }    
+    }
+    else
+    {
+        cout << "Invalid number of waiters" << endl;
+        exit(1);
+    }
+    
 }
 
 TableComponent* Floor::getTable(int tableID) {
@@ -18,11 +47,17 @@ TableComponent* Floor::getTable(int tableID) {
     return nullptr;
 }
 
+
+
 Floor::~Floor() {
     for (TableComponent* table : tables) {
         delete table;
     }
     this->tables.clear();
+    for (PrototypeWaiter* waiter : waiters) {
+        delete waiter;
+    }
+    this->waiters.clear();
 }
 
 void Floor::addTable(TableComponent* table) {
@@ -173,4 +208,13 @@ void Floor::vacateTable(int tableID){
             return;
         }
     }
+}
+
+void Floor::attachRandomWaiter(CustomerComponent* customers){
+    int choice = rand() % waiters.size();
+    PrototypeWaiter* waiter = waiters[choice];
+    if(customers != nullptr){
+        customers->attachWaiter(waiter);
+    }
+    cout << waiter->getName() << " attached to group " << customers->getID() << endl;
 }
