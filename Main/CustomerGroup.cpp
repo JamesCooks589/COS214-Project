@@ -26,6 +26,7 @@ Order* CustomerGroup::getOrder(){
 
     //Set up the list of orders to pack into one
     std::vector<Order*> orderVector = std::vector<Order*>();
+    std::cout << "<-----------Orders for Table: " << this->getTableID() << "----------->" << std::endl;
     for(CustomerComponent* ptr : this->customers){
         //Gets a vector of all orders from customers to pack into a single order
         orderVector.push_back(ptr->getOrder());
@@ -40,6 +41,8 @@ Order* CustomerGroup::getOrder(){
 
     //Clear orderVector when done to not hold dangling pointers
     orderVector.clear();
+
+    std::cout << endl;
 
     //Dummy return until fully implemented
     return new Order(this->getTableID(), bigOrder);

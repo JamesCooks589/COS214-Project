@@ -37,6 +37,9 @@ public:
     void vacateTable(int tableID);
     int const getMAX_TABLES();
     TableComponent* getRandomOccupiedTable();
+    int getNumVacantTables();
+    int getNumOccupiedTables();
+    int getNumTables();
 };
 
 #endif

@@ -217,7 +217,7 @@ void Floor::attachRandomWaiter(CustomerComponent* customers){
     if(customers != nullptr){
         customers->attachWaiter(waiter);
     }
-    cout << waiter->getName() << " attached to group " << customers->getID() << endl;
+    cout << waiter->getName() << " is serving group " << customers->getID() << endl;
 }
 
 TableComponent* Floor::getRandomOccupiedTable(){
@@ -232,4 +232,28 @@ TableComponent* Floor::getRandomOccupiedTable(){
         return occupiedTables[choice];
     }
     return nullptr;
+}
+
+int Floor::getNumVacantTables(){
+    int numVacantTables = 0;
+    for(TableComponent* table : tables){
+        if(!table->isOccupied()){
+            numVacantTables++;
+        }
+    }
+    return numVacantTables;
+}
+
+int Floor::getNumOccupiedTables(){
+    int numOccupiedTables = 0;
+    for(TableComponent* table : tables){
+        if(table->isOccupied()){
+            numOccupiedTables++;
+        }
+    }
+    return numOccupiedTables;
+}
+
+int Floor::getNumTables(){
+    return this->tables.size();
 }

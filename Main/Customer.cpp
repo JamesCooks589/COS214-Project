@@ -54,17 +54,19 @@ Order* Customer::getOrder() {
         myOrder.push_back(toppingIngredient->getName());
     }
     //Print customer order
-    std::cout << "Customer " << name << " ordered: ";
+    std::cout << name << " ordered: ";
     long unsigned int i = 0;
     for (std::string food : myOrder)
-    {
-        if (i == myOrder.size() - 1)
-        {
-            std::cout << food;
-        }
-        else
-        {
-            std::cout << food << ", ";
+    {   
+        if(i != 0){
+            if (i == myOrder.size() - 1)
+            {
+                std::cout << food;
+            }
+            else
+            {
+                std::cout << food << ", ";
+            }
         }
         i++;
     }
@@ -131,7 +133,7 @@ void Customer::payBill(double amount, bool split){
     double tipModifier = happinessAdjust/800.0; 
     double tip = amount * tipModifier;
     double total = amount + tip;
-    std::cout << "Customer" << name << " paid: " << std::fixed << std::setprecision(2) << "\033[1;33m" << "$" << total << "\033[0m" << " including tip: " << "\033[1;33m" << "$" << tip << "\033[0m" << std::endl;
+    std::cout << name << " paid: " << std::fixed << std::setprecision(2) << "\033[1;33m" << "$" << total << "\033[0m" << " including tip: " << "\033[1;33m" << "$" << tip << "\033[0m" << std::endl;
 }
 
 void Customer::chefVisit(){

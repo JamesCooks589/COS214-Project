@@ -64,7 +64,8 @@ void Waiter::billSignal(CustomerComponent* customer) {
             customer->payBill(bill->calculateTotalAmount(), true);
         }
         else{
-            std::cout << "Customers at table " << std::to_string(id) << " chose not to split the bill." << std::endl;
+            //cout not in red bold text
+            std::cout << "Customers at table " << std::to_string(id) << " chose \033[0;31mNOT\033[0m to split the bill." << std::endl;
             customer->payBill(bill->calculateTotalAmount(), false);
         }
         floor->vacateTable(customer->getTableID());

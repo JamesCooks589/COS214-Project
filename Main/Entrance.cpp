@@ -7,7 +7,7 @@ Entrance::Entrance(Floor *floor)
 
 void Entrance::addGroup(CustomerComponent *group)
 {
-    cout << "Customer group " << group->getID() << " added to queue" << endl;
+    cout << "Customer group " << group->getID() << " with size: " << group->getSize() << " showed up to the restaurant." << endl;
     queue.add(group);
 }
 void Entrance::removeGroup(CustomerComponent *group)

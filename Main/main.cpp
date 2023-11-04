@@ -31,25 +31,25 @@ int main() {
     
 
     CustomerComponent* group1 = new CustomerGroup(1);
-    for(int i = 1; i <= 2; i++){
+    for(int i = 1; i <= 10; i++){
         string name = "Customer-" + to_string(i);
         group1->addToGroup(new Customer(name,i));
     }
 
     CustomerComponent* group2 = new CustomerGroup(2);
-    for(int i = 1; i <= 2; i++){
+    for(int i = 1; i <= 5; i++){
         string name = "Customer-" + to_string(i);
         group2->addToGroup(new Customer(name,i));
     }
     
-    cout << "Group " << group1->getID() << " created with size " << to_string(group1->getSize()) << endl;
     entrance->addGroup(group1);
-    cout << "Group " << group2->getID() << " created with size " << to_string(group2->getSize()) << endl;
     entrance->addGroup(group2);
 
 
     entrance->seatGroup();
+    floor->printTables();
     entrance->seatGroup();
+    floor->printTables();
 
     kitchen->letChefVisitTable();
 
@@ -63,7 +63,15 @@ int main() {
     group2->signalForBill();
     
 
-    floor->printTables();
+    //if all tables vacant simply print all tables are vacant
+    if (floor->getNumVacantTables() == floor->getNumTables())
+    {
+        cout << "All tables are vacant" << endl;
+    }
+    else
+    {
+        cout << "Not all tables are vacant" << endl;
+    }
 
     delete kitchen;
     delete floor;
