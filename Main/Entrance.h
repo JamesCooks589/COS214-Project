@@ -15,4 +15,5 @@ public:
     void addGroup(CustomerComponent* group);
     void removeGroup(CustomerComponent* group);
     bool seatGroup();
+    bool isEmpty();
 };

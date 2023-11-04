@@ -85,8 +85,12 @@ bool Entrance::seatGroup()
         cout << "Customer group " << current->getGroup()->getID() << " not seated" << endl;
         return false;
     }
+
 }
-       
+
+bool Entrance::isEmpty(){
+    return queue.isEmpty();
+}       
         
 
 
