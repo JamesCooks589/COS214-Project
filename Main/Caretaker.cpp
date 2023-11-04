@@ -1,6 +1,8 @@
 #include "Caretaker.h"
 #include <algorithm>
 
+using namespace std;
+
 Caretaker& Caretaker::getInstance() {
     static Caretaker instance;
     return instance;

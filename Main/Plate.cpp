@@ -27,11 +27,12 @@ void Plate::addFood(string food){
 
 void Plate::printPlate(){
     //Print plate contents
+    int i = 0;
     cout << "Plate for " << this->customerName << " at table " << this->tableID << ": ";
     for (string food : this->food)
-    {
+    {        
         //If last item in vector, don't add comma
-        if (food == this->food.back())
+        if (i == this->food.size() - 1)
         {
             cout << food;
         }
@@ -39,7 +40,7 @@ void Plate::printPlate(){
         {
             cout << food << ", ";
         }
-        
+        i++;
     }
     cout << endl;
 }

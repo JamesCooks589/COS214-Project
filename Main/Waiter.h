@@ -11,25 +11,37 @@
 
 // class Waiter;
 class CustomerComponent;
+class Kitchen;
+class Floor;
 
-// class Prototype {
-// public:
-//     virtual std::unique_ptr<Prototype> clone() = 0;
-// };
+class PrototypeWaiter {
+public:
+    //Clone method
+    public:
+        virtual PrototypeWaiter* clone() = 0;
+        virtual void setName(std::string name) = 0;
+        virtual std::string getName() = 0;
+        virtual void orderSignal(CustomerComponent* customer) = 0;
+        virtual void billSignal(CustomerComponent* customer) = 0;
+        virtual void signalReadyOrder() = 0;
+};
 
-class Waiter{
+class Waiter : public PrototypeWaiter{
 private:
     // Menu* menu;
     Kitchen* kitchen;
     std::vector<Plate*> plates;
     std::string name;
+    Floor* floor;
 
 public:
-    Waiter(Kitchen* kitchen, std::string name);
-    //std::unique_ptr<Prototype> clone();
-    void update(std::string message);
+    Waiter(Kitchen* kitchen, std::string name, Floor* floor);
+    PrototypeWaiter* clone();
+    void setName(std::string name);
+    std::string getName();
     void orderSignal(CustomerComponent* customer);
     void billSignal(CustomerComponent* customer);
+    void signalReadyOrder();
     //void deliverOrder(Plate* p);
 };
 

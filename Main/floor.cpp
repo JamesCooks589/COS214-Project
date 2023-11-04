@@ -10,7 +10,7 @@ Floor::Floor() {
 }
 
 TableComponent* Floor::getTable(int tableID) {
-    for (TableComponent* component : tables) {
+    for (TableComponent* component : this->tables) {
         if (component->getID() == tableID) {
             return component;
         }
@@ -19,8 +19,8 @@ TableComponent* Floor::getTable(int tableID) {
 }
 
 void Floor::addTable(TableComponent* table) {
-    if (tables.size() < MAX_TABLES) {
-        tables.push_back(table);
+    if (this->tables.size() < MAX_TABLES) {
+        this->tables.push_back(table);
         tableCount++;
         vacantTables++;
     }

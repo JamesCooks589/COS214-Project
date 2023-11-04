@@ -4,14 +4,14 @@
 
 class OrderMemento {
 public:
-    OrderMemento(int tableNumber, std::vector<std::vector<std::string>> customerOrders, std::string orderDetails);
+    OrderMemento(int tableNumber, std::vector<std::vector<std::string>> customerOrders/*, std::string orderDetails*/);
     int getTableNumber() const;
     std::vector<std::vector<std::string>> getCustomerOrders() const;
-    std::string getOrderDetails() const;
+    //std::string getOrderDetails() const;
 
 private:
     int tableNumber;
     std::vector<std::vector<std::string>> customerOrders;
-    std::string orderDetails;
+    //std::string orderDetails;
 };
 

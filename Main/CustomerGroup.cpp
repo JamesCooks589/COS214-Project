@@ -1,5 +1,5 @@
 #include "CustomerGroup.h"
-
+#include <iomanip>
 CustomerGroup::CustomerGroup(int id) : CustomerComponent(id){};
 
 CustomerGroup::~CustomerGroup(){
@@ -28,9 +28,7 @@ Order* CustomerGroup::getOrder(){
     std::vector<Order*> orderVector = std::vector<Order*>();
     for(CustomerComponent* ptr : this->customers){
         //Gets a vector of all orders from customers to pack into a single order
-        Order* order = ptr->getOrder();
         orderVector.push_back(ptr->getOrder());
-        delete order;
     }
     std::vector<vector<string>> bigOrder = std::vector<std::vector<string>>();
     for(Order* ptr : orderVector){
@@ -100,17 +98,17 @@ void CustomerGroup::payBill(double amount, bool split){
         if(happiness < 0){
             happiness = 0;
         }
-        double tipModifier = happiness/800;
+        double tipModifier = happiness/800.0;
         double tip = amount * tipModifier;
-        double total = amount + tipModifier;
-        std::cout << "Customers at table: " << this->getTableID() << " have paid in total: " << std::to_string(total) << " including the tip of: " << std::to_string(tip) << std::endl;
+        double total = amount + tip;
+        //Print money paid with number in RGB 255,255,0 (yellow)
+        std::cout << "Customers at table: " << this->getTableID() << " have paid in total: " << std::fixed << std::setprecision(2) << "\033[1;33m" << "$" << total << "\033[0m" << " including tip: " << "\033[1;33m" << "$" << tip << "\033[0m" << std::endl;
     }
 }
 
 void CustomerGroup::split(double total){
-    int size = this->getSize();
-    int actualTotal = total/this->getSize();
+    double actualTotal = total/this->getSize();
     for(CustomerComponent* customer : this->customers){
-        customer->payBill(total, true);
+        customer->payBill(actualTotal, true);
     }
 }

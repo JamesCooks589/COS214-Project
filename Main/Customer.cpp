@@ -1,5 +1,6 @@
 #include "Customer.h"
 #include "IngredientFactory.h"
+#include <iomanip>
 
 Customer::Customer(std::string name, int id) : CustomerComponent(id){
     this->name = name;
@@ -52,7 +53,22 @@ Order* Customer::getOrder() {
         Ingredient* toppingIngredient = IngredientFactory::getIngredient(toppingName, 2.0);
         myOrder.push_back(toppingIngredient->getName());
     }
-    
+    //Print customer order
+    std::cout << "Customer " << name << " ordered: ";
+    long unsigned int i = 0;
+    for (std::string food : myOrder)
+    {
+        if (i == myOrder.size() - 1)
+        {
+            std::cout << food;
+        }
+        else
+        {
+            std::cout << food << ", ";
+        }
+        i++;
+    }
+    std::cout << std::endl;
     orderDetails.push_back(myOrder);
     return new Order(this->getTableID(), orderDetails);
 }
@@ -88,6 +104,15 @@ void Customer::givePlate(Plate* plate){
     }
     //eat the food, and the plate
     std::cout << this->name << " is eating." << std::endl;
+    //if happiness is above 100 set output text for happiness to green, if 70..100 set to yellow, if 0..70 set to red
+    if(happiness > 100){   
+        std::cout << this->name << " happiness level: " << "\033[1;32m" << happiness << "\033[0m" << std::endl;
+    }else if(happiness > 70){
+        std::cout << this->name << " happiness level: " << "\033[1;33m" << happiness << "\033[0m" << std::endl;
+    }else{
+        std::cout << this->name << " happiness level: " << "\033[1;31m" << happiness << "\033[0m" << std::endl;
+    }
+
     delete plate;
 }
 
@@ -96,8 +121,15 @@ int Customer::getHappiness(){
 }
 
 void Customer::payBill(double amount, bool split){
-    double tipModifier = happiness/800;
+    int happinessAdjust = this->getHappiness();
+    if(happinessAdjust > 200){
+        happinessAdjust = 200;
+    }
+    if(happinessAdjust < 0){
+        happinessAdjust = 0;
+    }
+    double tipModifier = happinessAdjust/800.0; 
     double tip = amount * tipModifier;
-    double total = amount + tipModifier;
-    std::cout << "Customer" << name << " paid:" << total << " including tip: " << tip << "for their share of the bill." << std::endl;
+    double total = amount + tip;
+    std::cout << "Customer" << name << " paid: " << std::fixed << std::setprecision(2) << "\033[1;33m" << "$" << total << "\033[0m" << " including tip: " << "\033[1;33m" << "$" << tip << "\033[0m" << std::endl;
 }

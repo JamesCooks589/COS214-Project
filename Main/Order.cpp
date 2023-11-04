@@ -94,12 +94,11 @@ string Order::getOrderDetails() {
 }
 
 OrderMemento Order::createMemento() {
-    return OrderMemento(tableNumber, customerOrders, orderDetails);
+    return OrderMemento(tableNumber, customerOrders);
 }
 
 void Order::restoreFromMemento(const OrderMemento& memento) {
     tableNumber = memento.getTableNumber();
     customerOrders = memento.getCustomerOrders();
-    orderDetails = memento.getOrderDetails();
 }
 

@@ -6,17 +6,23 @@
 #include "floor.h"
 #include <vector>
 #include <random>
-Waiter::Waiter(Kitchen* kitchen, std::string name){
+Waiter::Waiter(Kitchen* kitchen, std::string name, Floor* floor){
     this->kitchen = kitchen;
+    this->name = name;
+    this->floor = floor;
+}
+
+//Clone method
+PrototypeWaiter* Waiter::clone(){
+    return new Waiter(this->kitchen, this->name, this->floor);
+}
+
+void Waiter::setName(std::string name) {
     this->name = name;
 }
 
-// std::unique_ptr<Prototype> Waiter::clone() {
-//     return std::make_unique<Waiter>(kitchen);
-// }
-
-void Waiter::update(std::string message) {
-    // implement if we want to update what the waiter should do using an update method with a passed in msg
+std::string Waiter::getName() {
+    return this->name;
 }
 
 void Waiter::orderSignal(CustomerComponent* customer) {
@@ -24,13 +30,36 @@ void Waiter::orderSignal(CustomerComponent* customer) {
     
     Order* order = customer->getOrder();
 
-    kitchen->setOrder(order);
-    this->plates = kitchen->getPlates();
+    kitchen->setOrder(order, this);
+    // this->plates = kitchen->getPlates();
 
-    for(Plate* plate: plates){
-        customer->givePlate(plate);
+    // for(Plate* plate: plates){
+    //     customer->givePlate(plate);
+    // }
+
+}
+
+void Waiter::signalReadyOrder(){
+    this->plates = kitchen->getPlates();
+    int id = 0;
+    if(!this->plates.empty()){
+        id = this->plates[0]->getID();
     }
 
+    TableComponent* toDeliver = floor->getTable(id);
+
+    if(toDeliver != nullptr){
+        CustomerComponent* customer = toDeliver->getCustomers();
+        if(customer != nullptr){
+            for(Plate* plate: plates){
+                customer->givePlate(plate);
+            }
+        }
+    }
+    
+    // for(Plate* plate: plates){
+    //     customer->givePlate(plate);
+    // }
 }
 
 void Waiter::billSignal(CustomerComponent* customer) {
@@ -38,7 +67,7 @@ void Waiter::billSignal(CustomerComponent* customer) {
     
     int id = customer->getTableID();    
     try{
-        Bill* bill =  new Bill(id);
+        Bill* bill = new Bill(id);
         int choice = rand() % 2;
         if(choice == 0){
             std::cout << "Customers at table " << std::to_string(id) << " chose to split the bill." << std::endl;

@@ -31,10 +31,13 @@ Kitchen::~Kitchen() {
 }
 
 //Kitchen Handles one order at a time
-void Kitchen::setOrder(Order* order) {
+void Kitchen::setOrder(Order* order, Waiter* waiter) {
     if (this->order == nullptr)
     {      
         this->order = order;
+        //Create a memento of the order
+        Caretaker::getInstance().addMemento(this->order->createMemento());
+
 
         //Create plates
         this->createPlates();
@@ -47,7 +50,11 @@ void Kitchen::setOrder(Order* order) {
             this->chefChain->cookFood(orderDetails, this->plates[i]);
         }
 
+        //Signal waiter that order is ready
+        waiter->signalReadyOrder();
+
         //Reset order
+        delete order;
         this->order = nullptr;
     }
     else
