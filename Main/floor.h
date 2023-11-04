@@ -5,9 +5,10 @@
 #include "TableComponent.h"
 #include "TableGroup.h"
 #include "Waiter.h"
-#include "Kitchen.h"
 
 using namespace std;
+
+class Kitchen;
 
 class Floor {
 private:
@@ -35,6 +36,7 @@ public:
     void attachRandomWaiter(CustomerComponent* customers);
     void vacateTable(int tableID);
     int const getMAX_TABLES();
+    TableComponent* getRandomOccupiedTable();
 };
 
 #endif

@@ -4,7 +4,10 @@
 #include <iostream>
 #include "Plate.h"
 
+
 using namespace std;
+
+class CustomerComponent;
 
 class Chef
 {
@@ -15,5 +18,6 @@ public:
     virtual ~Chef();
     void Add(Chef* chef);
     virtual void cookFood(vector<string> orderDetails, Plate* plate);
+    void visit(CustomerComponent* visitCandidate);
 };
 

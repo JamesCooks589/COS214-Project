@@ -112,3 +112,9 @@ void CustomerGroup::split(double total){
         customer->payBill(actualTotal, true);
     }
 }
+
+void CustomerGroup::chefVisit(){
+    for(CustomerComponent* customer : this->customers){
+        customer->chefVisit();
+    }
+}

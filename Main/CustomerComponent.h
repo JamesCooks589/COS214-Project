@@ -31,4 +31,5 @@ class CustomerComponent{
         virtual void addToGroup(CustomerComponent* comp);
         virtual void payBill(double amount, bool split) = 0;
         virtual ~CustomerComponent();
+        virtual void chefVisit() = 0;
 };

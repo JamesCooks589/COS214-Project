@@ -17,4 +17,5 @@ class CustomerGroup : public CustomerComponent{
         int getSize();
         void payBill(double amount, bool split);
         void split(double total);
+        void chefVisit();
 };

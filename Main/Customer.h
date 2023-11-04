@@ -17,4 +17,5 @@ class Customer : public CustomerComponent{
         void setTableID(int id);
         int getHappiness();
         void payBill(double amount, bool split);
+        void chefVisit();
 };

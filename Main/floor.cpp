@@ -1,4 +1,5 @@
 #include "floor.h"
+#include "Kitchen.h"
 #include <algorithm>
 #include <iostream>
 
@@ -217,4 +218,18 @@ void Floor::attachRandomWaiter(CustomerComponent* customers){
         customers->attachWaiter(waiter);
     }
     cout << waiter->getName() << " attached to group " << customers->getID() << endl;
+}
+
+TableComponent* Floor::getRandomOccupiedTable(){
+    vector<TableComponent*> occupiedTables;
+    for(TableComponent* table : tables){
+        if(table->isOccupied()){
+            occupiedTables.push_back(table);
+        }
+    }
+    if(occupiedTables.size() > 0){
+        int choice = rand() % occupiedTables.size();
+        return occupiedTables[choice];
+    }
+    return nullptr;
 }

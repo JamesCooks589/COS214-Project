@@ -17,10 +17,9 @@ int main() {
     //Make floor
     Floor* floor = new Floor(10, kitchen);
 
+    kitchen->setFloor(floor);
+
     //Make waiter
-    PrototypeWaiter* waiter = new Waiter(kitchen, "Bob", floor);
-    PrototypeWaiter* waiter2 = waiter->clone();
-    waiter2->setName("Joe");
 
 
     for (int i = 1; i <= 10; i++) {
@@ -32,13 +31,13 @@ int main() {
     
 
     CustomerComponent* group1 = new CustomerGroup(1);
-    for(int i = 1; i <= 20; i++){
+    for(int i = 1; i <= 2; i++){
         string name = "Customer-" + to_string(i);
         group1->addToGroup(new Customer(name,i));
     }
 
     CustomerComponent* group2 = new CustomerGroup(2);
-    for(int i = 1; i <= 5; i++){
+    for(int i = 1; i <= 2; i++){
         string name = "Customer-" + to_string(i);
         group2->addToGroup(new Customer(name,i));
     }
@@ -51,14 +50,15 @@ int main() {
 
     entrance->seatGroup();
     entrance->seatGroup();
-    
+
+    kitchen->letChefVisitTable();
+
+
     //Let customers order
-    //group1->attachWaiter(waiter);
     group1->signalToOrder();
     group1->signalForBill();
 
     
-    //group2->attachWaiter(waiter2);
     group2->signalToOrder();
     group2->signalForBill();
     
@@ -67,8 +67,6 @@ int main() {
 
     delete kitchen;
     delete floor;
-    delete waiter;
-    delete waiter2;
     delete entrance;
     IngredientFactory::cleanup();
     return 0;

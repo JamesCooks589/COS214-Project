@@ -133,3 +133,7 @@ void Customer::payBill(double amount, bool split){
     double total = amount + tip;
     std::cout << "Customer" << name << " paid: " << std::fixed << std::setprecision(2) << "\033[1;33m" << "$" << total << "\033[0m" << " including tip: " << "\033[1;33m" << "$" << tip << "\033[0m" << std::endl;
 }
+
+void Customer::chefVisit(){
+    happiness += 20;
+}

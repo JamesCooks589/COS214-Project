@@ -1,4 +1,5 @@
 #include "Kitchen.h"
+#include "floor.h"
 
 Kitchen::Kitchen() {
     this->baseChefFactory = new BaseChef();
@@ -64,6 +65,10 @@ void Kitchen::setOrder(Order* order, PrototypeWaiter* waiter) {
 
 }
 
+void Kitchen::setFloor(Floor* floor) {
+    this->floor = floor;
+}
+
 //Get plates
 vector<Plate*> Kitchen::getPlates() {
     //Return plates using clone function
@@ -98,4 +103,12 @@ vector<string> Kitchen::splitOrder(int currentRow){
     return orderDetails;
 }
 
+
+void Kitchen::letChefVisitTable(){
+    //Get random occupied table
+    TableComponent* table = this->floor->getRandomOccupiedTable();
+    if (table != nullptr){
+        chefChain->visit(table->getCustomers());
+    }   
+}
     
