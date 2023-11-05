@@ -26,7 +26,7 @@ std::string Waiter::getName() {
 }
 
 void Waiter::orderSignal(CustomerComponent* customer) {
-    std::cout << name << ": Received signal to take order from table " << customer->getTableID() << "." << std::endl;
+    std::cout << "\033[1;35m"<< name << "\033[0m" << ": Received signal to take order from table " << customer->getTableID() << "." << std::endl;
     
     Order* order = customer->getOrder();
 
@@ -45,6 +45,8 @@ void Waiter::signalReadyOrder(){
     if(toDeliver != nullptr){
         CustomerComponent* customer = toDeliver->getCustomers();
         if(customer != nullptr){
+            cout << "\033[1;35m"<< name << "\033[0m" << ": Delivering order to table " << customer->getTableID() << "." << endl;
+            
             for(Plate* plate: plates){
                 customer->givePlate(plate);
             }
@@ -53,7 +55,7 @@ void Waiter::signalReadyOrder(){
 }
 
 void Waiter::billSignal(CustomerComponent* customer) {
-    std::cout << name << ": Received signal to deliver bill to table " << customer->getTableID() << "." << std::endl;
+    std::cout << "\033[1;35m"<< name << "\033[0m" << ": Received signal to deliver bill to table " << customer->getTableID() << "." << std::endl;
     
     int id = customer->getTableID();    
     try{
@@ -76,27 +78,3 @@ void Waiter::billSignal(CustomerComponent* customer) {
         delete e;
     }
 }
-
-// void Waiter::deliverOrder(Plate* p) {
-//     int tableID = p->getID();
-
-//     TableComponent* table = floor->getTable(tableID);
-    
-//     if (table != nullptr && table->isOccupied()) {
-//         std::cout << "Waiter " << this << ": Delivering order to table " << tableID << "." << std::endl;
-//         for(Plate* pp : plates){
-//             if(pp == p){
-//                 CustomerComponent* customer = table->getCustomers();
-//                 customer->givePlate(pp);
-
-//                 plates.erase(std::remove(plates.begin(), plates.end(), pp), plates.end());
-
-//                 break;
-//             }
-//         }
-        
-//     } 
-//     else {
-//         std::cout << "Error: No occupied table found with this ID." << std::endl;
-//     }
-// }

@@ -77,6 +77,7 @@ void CustomerGroup::givePlate(Plate* plate){
             return;
         }
     }
+
 }
 
 int CustomerGroup::getHappiness(){
@@ -117,6 +118,7 @@ void CustomerGroup::split(double total){
 }
 
 void CustomerGroup::chefVisit(){
+    cout << "\033[1;32m" << "Chef visited table " << this->getTableID() << "\033[0m" << endl;
     for(CustomerComponent* customer : this->customers){
         customer->chefVisit();
     }

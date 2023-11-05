@@ -54,7 +54,7 @@ Order* Customer::getOrder() {
         myOrder.push_back(toppingIngredient->getName());
     }
     //Print customer order
-    std::cout << name << " ordered: ";
+    std::cout << '\t' << name << " ordered: ";
     long unsigned int i = 0;
     for (std::string food : myOrder)
     {   

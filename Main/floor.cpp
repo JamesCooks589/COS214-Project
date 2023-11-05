@@ -83,6 +83,11 @@ void Floor::removeTable(TableComponent* table) {
 }
 
 TableComponent* Floor::mergeTables(int groupSize) {
+    //Cout in blue
+    cout << "\033[1;34m";
+    cout << "///// Merging tables to accomodate group of size " << groupSize << " /////" << endl;
+    cout << "\033[0m";
+    vector<int> tableIDs;
     if(groupSize > this->getVacantCapacity()){
         return nullptr;
     }
@@ -99,11 +104,11 @@ TableComponent* Floor::mergeTables(int groupSize) {
                 group = new TableGroup((*it)->getID());
                 group->addToGroup(*it);
                 it = tables.erase(it);
-                cout << "Added table " << group->getID() << " to group " << group->getID() << endl;
+                tableIDs.push_back(group->getID());
             }
             else{
                  group->addToGroup(*it);
-                 cout << "Added table " << (*it)->getID() << " to group " << group->getID() << endl;
+                 tableIDs.push_back((*it)->getID());
                  it = tables.erase(it);
             }
             
@@ -114,7 +119,11 @@ TableComponent* Floor::mergeTables(int groupSize) {
     }
     if(group != nullptr){
         this->tables.push_back(group);
-        cout << "Group " << group->getID() << " created" << endl;
+        cout << "Table group: " << group->getID() << " created with tables: ";
+        for(int id : tableIDs){
+            cout << id << " ";
+        }
+        cout << endl;
         return group;
     }
     return nullptr;
@@ -172,10 +181,10 @@ void Floor::printTables() {
     
     for (TableComponent* table : tables) {
         if(table->isOccupied()){
-            cout << "Table " << table->getID() << " has capacity " << table->getCapacity() << ": occupied by " << table->getCustomers()->getSize() << endl;
+            cout << "Table " << table->getID() << " has capacity " << table->getCapacity() << ": " << "\033[1;33m" << "occupied " << "\033[0m" << "by " << table->getCustomers()->getSize() << " customers" << endl;
         }
         else{
-            cout << "Table " << table->getID() << " has capacity " << table->getCapacity() << ": vacant" << endl;
+            cout << "Table " << table->getID() << " has capacity " << table->getCapacity() << ": " << "\033[1;32m" << "vacant" << "\033[0m" << endl;
         }
     }
 }
@@ -201,7 +210,7 @@ void Floor::vacateTable(int tableID){
             if(table->getCapacity() > 2){
                 this->splitTables(tableID);
             }
-            cout << "Table " << tableID << " vacated" << endl;
+            cout << "\033[1;34m" << "Table " << tableID << " vacated" << "\033[0m" << endl;
             if(isFull){
                 isFull = false;
             }
@@ -217,7 +226,7 @@ void Floor::attachRandomWaiter(CustomerComponent* customers){
     if(customers != nullptr){
         customers->attachWaiter(waiter);
     }
-    cout << waiter->getName() << " is serving group " << customers->getID() << endl;
+    cout << "\033[1;35m"<< waiter->getName() << "\033[0m" <<" is serving group " << customers->getID() << endl;
 }
 
 TableComponent* Floor::getRandomOccupiedTable(){

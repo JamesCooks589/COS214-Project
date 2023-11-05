@@ -26,14 +26,19 @@ void Chef::Add(Chef* chef){
 
 void Chef::visit(CustomerComponent* visit){
     if(next == nullptr){
+        cout << "\033[1;32m";
         cout << "Chef is visiting customers at table " << to_string(visit->getTableID()) << endl;
+        cout << "\033[0m";
+
         visit->chefVisit();
     }
     else{
         //Random chance that it visits the customer
         int chance = rand() % 10 + 1;
         if(chance <= 1){
+            cout << "\033[1;32m";
             cout << "Chef is visiting customers at table " << to_string(visit->getTableID()) << endl;
+            cout << "\033[0m";
             visit->chefVisit();
         }
         else{
