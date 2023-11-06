@@ -4,8 +4,8 @@
 *        This file contains the declaration of the Bill class,
 *        which represents a bill for a customer's order,
 *        including functions to calculate total amount and print the bill.
-* @author [Author Name]
-* @date [Creation Date]
+* @author [Ze-Lin Zhang]
+* @date [28/10/23]
 */
 
 #pragma once
