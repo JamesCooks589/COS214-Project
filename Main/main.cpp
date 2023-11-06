@@ -1,3 +1,11 @@
+/**
+ * @file main.cpp
+ * @brief Main file for the pizzeria simulation program.
+ *        This file contains the entry point of the program and the main logic for simulating the restaurant operations.
+ * @author [Author Name]
+ * @date [Creation Date]
+ */
+
 /*Comment out the pizza we are not creating*/
 #include "Kitchen.h"
 #include "Entrance.h"

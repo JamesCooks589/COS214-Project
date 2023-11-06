@@ -1,6 +1,20 @@
+/**
+ * @file Bill.cpp
+ * @brief Implementation file for the Bill class.
+ *        This file contains the implementation of methods to manage restaurant bills.
+ * @author [Author Name]
+ * @date [Creation Date]
+ */
+
 #include "Bill.h"
 #include <iostream>
 
+/**
+ * @brief Constructor for the Bill class.
+ * Retrieves order details from OrderMemento and initializes the Bill object.
+ * @param orderId The unique identifier for the order.
+ * @throws std::runtime_error if there is an error retrieving order details.
+ */
 Bill::Bill(int orderId) : orderId(orderId), totalAmount(0.0) {
     // Retrieve OrderMemento from Caretaker
     try {
@@ -18,6 +32,10 @@ Bill::Bill(int orderId) : orderId(orderId), totalAmount(0.0) {
     }
 }
 
+/**
+ * @brief Calculates the total amount of the bill based on the food items ordered.
+ * @return The total amount of the bill.
+ */
 double Bill::calculateTotalAmount() {
     totalAmount = 50; // Base cost
     for (const auto& itemName : foodItems) {
@@ -28,6 +46,9 @@ double Bill::calculateTotalAmount() {
     return totalAmount;
 }
 
+/**
+ * @brief Prints the bill details including order ID, food items, and total amount.
+ */
 void Bill::printBill() {
     std::cout << "Order ID: " << orderId << std::endl;
     std::cout << "Food Items:" << std::endl;

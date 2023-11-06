@@ -1,3 +1,11 @@
+/**
+ * @file IngredientFactory.cpp
+ * @brief Implementation file for the IngredientFactory class.
+ *        This file contains the implementation of methods to create and manage ingredients using the IngredientFactory class.
+ * @author [Author Name]
+ * @date [Creation Date]
+ */
+
 #include "IngredientFactory.h"
 
 std::unordered_map<std::string, Ingredient*> IngredientFactory::ingredientPool;

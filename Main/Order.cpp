@@ -1,3 +1,11 @@
+/**
+ * @file Order.cpp
+ * @brief Implementation file for the Order class.
+ *        This file contains the implementation of methods to handle restaurant orders.
+ * @author [Author Name]
+ * @date [Creation Date]
+ */
+
 #include "Order.h"
 
 Order::Order(int tableNumber, vector<vector<string>> customerOrders) {

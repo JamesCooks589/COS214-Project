@@ -1,3 +1,11 @@
+/**
+ * @file Meat.cpp
+ * @brief Implementation file for the Meat class.
+ *        This file contains the implementation of methods to cook Meat-based dishes and add them to the plate.
+ * @author [Author Name]
+ * @date [Creation Date]
+ */
+
 #include "Meat.h"
 #include <iostream>
 

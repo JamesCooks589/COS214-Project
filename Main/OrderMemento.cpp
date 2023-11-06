@@ -1,3 +1,11 @@
+/**
+ * @file OrderMemento.cpp
+ * @brief Implementation file for the OrderMemento class.
+ *        This file contains the implementation of methods to handle order mementos.
+ * @author [Author Name]
+ * @date [Creation Date]
+ */
+
 #include "OrderMemento.h"
 
 OrderMemento::OrderMemento(int tableNumber, std::vector<std::vector<std::string>> customerOrders/*, std::string orderDetails*/)

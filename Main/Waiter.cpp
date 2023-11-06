@@ -1,4 +1,12 @@
-#include "Waiter.h"
+/**
+ * @file Waiter.cpp
+ * @brief Implementation file for the Waiter class.
+ *        This file contains the implementation of methods to handle waiter actions.
+ * @author [Author Name]
+ * @date [Creation Date]
+ */
+ 
+ #include "Waiter.h"
 #include "Order.h" 
 #include "Kitchen.h"
 #include "Bill.h"

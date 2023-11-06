@@ -1,3 +1,11 @@
+/**
+ * @file Entrance.cpp
+ * @brief Implementation file for the Entrance class.
+ *        This file contains the implementation of methods related to managing customer groups at the restaurant entrance.
+ * @author [Author Name]
+ * @date [Creation Date]
+ */
+
 #include "Entrance.h"
 
 Entrance::Entrance(Floor *floor)

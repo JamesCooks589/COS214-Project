@@ -1,5 +1,12 @@
+/**
+ * @file LinkedList.cpp
+ * @brief Implementation file for the LinkedList class.
+ *        This file contains the implementation of methods to manage a linked list of customer groups.
+ * @author [Author Name]
+ * @date [Creation Date]
+ */
+ 
 #include "LinkedList.h"
-
 
 LinkedList::LinkedList() {
     head = nullptr;

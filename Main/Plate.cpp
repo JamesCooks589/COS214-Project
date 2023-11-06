@@ -1,3 +1,11 @@
+/**
+ * @file Plate.cpp
+ * @brief Implementation file for the Plate class.
+ *        This file contains the implementation of methods to handle plate information.
+ * @author [Author Name]
+ * @date [Creation Date]
+ */
+
 #include "Plate.h"
 
 Plate::Plate(int tableID, string customerName){

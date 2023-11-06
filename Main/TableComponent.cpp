@@ -1,3 +1,10 @@
+/*
+ * File: TableComponent.cpp
+ * Author: [Author Name]
+ * Created on: [Creation Date]
+ * Description: Implementation file for the TableComponent class. Contains the member function definitions.
+ */
+
 #include "TableComponent.h"
 #include <iostream>
 

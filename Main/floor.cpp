@@ -1,3 +1,11 @@
+/**
+ * @file Floor.cpp
+ * @brief Implementation file for the Floor class.
+ *        This file contains the implementation of methods related to managing tables and waiters on the restaurant floor.
+ * @author [Author Name]
+ * @date [Creation Date]
+ */
+
 #include "floor.h"
 #include "Kitchen.h"
 #include <algorithm>

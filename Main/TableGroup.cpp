@@ -1,4 +1,12 @@
-#include "TableGroup.h"
+/**
+ * @file TableGroup.cpp
+ * @brief Implementation file for the TableGroup class.
+ *        This file contains the implementation of methods to handle table group operations.
+ * @author [Author Name]
+ * @date [Creation Date]
+ */
+ 
+ #include "TableGroup.h"
 
 void TableGroup::addToGroup(TableComponent* tableToAdd){
     if(tableToAdd != nullptr){
