@@ -3,8 +3,8 @@
 * @brief Implementation file for the ChefFactory class.
 *        This file contains the implementation of functions to create
 *        different types of pizzas using the ChefFactory class.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Yi-Rou Hung
+* @date 22/10/2023
 */
 
 #include "BaseChef.h"
