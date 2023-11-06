@@ -1,0 +1,14 @@
+---
+Checks: '-*,readability-identifier-naming'
+CheckOptions:
+  - key: readability-identifier-naming.VariableCase
+    value: camelCase
+  - key: readability-identifier-naming.FunctionCase
+    value: camelCase
+  - key: readability-identifier-naming.ClassCase
+    value: PascalCase
+  - key: readability-identifier-naming.ConstantCase
+    value: UPPER_CASE_WITH_UNDERSCORES
+  - key: readability-identifier-naming.EnumCase
+    value: PascalCase
+...
