@@ -3,8 +3,8 @@
 * @brief Declaration of the OrderMemento class.
 *        This file contains the declaration of the OrderMemento class,
 *        which represents a memento containing the state of a customer order.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Quintin d'Hotman de Villiers
+* @date 2023/10/20
 */
 
 #pragma once
