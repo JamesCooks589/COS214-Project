@@ -2,8 +2,8 @@
  * @file Order.cpp
  * @brief Implementation file for the Order class.
  *        This file contains the implementation of methods to handle restaurant orders.
- * @author [Author Name]
- * @date [Creation Date]
+ * @author [Ze-Lin Zhang]
+ * @date [28/10/23]
  */
 
 #include "Order.h"
