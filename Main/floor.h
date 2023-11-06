@@ -3,8 +3,8 @@
 * @brief Declaration of the Floor class.
 *        This file contains the declaration of the Floor class,
 *        which represents the floor of the restaurant with tables and waiters.
-* @author [Author Name]
-* @date [Creation Date]
+* @author James Cooks and Lloyd Creighton
+* @date 30/10/2023
 */
 
 #pragma once
