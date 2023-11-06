@@ -4,7 +4,7 @@
 *        This file contains the declaration of the Waiter class,
 *        which represents a waiter in the restaurant derived from PrototypeWaiter.
 * @author Carter Shin
-* @date 4 November 2023
+* @date 1 November 2023
 */
 
 #pragma once
