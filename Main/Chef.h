@@ -3,8 +3,8 @@
 * @brief Declaration of the Chef class.
 *        This file contains the declaration of the Chef class,
 *        which represents a chef capable of cooking food and handling orders.
-* @author [Author Name]
-* @date [Creation Date]
+* @author James Cooks
+* @date 27/10/2023
 */
 
 #pragma once
