@@ -12,6 +12,12 @@
 #include <iostream>
 
 using namespace std;
+
+/**
+ * @brief Constructor for the Floor class.
+ * @param numWaiters Number of waiters to be initialized on the floor.
+ * @param kitchen Pointer to the Kitchen object associated with the floor.
+ */
 Floor::Floor(int numWaiters, Kitchen* kitchen) {
     this->tableCount = 0;
     this->vacantTables = 0;
@@ -56,8 +62,9 @@ TableComponent* Floor::getTable(int tableID) {
     return nullptr;
 }
 
-
-
+/**
+ * @brief Destructor for the Floor class.
+ */
 Floor::~Floor() {
     for (TableComponent* table : tables) {
         delete table;
@@ -69,6 +76,10 @@ Floor::~Floor() {
     this->waiters.clear();
 }
 
+/**
+ * @brief Adds a table to the floor.
+ * @param table Pointer to the TableComponent object representing the table to be added.
+ */
 void Floor::addTable(TableComponent* table) {
     if (this->tables.size() < MAX_TABLES) {
         this->tables.push_back(table);
@@ -80,6 +91,10 @@ void Floor::addTable(TableComponent* table) {
     }
 }
 
+/**
+ * @brief Removes a table from the floor.
+ * @param table Pointer to the TableComponent object representing the table to be removed.
+ */
 void Floor::removeTable(TableComponent* table) {
     for (long unsigned int i = 0; i < tables.size(); i++) {
         if (tables[i]->getID() == table->getID()) {
@@ -90,6 +105,11 @@ void Floor::removeTable(TableComponent* table) {
     }
 }
 
+/**
+ * @brief Merges tables to accommodate a larger group.
+ * @param groupSize Size of the customer group to be accommodated.
+ * @return Pointer to the TableComponent object representing the merged table group, or nullptr if merge is not possible.
+ */
 TableComponent* Floor::mergeTables(int groupSize) {
     //Cout in blue
     cout << "\033[1;34m";

@@ -11,10 +11,18 @@
 
 using namespace std;
 
+/**
+ * @brief Default constructor for the Flour class.
+ */
 Flour::Flour(/* args */)
 {
 }
 
+/**
+ * @brief Cooks food items based on flour and adds them to the plate.
+ * @param orderDetails A vector containing the food items to be cooked.
+ * @param plate Pointer to the Plate object where cooked food items are added.
+ */
 void Flour::cookFood(vector<string> orderDetails, Plate* plate){
     for (string food : orderDetails)
     {

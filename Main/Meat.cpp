@@ -11,10 +11,18 @@
 
 using namespace std;
 
+/**
+ * @brief Default constructor for the Meat class.
+ */
 Meat::Meat(/* args */)
 {
 }
 
+/**
+ * @brief Cooks Meat-based dishes and adds them to the plate based on order details.
+ * @param orderDetails A vector of strings representing the ordered dishes.
+ * @param plate Pointer to the Plate object to which the cooked dishes are added.
+ */
 void Meat::cookFood(vector<string> orderDetails, Plate* plate){
     for (string food : orderDetails)
     {

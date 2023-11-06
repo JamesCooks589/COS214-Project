@@ -8,21 +8,38 @@
 
 #include "Entrance.h"
 
+/**
+ * @brief Constructor for the Entrance class.
+ * @param floor Pointer to the Floor object representing the restaurant floor.
+ */
 Entrance::Entrance(Floor *floor)
 {
     this->floor = floor;
 }
 
+/**
+ * @brief Adds a customer group to the entrance queue.
+ * @param group Pointer to the CustomerComponent object representing the customer group.
+ */
 void Entrance::addGroup(CustomerComponent *group)
 {
     cout << "Customer group " << group->getID() << " with size: " << group->getSize() << " showed up to the restaurant." << endl;
     queue.add(group);
 }
+
+/**
+ * @brief Removes a customer group from the entrance queue.
+ * @param group Pointer to the CustomerComponent object representing the customer group.
+ */
 void Entrance::removeGroup(CustomerComponent *group)
 {
     queue.remove(group);
 }
 
+/**
+ * @brief Attempts to seat a customer group from the entrance queue based on available tables.
+ * @return True if the group is successfully seated, false otherwise.
+ */
 bool Entrance::seatGroup()
 {
     if (queue.isEmpty())
@@ -96,6 +113,10 @@ bool Entrance::seatGroup()
 
 }
 
+/**
+ * @brief Checks if the entrance queue is empty.
+ * @return True if the queue is empty, false otherwise.
+ */
 bool Entrance::isEmpty(){
     return queue.isEmpty();
 }       

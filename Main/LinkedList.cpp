@@ -8,10 +8,18 @@
  
 #include "LinkedList.h"
 
+/**
+ * @brief Constructor for the LinkedList class.
+ *        Initializes the head pointer to nullptr.
+ */
 LinkedList::LinkedList() {
     head = nullptr;
 }
 
+/**
+ * @brief Destructor for the LinkedList class.
+ *        Deletes all nodes in the linked list to prevent memory leaks.
+ */
 LinkedList::~LinkedList() {
     Node* current = head;
     while (current != nullptr) {
@@ -22,10 +30,18 @@ LinkedList::~LinkedList() {
     delete current;
 }
 
+/**
+ * @brief Returns a new GroupIterator object to iterate through the linked list.
+ * @return Pointer to the GroupIterator object.
+ */
 GroupIterator* LinkedList::getIterator() {
     return iterator = new GroupIterator(head);
 }
 
+/**
+ * @brief Adds a new customer group to the end of the linked list.
+ * @param group Pointer to the CustomerComponent object representing the customer group to be added.
+ */
 void LinkedList::add(CustomerComponent* group) {
     Node* newNode = new Node(group);
     if (head == nullptr) {
@@ -39,6 +55,10 @@ void LinkedList::add(CustomerComponent* group) {
     }
 }
 
+/**
+ * @brief Removes a customer group from the linked list based on its ID.
+ * @param group Pointer to the CustomerComponent object representing the customer group to be removed.
+ */
 void LinkedList::remove(CustomerComponent* group) {
     if (head == nullptr) {
         return;
@@ -61,6 +81,9 @@ void LinkedList::remove(CustomerComponent* group) {
     }
 }
 
+/**
+ * @brief Prints the IDs of customer groups in the linked list.
+ */
 void LinkedList::printList(){
     Node* current = head;
     while (current != nullptr) {
@@ -69,10 +92,18 @@ void LinkedList::printList(){
     }
 }
 
+/**
+ * @brief Retrieves the head node of the linked list.
+ * @return Pointer to the head node of the linked list.
+ */
 Node* LinkedList::getHead(){
     return head;
 }
 
+/**
+ * @brief Checks if the linked list is empty.
+ * @return True if the linked list is empty, false otherwise.
+ */
 bool LinkedList::isEmpty(){
     if(head == nullptr){
         return true;

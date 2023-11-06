@@ -9,6 +9,10 @@
 #include "Kitchen.h"
 #include "floor.h"
 
+/**
+ * @brief Constructor for the Kitchen class.
+ *        Initializes chef factories, creates the chain of responsibility, and initializes plates and order.
+ */
 Kitchen::Kitchen() {
     this->baseChefFactory = new BaseChef();
     this->toppingChefFactory = new ToppingChef();
@@ -25,6 +29,10 @@ Kitchen::Kitchen() {
     this->order = nullptr;
 }
 
+/**
+ * @brief Destructor for the Kitchen class.
+ *        Deletes chef factories, the chain of responsibility, and plates to prevent memory leaks.
+ */
 Kitchen::~Kitchen() {
     //Delete factories
     delete this->baseChefFactory;
@@ -39,7 +47,11 @@ Kitchen::~Kitchen() {
     }
 }
 
-//Kitchen Handles one order at a time
+/**
+ * @brief Sets the current order in the kitchen, processes it, and notifies the waiter when the order is ready.
+ * @param order Pointer to the Order object containing customer orders.
+ * @param waiter Pointer to the PrototypeWaiter serving the order.
+ */
 void Kitchen::setOrder(Order* order, PrototypeWaiter* waiter) {
     if (this->order == nullptr)
     {      
@@ -73,11 +85,18 @@ void Kitchen::setOrder(Order* order, PrototypeWaiter* waiter) {
 
 }
 
+/**
+ * @brief Sets the floor object associated with the kitchen.
+ * @param floor Pointer to the Floor object representing the restaurant floor.
+ */
 void Kitchen::setFloor(Floor* floor) {
     this->floor = floor;
 }
 
-//Get plates
+/**
+ * @brief Gets the prepared plates, clones them, and returns the cloned plates to the waiter.
+ * @return A vector of cloned Plate objects representing the prepared dishes for customers.
+ */
 vector<Plate*> Kitchen::getPlates() {
     //Return plates using clone function
     vector<Plate*> OutPlates = vector<Plate*>();
@@ -94,6 +113,9 @@ vector<Plate*> Kitchen::getPlates() {
 
 //HELPER FUNCTIONS
 
+/**
+ * @brief Creates plates for each customer in the order and assigns names and table numbers to the plates.
+ */
 void Kitchen::createPlates() {
     //Create plate for each row(customer) in order and assign name and table number
     for (size_t i = 0; i < this->order->getCustomerOrders().size(); ++i) {
@@ -101,6 +123,11 @@ void Kitchen::createPlates() {
     }
 }
 
+/**
+ * @brief Splits the order details for a specific customer from the overall order.
+ * @param currentRow Index of the customer's order details in the overall order.
+ * @return A vector of strings representing the order details for the specific customer.
+ */
 vector<string> Kitchen::splitOrder(int currentRow){
     //OrderDetails is a 2d vector of strings e.g [["COUSTOMER 1", "Flour", "Cheese"], ["COUSTOMER 2", "Flour", "Cheese"]]
     //Split order details into seperate vectors for each customer
@@ -111,7 +138,9 @@ vector<string> Kitchen::splitOrder(int currentRow){
     return orderDetails;
 }
 
-
+/**
+ * @brief Lets a chef visit a random occupied table in the restaurant floor.
+ */
 void Kitchen::letChefVisitTable(){
     //Get random occupied table
     TableComponent* table = this->floor->getRandomOccupiedTable();

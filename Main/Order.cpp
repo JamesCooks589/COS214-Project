@@ -8,6 +8,11 @@
 
 #include "Order.h"
 
+/**
+ * @brief Constructor for the Order class.
+ * @param tableNumber The number of the table placing the order.
+ * @param customerOrders A vector containing customer-wise order details.
+ */
 Order::Order(int tableNumber, vector<vector<string>> customerOrders) {
     this->tableNumber = tableNumber;
     this->customerOrders = customerOrders;
@@ -29,6 +34,11 @@ Order::Order(int tableNumber, vector<vector<string>> customerOrders) {
     }
 }
 
+/**
+ * @brief Checks if the given order details are valid.
+ * @param orderDetails A vector containing food items for a customer's order.
+ * @return true if all ingredients in orderDetails are valid, false otherwise.
+ */
 bool Order::IsValidOrderDetails(vector<string> orderDetails) {
     // Define a list of valid ingredients
     vector<string> validIngredients = {"Flour", "Cheese", "Meat", "Veggies"};
@@ -57,8 +67,13 @@ bool Order::IsValidOrderDetails(vector<string> orderDetails) {
     return true;
 }
 
-
 //HELPER
+
+/**
+ * @brief Trims leading and trailing spaces from a string.
+ * @param str The string to be trimmed.
+ * @return The trimmed string.
+ */
 string Order::trim(const string& str) {
     // Trim leading and trailing spaces from a string
     size_t first = str.find_first_not_of(" \t\n");
@@ -69,7 +84,9 @@ string Order::trim(const string& str) {
     return str.substr(first, (last - first + 1));
 }
 
-// Method to print order details
+/**
+ * @brief Prints the order details to the console.
+ */
 void Order::printOrder() {
      cout << "Order from Table " << tableNumber << ":\n";
     for (std::vector<std::vector<std::string>>::size_type i = 0; i < customerOrders.size(); i++) {
@@ -86,25 +103,42 @@ void Order::printOrder() {
     }
 }
 
-// Method to get table number
+/**
+ * @brief Gets the table number associated with the order.
+ * @return The table number.
+ */
 int Order::getTableNumber() {
     return tableNumber;
 }
 
-// Method to get customer orders
+/**
+ * @brief Gets the customer orders.
+ * @return A vector containing customer-wise order details.
+ */
 vector<vector<string>> Order::getCustomerOrders() {
     return customerOrders;
 }
 
-// Method to get order details
+/**
+ * @brief Gets the order details.
+ * @return A string containing the order details.
+ */
 string Order::getOrderDetails() {
     return orderDetails;
 }
 
+/**
+ * @brief Creates a memento of the current order state.
+ * @return An OrderMemento object representing the current order state.
+ */
 OrderMemento Order::createMemento() {
     return OrderMemento(tableNumber, customerOrders);
 }
 
+/**
+ * @brief Restores the order state from a given memento.
+ * @param memento The OrderMemento object containing the desired order state.
+ */
 void Order::restoreFromMemento(const OrderMemento& memento) {
     tableNumber = memento.getTableNumber();
     customerOrders = memento.getCustomerOrders();

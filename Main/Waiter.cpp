@@ -6,7 +6,7 @@
  * @date 4 November 2023
  */
  
- #include "Waiter.h"
+#include "Waiter.h"
 #include "Order.h" 
 #include "Kitchen.h"
 #include "Bill.h"
@@ -14,25 +14,47 @@
 #include "floor.h"
 #include <vector>
 #include <random>
+
+/**
+ * @brief Constructor for the Waiter class.
+ * @param kitchen Pointer to the Kitchen object associated with the waiter.
+ * @param name The name of the waiter.
+ * @param floor Pointer to the Floor object associated with the waiter.
+ */
 Waiter::Waiter(Kitchen* kitchen, std::string name, Floor* floor){
     this->kitchen = kitchen;
     this->name = name;
     this->floor = floor;
 }
 
-//Clone method
+/**
+ * @brief Clone the Waiter object, creating a new Waiter with the same kitchen, name, and floor.
+ * @return A cloned Waiter object.
+ */
 PrototypeWaiter* Waiter::clone(){
     return new Waiter(this->kitchen, this->name, this->floor);
 }
 
+/**
+ * @brief Set the name of the waiter.
+ * @param name The new name for the waiter.
+ */
 void Waiter::setName(std::string name) {
     this->name = name;
 }
 
+/**
+ * @brief Get the name of the waiter.
+ * @return The name of the waiter.
+ */
 std::string Waiter::getName() {
     return this->name;
 }
 
+/**
+ * @brief Receive a signal to take the order from the customer and pass the order to the kitchen.
+ * @param customer Pointer to the CustomerComponent object placing the order.
+ */
 void Waiter::orderSignal(CustomerComponent* customer) {
     std::cout << "\033[1;35m"<< name << "\033[0m" << ": Received signal to take order from table " << customer->getTableID() << "." << std::endl;
     
@@ -41,6 +63,9 @@ void Waiter::orderSignal(CustomerComponent* customer) {
     kitchen->setOrder(order, this);
 }
 
+/**
+ * @brief Receive a signal that the order is ready and deliver the order to the customer.
+ */
 void Waiter::signalReadyOrder(){
     this->plates = kitchen->getPlates();
     int id = 0;
@@ -62,6 +87,10 @@ void Waiter::signalReadyOrder(){
     }
 }
 
+/**
+ * @brief Receive a signal to deliver the bill to the customer and handle the payment process.
+ * @param customer Pointer to the CustomerComponent object to whom the bill is delivered.
+ */
 void Waiter::billSignal(CustomerComponent* customer) {
     std::cout << "\033[1;35m"<< name << "\033[0m" << ": Received signal to deliver bill to table " << customer->getTableID() << "." << std::endl;
     
