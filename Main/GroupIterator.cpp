@@ -2,8 +2,8 @@
  * @file GroupIterator.cpp
  * @brief Implementation file for the GroupIterator class.
  *        This file contains the implementation of the GroupIterator class methods for iterating over customer groups in a linked list.
- * @author [Author Name]
- * @date [Creation Date]
+* @author Qwinton Knocklein
+* @date 27/10/2023
  */
 
 #include "GroupIterator.h"
