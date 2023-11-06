@@ -2,8 +2,8 @@
  * @file Waiter.cpp
  * @brief Implementation file for the Waiter class.
  *        This file contains the implementation of methods to handle waiter actions.
- * @author [Carter Shin]
- * @date [2023/11/4]
+ * @author Carter Shin
+ * @date 4 November 2023
  */
  
  #include "Waiter.h"
