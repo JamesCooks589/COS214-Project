@@ -3,8 +3,8 @@
 * @brief Declaration of the Vegan class.
 *        This file contains the declaration of the Vegan class,
 *        which represents a vegan pizza derived from PizzaCreator.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Yi-Rou Hung
+* @date 23/10/2023
 */
 
 #pragma once
