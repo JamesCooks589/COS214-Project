@@ -2,8 +2,8 @@
  * @file OrderMemento.cpp
  * @brief Implementation file for the OrderMemento class.
  *        This file contains the implementation of methods to handle order mementos.
- * @author [Author Name]
- * @date [Creation Date]
+ * @author Quintin d'Hotman de Villiers
+ * @date 2023/10/20
  */
 
 #include "OrderMemento.h"

@@ -3,8 +3,8 @@
 * @brief Declaration of the IngredientFactory class.
 *        This file contains the declaration of the IngredientFactory class,
 *        which represents a factory for creating Ingredient objects.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Quintin d'Hotman de Villiers
+* @date 2023/10/30
 */
 
 #pragma once

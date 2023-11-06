@@ -2,8 +2,8 @@
  * @file Caretaker.cpp
  * @brief Implementation file for the Caretaker class.
  *        This file contains the implementation of methods to manage OrderMementos.
- * @author [Author Name]
- * @date [Creation Date]
+ * @author Quintin d'Hotman de Villiers
+ * @date 2023/10/21
  */
 
 #include "Caretaker.h"

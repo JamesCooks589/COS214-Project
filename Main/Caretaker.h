@@ -4,8 +4,8 @@
 *        This file contains the declaration of the Caretaker class,
 *        which is responsible for managing the order mementos and providing
 *        access to them.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Quintin d'Hotman de Villiers
+* @date 2023/10/21
 */
 
 #pragma once

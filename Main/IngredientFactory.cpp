@@ -2,8 +2,8 @@
  * @file IngredientFactory.cpp
  * @brief Implementation file for the IngredientFactory class.
  *        This file contains the implementation of methods to create and manage ingredients using the IngredientFactory class.
- * @author [Author Name]
- * @date [Creation Date]
+ * @author Quintin d'Hotman de Villiers
+ * @date 2023/10/30
  */
 
 #include "IngredientFactory.h"

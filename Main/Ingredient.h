@@ -3,8 +3,8 @@
 * @brief Declaration of the Ingredient class.
 *        This file contains the declaration of the Ingredient class,
 *        which represents an ingredient used in food preparation.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Quintin d'Hotman de Villiers
+* @date 2023/10/30
 */
 
 #pragma once

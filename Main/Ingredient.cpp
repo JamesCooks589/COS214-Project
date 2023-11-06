@@ -2,8 +2,8 @@
  * @file Ingredient.cpp
  * @brief Implementation file for the Ingredient class.
  *        This file contains the implementation of the Ingredient class methods for managing ingredients in a restaurant menu.
- * @author [Author Name]
- * @date [Creation Date]
+ * @author Quintin d'Hotman de Villiers
+ * @date 2023/10/30
  */
 
 #include "Ingredient.h"
