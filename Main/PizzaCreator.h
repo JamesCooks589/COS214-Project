@@ -3,8 +3,8 @@
 * @brief Declaration of the PizzaCreator class.
 *        This file contains the declaration of the PizzaCreator class,
 *        which represents a pizza creator derived from the Chef class.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Yi-Rou Hung
+* @date 23/10/2023
 */
 
 #pragma once
