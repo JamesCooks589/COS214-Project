@@ -3,8 +3,8 @@
 * @brief Declaration of the Meat class.
 *        This file contains the declaration of the Meat class,
 *        which represents a type of non-vegan food derived from Nonvegan class.
-* @author [Author Name]
-* @date [Creation Date]
+* @author James Cooks and Monica Hung
+* @date 22/10/2023
 */
 
 #pragma once

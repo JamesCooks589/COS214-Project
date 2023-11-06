@@ -3,8 +3,8 @@
 * @brief Declaration of the Kitchen class.
 *        This file contains the declaration of the Kitchen class,
 *        which represents the kitchen area of the restaurant with chefs and orders.
-* @author [Author Name]
-* @date [Creation Date]
+* @author James Cooks and Lloyd Creighton
+* @date 30/10/2023
 */
 
 #pragma once

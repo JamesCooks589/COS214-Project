@@ -3,8 +3,8 @@
 * @brief Declaration of the LinkedList class.
 *        This file contains the declaration of the LinkedList class,
 *        which represents a linked list to store customer groups.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Qwinton Knocklein
+* @date 27/10/2023
 */
 
 #pragma once

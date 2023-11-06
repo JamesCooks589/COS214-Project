@@ -2,8 +2,8 @@
  * @file Cheese.cpp
  * @brief Implementation file for the Cheese class.
  *        This file contains the implementation of methods to cook Cheese food items.
- * @author [Author Name]
- * @date [Creation Date]
+ * @author James Cooks and Monica Hung
+ * @date 22/10/2023
  */
 
 #include "Cheese.h"

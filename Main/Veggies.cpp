@@ -2,8 +2,8 @@
  * @file Veggies.cpp
  * @brief Implementation file for the Veggies class.
  *        This file contains the implementation of methods to handle cooking vegetable toppings.
- * @author [Author Name]
- * @date [Creation Date]
+ * @author James Cooks and Monica Hung
+ * @date 22/10/2023
  */
 
 #include "Veggies.h"

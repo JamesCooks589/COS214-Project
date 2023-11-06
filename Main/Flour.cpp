@@ -2,8 +2,8 @@
  * @file Flour.cpp
  * @brief Implementation file for the Flour class.
  *        This file contains the implementation of the Flour class methods to prepare and cook flour-based dishes.
- * @author [Author Name]
- * @date [Creation Date]
+ * @author James Cooks and Monica Hung
+ * @date 22/10/2023
  */
 
 #include "Flour.h"

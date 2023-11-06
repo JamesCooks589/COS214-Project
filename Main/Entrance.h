@@ -4,8 +4,8 @@
 *        This file contains the declaration of the Entrance class,
 *        which represents the entrance area for customers entering the restaurant.
 *        It manages customer groups in a queue and handles seating them on the floor.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Qwinton Knocklein
+* @date 27/10/2023
 */
 
 #pragma once

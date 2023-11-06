@@ -3,8 +3,8 @@
 * @brief Declaration of the Plate class.
 *        This file contains the declaration of the Plate class,
 *        which represents a plate containing food items for a customer order.
-* @author [Author Name]
-* @date [Creation Date]
+* @author James Cooks
+ * @date 30/10/2023
 */
 
 #pragma once

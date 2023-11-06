@@ -3,8 +3,8 @@
 * @brief Declaration of the GroupIterator class.
 *        This file contains the declaration of the GroupIterator class,
 *        which represents an iterator for iterating through customer groups.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Qwinton Knocklein
+* @date 27/10/2023
 */
 
 #pragma once
