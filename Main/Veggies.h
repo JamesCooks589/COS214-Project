@@ -3,8 +3,8 @@
 * @brief Declaration of the Veggies class.
 *        This file contains the declaration of the Veggies class,
 *        which represents a vegan pizza with vegetables derived from Vegan.
-* @author [Author Name]
-* @date [Creation Date]
+* @author James Cooks and Monica Hung
+* @date 22/10/2023
 */
 
 #pragma once
