@@ -3,8 +3,8 @@
 * @brief Declaration of the Node class.
 *        This file contains the declaration of the Node class,
 *        which represents a node in a linked list containing CustomerComponent objects.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Qwinton Knocklein
+* @date 27/10/2023
 */
 
 #pragma once
