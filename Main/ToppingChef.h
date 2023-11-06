@@ -3,8 +3,8 @@
 * @brief Declaration of the ToppingChef class.
 *        This file contains the declaration of the ToppingChef class,
 *        which represents a chef creator for pizza toppings derived from ChefCreator.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Yi-Rou Hung
+* @date 23/10/2023
 */
 
 #pragma once
