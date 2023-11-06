@@ -2,8 +2,8 @@
  * @file ToppingChef.cpp
  * @brief Implementation file for the ToppingChef class.
  *        This file contains the implementation of methods to create different types of pizzas.
- * @author [Author Name]
- * @date [Creation Date]
+ * @author Yi-Rou Hung
+ * @date 23/10/2023
  */
 
 #include "ToppingChef.h"
