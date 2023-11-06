@@ -4,8 +4,8 @@
 *        This file contains the declaration of the BaseChef class,
 *        which is a subclass of ChefCreator and defines functions to
 *        create vegan and non-vegan pizzas.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Yi-Rou Hung
+* @date 22/10/2023
 */
 
 #pragma once
