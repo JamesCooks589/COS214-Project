@@ -3,8 +3,8 @@
 * @brief Declaration of the Flour class.
 *        This file contains the declaration of the Flour class,
 *        which represents a type of vegan food derived from Vegan class.
-* @author [Author Name]
-* @date [Creation Date]
+* @author James Cooks and Monica Hung
+* @date 22/10/2023
 */
 
 #pragma once
