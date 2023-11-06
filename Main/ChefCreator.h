@@ -3,8 +3,8 @@
 * @brief Declaration of the ChefCreator class.
 *        This file contains the declaration of the ChefCreator class,
 *        which is responsible for creating chefs capable of cooking vegan and non-vegan pizzas.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Yi-Rou Hung
+* @date 22/10/2023
 */
 
 #pragma once

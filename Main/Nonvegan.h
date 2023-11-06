@@ -3,8 +3,8 @@
 * @brief Declaration of the Nonvegan class.
 *        This file contains the declaration of the Nonvegan class,
 *        which represents a type of pizza creator for non-vegan pizzas.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Yi-Rou Hung
+* @date 23/10/2023
 */
 
 #pragma once

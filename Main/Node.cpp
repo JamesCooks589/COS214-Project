@@ -2,8 +2,8 @@
  * @file Node.cpp
  * @brief Implementation file for the Node class.
  *        This file contains the implementation of methods to manage nodes in the linked list.
- * @author [Author Name]
- * @date [Creation Date]
+* @author Qwinton Knocklein
+* @date 27/10/2023
  */
 
 #include "Node.h"

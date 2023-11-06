@@ -8,6 +8,7 @@
 
 #include "Caretaker.h"
 #include <algorithm>
+#include <stdexcept>
 
 using namespace std;
 
