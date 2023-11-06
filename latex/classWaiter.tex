@@ -44,7 +44,6 @@ void \mbox{\hyperlink{classWaiter_a848c6cece51c9f01c86d450351269ae2}{order\+Sign
 \begin{DoxyCompactList}\small\item\em Notifies the waiter about a customer\textquotesingle{}s order. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classWaiter_a5e58056fc5818614fee569a3ab31b4f6}{bill\+Signal}} (\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$customer)
 \begin{DoxyCompactList}\small\item\em Notifies the waiter to generate a bill for a customer. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classWaiter_ad2d516cf6ed56c2efc5b882f212b4faf}\label{classWaiter_ad2d516cf6ed56c2efc5b882f212b4faf}} 
 void \mbox{\hyperlink{classWaiter_ad2d516cf6ed56c2efc5b882f212b4faf}{signal\+Ready\+Order}} ()
 \begin{DoxyCompactList}\small\item\em Notifies the waiter that an order is ready to be served. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classWaiter_aa3eac8a78439feb99b0bb50380f8597d}\label{classWaiter_aa3eac8a78439feb99b0bb50380f8597d}} 
@@ -72,7 +71,13 @@ Constructor for the \mbox{\hyperlink{classWaiter}{Waiter}} class.
 \hline
 {\em name} & The name of the waiter. \\
 \hline
-{\em floor} & Pointer to the \mbox{\hyperlink{classFloor}{Floor}} object representing the restaurant floor plan. Initializes a new instance of \mbox{\hyperlink{classWaiter}{Waiter}} with the given kitchen, name, and floor. \\
+{\em floor} & Pointer to the \mbox{\hyperlink{classFloor}{Floor}} object representing the restaurant floor plan. Initializes a new instance of \mbox{\hyperlink{classWaiter}{Waiter}} with the given kitchen, name, and floor.\\
+\hline
+{\em kitchen} & Pointer to the \mbox{\hyperlink{classKitchen}{Kitchen}} object associated with the waiter. \\
+\hline
+{\em name} & The name of the waiter. \\
+\hline
+{\em floor} & Pointer to the \mbox{\hyperlink{classFloor}{Floor}} object associated with the waiter. \\
 \hline
 \end{DoxyParams}
 
@@ -88,9 +93,13 @@ Constructor for the \mbox{\hyperlink{classWaiter}{Waiter}} class.
 
 Notifies the waiter to generate a bill for a customer. 
 
+Receive a signal to deliver the bill to the customer and handle the payment process.
+
 
 \begin{DoxyParams}{Parameters}
-{\em customer} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object for billing. \\
+{\em customer} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object for billing.\\
+\hline
+{\em customer} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object to whom the bill is delivered. \\
 \hline
 \end{DoxyParams}
 
@@ -107,8 +116,12 @@ Implements \mbox{\hyperlink{classPrototypeWaiter_af5edd51380caec663a48b0ec1874be
 
 Creates a clone of the waiter. 
 
+Clone the \mbox{\hyperlink{classWaiter}{Waiter}} object, creating a new \mbox{\hyperlink{classWaiter}{Waiter}} with the same kitchen, name, and floor.
+
 \begin{DoxyReturn}{Returns}
-Pointer to the cloned \mbox{\hyperlink{classWaiter}{Waiter}} object. 
+Pointer to the cloned \mbox{\hyperlink{classWaiter}{Waiter}} object.
+
+A cloned \mbox{\hyperlink{classWaiter}{Waiter}} object. 
 \end{DoxyReturn}
 
 
@@ -123,6 +136,8 @@ Implements \mbox{\hyperlink{classPrototypeWaiter_a2175dc09053d597564a981635ad576
 
 
 Gets the name of the waiter. 
+
+Get the name of the waiter.
 
 \begin{DoxyReturn}{Returns}
 The name of the waiter. 
@@ -140,6 +155,8 @@ Implements \mbox{\hyperlink{classPrototypeWaiter_ac0a4278c8e319bcb916abf18c1f146
 
 
 Notifies the waiter about a customer\textquotesingle{}s order. 
+
+Receive a signal to take the order from the customer and pass the order to the kitchen.
 
 
 \begin{DoxyParams}{Parameters}
@@ -160,14 +177,32 @@ Implements \mbox{\hyperlink{classPrototypeWaiter_a1fe4f1d550b6d064c8e3319bcc8d9e
 
 Sets the name of the waiter. 
 
+Set the name of the waiter.
+
 
 \begin{DoxyParams}{Parameters}
-{\em name} & The name of the waiter. \\
+{\em name} & The name of the waiter.\\
+\hline
+{\em name} & The new name for the waiter. \\
 \hline
 \end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{classPrototypeWaiter_a54833486044bb8df3e1d3b847ebbf358}{Prototype\+Waiter}}.
+
+\mbox{\Hypertarget{classWaiter_ad2d516cf6ed56c2efc5b882f212b4faf}\label{classWaiter_ad2d516cf6ed56c2efc5b882f212b4faf}} 
+\index{Waiter@{Waiter}!signalReadyOrder@{signalReadyOrder}}
+\index{signalReadyOrder@{signalReadyOrder}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{signalReadyOrder()}{signalReadyOrder()}}
+{\footnotesize\ttfamily void Waiter\+::signal\+Ready\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Notifies the waiter that an order is ready to be served. 
+
+Receive a signal that the order is ready and deliver the order to the customer. 
+
+Implements \mbox{\hyperlink{classPrototypeWaiter_aeb237f3d846d409f23cdf591c71c3ee6}{Prototype\+Waiter}}.
 
 
 

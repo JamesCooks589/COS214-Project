@@ -112,9 +112,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5ca04a9b090ae1111937a0c074387776"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTableGroup.html#a5ca04a9b090ae1111937a0c074387776">isEmpty</a> ()</td></tr>
 <tr class="memdesc:a5ca04a9b090ae1111937a0c074387776"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the table group is empty (does not contain any tables).  <a href="classTableGroup.html#a5ca04a9b090ae1111937a0c074387776">More...</a><br /></td></tr>
 <tr class="separator:a5ca04a9b090ae1111937a0c074387776"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac46ee16b86e75112ac70e9eac0f70866"><td class="memItemLeft" align="right" valign="top"><a id="ac46ee16b86e75112ac70e9eac0f70866"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTableGroup.html#ac46ee16b86e75112ac70e9eac0f70866">~TableGroup</a> ()</td></tr>
-<tr class="memdesc:ac46ee16b86e75112ac70e9eac0f70866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for the <a class="el" href="classTableGroup.html" title="Represents a group of tables in the restaurant derived from TableComponent.">TableGroup</a> class. Cleans up resources and performs necessary cleanup operations. <br /></td></tr>
+<tr class="memitem:ac46ee16b86e75112ac70e9eac0f70866"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTableGroup.html#ac46ee16b86e75112ac70e9eac0f70866">~TableGroup</a> ()</td></tr>
+<tr class="memdesc:ac46ee16b86e75112ac70e9eac0f70866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for the <a class="el" href="classTableGroup.html" title="Represents a group of tables in the restaurant derived from TableComponent.">TableGroup</a> class. Cleans up resources and performs necessary cleanup operations.  <a href="classTableGroup.html#ac46ee16b86e75112ac70e9eac0f70866">More...</a><br /></td></tr>
 <tr class="separator:ac46ee16b86e75112ac70e9eac0f70866"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classTableComponent"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classTableComponent')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classTableComponent.html">TableComponent</a></td></tr>
 <tr class="memitem:acb218ee2809c9c68289b9d2044a5ad02 inherit pub_methods_classTableComponent"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTableComponent.html#acb218ee2809c9c68289b9d2044a5ad02">TableComponent</a> (int id)</td></tr>
@@ -177,6 +176,26 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
+<a id="ac46ee16b86e75112ac70e9eac0f70866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac46ee16b86e75112ac70e9eac0f70866">&#9670;&nbsp;</a></span>~TableGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TableGroup::~TableGroup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor for the <a class="el" href="classTableGroup.html" title="Represents a group of tables in the restaurant derived from TableComponent.">TableGroup</a> class. Cleans up resources and performs necessary cleanup operations. </p>
+<p>Destructor for the <a class="el" href="classTableGroup.html" title="Represents a group of tables in the restaurant derived from TableComponent.">TableGroup</a> class. Deletes all table components in the group and clears the group vector. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3746fdc171a40161e1a285b337400ba3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3746fdc171a40161e1a285b337400ba3">&#9670;&nbsp;</a></span>addToGroup()</h2>
@@ -203,9 +222,11 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 
 <p>Adds a table component to the group. </p>
+<p>Add a table component to the group.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tableToAdd</td><td>Pointer to the <a class="el" href="classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent.">TableComponent</a> object to be added to the group. </td></tr>
+    <tr><td class="paramname">tableToAdd</td><td>Pointer to the <a class="el" href="classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent.">TableComponent</a> object to be added to the group.</td></tr>
+    <tr><td class="paramname">tableToAdd</td><td>Pointer to the table component to be added to the group. </td></tr>
   </table>
   </dd>
 </dl>
@@ -238,7 +259,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 
 <p>Gets the combined capacity of all tables in the group. </p>
-<dl class="section return"><dt>Returns</dt><dd>The total capacity of the table group. </dd></dl>
+<p>Calculate the total capacity of all tables in the group.</p>
+<dl class="section return"><dt>Returns</dt><dd>The total capacity of the table group.</dd>
+<dd>
+The total capacity of the tables in the group. </dd></dl>
 
 <p>Implements <a class="el" href="classTableComponent.html#a7e7cb3629f25558318ed7c8ed2c9763d">TableComponent</a>.</p>
 
@@ -268,7 +292,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 
 <p>Checks if the table group is empty (does not contain any tables). </p>
-<dl class="section return"><dt>Returns</dt><dd>True if the table group does not contain any tables, false otherwise. </dd></dl>
+<p>Check if the table group is empty.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if the table group does not contain any tables, false otherwise.</dd>
+<dd>
+True if the group is empty, false otherwise. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTableComponent.html#aa23bcc74e58a947697800f2ff1b1a7d9">TableComponent</a>.</p>
 
@@ -298,7 +325,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 
 <p>Removes a table component from the group. </p>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to the removed <a class="el" href="classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent.">TableComponent</a> object. </dd></dl>
+<p>Remove and return a table component from the group.</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the removed <a class="el" href="classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent.">TableComponent</a> object.</dd>
+<dd>
+Pointer to the removed table component, or nullptr if the group is empty. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTableComponent.html#a87dfeccafd48005efa66910c245be051">TableComponent</a>.</p>
 
@@ -328,7 +358,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 
 <p>Splits the group into individual table components. </p>
-<dl class="section return"><dt>Returns</dt><dd>Vector of pointers to individual <a class="el" href="classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent.">TableComponent</a> objects split from the group. </dd></dl>
+<p>Split the table group, returning a vector of table components.</p>
+<dl class="section return"><dt>Returns</dt><dd>Vector of pointers to individual <a class="el" href="classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent.">TableComponent</a> objects split from the group.</dd>
+<dd>
+A vector of pointers to table components representing the split group. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classTableComponent.html#aa4f14a15df0fa5907e553d7de1d4e9b0">TableComponent</a>.</p>
 

@@ -38,7 +38,11 @@ Constructor for the \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} class.
 \begin{DoxyParams}{Parameters}
 {\em table\+Number} & The table number associated with the order. \\
 \hline
-{\em customer\+Orders} & Vector of vectors representing the items in the order. Initializes a new instance of \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} with the given table number and customer orders. \\
+{\em customer\+Orders} & Vector of vectors representing the items in the order. Initializes a new instance of \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} with the given table number and customer orders.\\
+\hline
+{\em table\+Number} & The table number associated with the order. \\
+\hline
+{\em customer\+Orders} & A vector containing customer-\/wise order details. \\
 \hline
 \end{DoxyParams}
 
@@ -54,8 +58,12 @@ Constructor for the \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} class.
 
 Gets the vector of vectors representing customer orders in the order memento. 
 
+Gets the customer-\/wise order details stored in the memento.
+
 \begin{DoxyReturn}{Returns}
-Vector of vectors containing customer order details in the order memento. 
+Vector of vectors containing customer order details in the order memento.
+
+A vector containing customer-\/wise order details. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classOrderMemento_aacfbc9f5c2a8b317789a6fb73f931788}\label{classOrderMemento_aacfbc9f5c2a8b317789a6fb73f931788}} 
 \index{OrderMemento@{OrderMemento}!getTableNumber@{getTableNumber}}
@@ -67,8 +75,12 @@ Vector of vectors containing customer order details in the order memento.
 
 Gets the table number associated with the order memento. 
 
+Gets the table number stored in the memento.
+
 \begin{DoxyReturn}{Returns}
-The table number of the order memento. 
+The table number of the order memento.
+
+The table number associated with the order. 
 \end{DoxyReturn}
 
 

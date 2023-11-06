@@ -18,7 +18,6 @@ Represents a customer order in a restaurant.
 \begin{DoxyCompactList}\small\item\em Creates a memento for the current order state. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classOrder_a9540b8c07b1e434995bf6816f61b30d2}{restore\+From\+Memento}} (const \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} \&memento)
 \begin{DoxyCompactList}\small\item\em Restores the order state from a memento. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classOrder_a0a0ffa4b438fc3f8b5847da148c7c868}\label{classOrder_a0a0ffa4b438fc3f8b5847da148c7c868}} 
 void \mbox{\hyperlink{classOrder_a0a0ffa4b438fc3f8b5847da148c7c868}{print\+Order}} ()
 \begin{DoxyCompactList}\small\item\em Prints the details of the order. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classOrder_a99ea64b45b38c884325176ab4b56484b}{get\+Table\+Number}} ()
@@ -51,7 +50,11 @@ Constructor for the \mbox{\hyperlink{classOrder}{Order}} class.
 \begin{DoxyParams}{Parameters}
 {\em table\+Number} & The table number associated with the order. \\
 \hline
-{\em customer\+Orders} & Vector of vectors representing the items in the order. Initializes a new instance of \mbox{\hyperlink{classOrder}{Order}} with the given table number and customer orders. \\
+{\em customer\+Orders} & Vector of vectors representing the items in the order. Initializes a new instance of \mbox{\hyperlink{classOrder}{Order}} with the given table number and customer orders.\\
+\hline
+{\em table\+Number} & The number of the table placing the order. \\
+\hline
+{\em customer\+Orders} & A vector containing customer-\/wise order details. \\
 \hline
 \end{DoxyParams}
 
@@ -67,8 +70,12 @@ Constructor for the \mbox{\hyperlink{classOrder}{Order}} class.
 
 Creates a memento for the current order state. 
 
+Creates a memento of the current order state.
+
 \begin{DoxyReturn}{Returns}
-\mbox{\hyperlink{classOrderMemento}{Order\+Memento}} object representing the current state of the order. 
+\mbox{\hyperlink{classOrderMemento}{Order\+Memento}} object representing the current state of the order.
+
+An \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} object representing the current order state. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classOrder_a3fd1f0fb693887a10985f0e1d814c3d1}\label{classOrder_a3fd1f0fb693887a10985f0e1d814c3d1}} 
 \index{Order@{Order}!getCustomerOrders@{getCustomerOrders}}
@@ -80,8 +87,12 @@ Creates a memento for the current order state.
 
 Gets the vector of vectors representing customer orders. 
 
+Gets the customer orders.
+
 \begin{DoxyReturn}{Returns}
-Vector of vectors containing customer order details. 
+Vector of vectors containing customer order details.
+
+A vector containing customer-\/wise order details. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classOrder_abe9c7efc3b241e10ef7fff5e22d2a361}\label{classOrder_abe9c7efc3b241e10ef7fff5e22d2a361}} 
 \index{Order@{Order}!getOrderDetails@{getOrderDetails}}
@@ -93,8 +104,12 @@ Vector of vectors containing customer order details.
 
 Gets the order details as a formatted string. 
 
+Gets the order details.
+
 \begin{DoxyReturn}{Returns}
-Formatted string containing order details. 
+Formatted string containing order details.
+
+A string containing the order details. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classOrder_a99ea64b45b38c884325176ab4b56484b}\label{classOrder_a99ea64b45b38c884325176ab4b56484b}} 
 \index{Order@{Order}!getTableNumber@{getTableNumber}}
@@ -107,17 +122,21 @@ Formatted string containing order details.
 Gets the table number associated with the order. 
 
 \begin{DoxyReturn}{Returns}
-The table number of the order. 
+The table number of the order.
+
+The table number. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classOrder_a3f9141f85e94eb575fcfc3283b4c3c3f}\label{classOrder_a3f9141f85e94eb575fcfc3283b4c3c3f}} 
 \index{Order@{Order}!IsValidOrderDetails@{IsValidOrderDetails}}
 \index{IsValidOrderDetails@{IsValidOrderDetails}!Order@{Order}}
 \doxysubsubsection{\texorpdfstring{IsValidOrderDetails()}{IsValidOrderDetails()}}
-{\footnotesize\ttfamily bool Order\+::\+Is\+Valid\+Order\+Details (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{customer\+Order }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Order\+::\+Is\+Valid\+Order\+Details (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{order\+Details }\end{DoxyParamCaption})}
 
 
 
 Checks if the customer order details are valid. 
+
+Checks if the given order details are valid.
 
 
 \begin{DoxyParams}{Parameters}
@@ -125,9 +144,27 @@ Checks if the customer order details are valid.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-True if the order details are valid, false otherwise. 
+True if the order details are valid, false otherwise.
 \end{DoxyReturn}
-\mbox{\Hypertarget{classOrder_a9540b8c07b1e434995bf6816f61b30d2}\label{classOrder_a9540b8c07b1e434995bf6816f61b30d2}} 
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Details} & A vector containing food items for a customer\textquotesingle{}s order. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all ingredients in order\+Details are valid, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOrder_a0a0ffa4b438fc3f8b5847da148c7c868}\label{classOrder_a0a0ffa4b438fc3f8b5847da148c7c868}} 
+\index{Order@{Order}!printOrder@{printOrder}}
+\index{printOrder@{printOrder}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{printOrder()}{printOrder()}}
+{\footnotesize\ttfamily void Order\+::print\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints the details of the order. 
+
+Prints the order details to the console. \mbox{\Hypertarget{classOrder_a9540b8c07b1e434995bf6816f61b30d2}\label{classOrder_a9540b8c07b1e434995bf6816f61b30d2}} 
 \index{Order@{Order}!restoreFromMemento@{restoreFromMemento}}
 \index{restoreFromMemento@{restoreFromMemento}!Order@{Order}}
 \doxysubsubsection{\texorpdfstring{restoreFromMemento()}{restoreFromMemento()}}
@@ -137,9 +174,13 @@ True if the order details are valid, false otherwise.
 
 Restores the order state from a memento. 
 
+Restores the order state from a given memento.
+
 
 \begin{DoxyParams}{Parameters}
-{\em memento} & The \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} object containing the state to be restored. \\
+{\em memento} & The \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} object containing the state to be restored.\\
+\hline
+{\em memento} & The \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} object containing the desired order state. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classOrder_a462616cd46ae4a3b069027d249f0760e}\label{classOrder_a462616cd46ae4a3b069027d249f0760e}} 
@@ -152,13 +193,23 @@ Restores the order state from a memento.
 
 Trims leading and trailing whitespace from a string. 
 
+Trims leading and trailing spaces from a string.
+
 
 \begin{DoxyParams}{Parameters}
 {\em str} & The input string to be trimmed. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Trimmed string with leading and trailing whitespace removed. 
+Trimmed string with leading and trailing whitespace removed.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to be trimmed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The trimmed string. 
 \end{DoxyReturn}
 
 

@@ -16,7 +16,6 @@ static \mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ \mbox{\hyperlink{cl
 \begin{DoxyCompactList}\small\item\em Gets an ingredient object based on the provided name and price. \end{DoxyCompactList}\item 
 static size\+\_\+t \mbox{\hyperlink{classIngredientFactory_ad61c901d9cca72d209462128c4ce46f0}{get\+Ingredient\+Count}} ()
 \begin{DoxyCompactList}\small\item\em Gets the total count of ingredients in the factory. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classIngredientFactory_aeaecc9b90ac38a17e14d51e374ff4f3f}\label{classIngredientFactory_aeaecc9b90ac38a17e14d51e374ff4f3f}} 
 static void \mbox{\hyperlink{classIngredientFactory_aeaecc9b90ac38a17e14d51e374ff4f3f}{cleanup}} ()
 \begin{DoxyCompactList}\small\item\em Cleans up resources and performs necessary cleanup operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -25,7 +24,17 @@ static void \mbox{\hyperlink{classIngredientFactory_aeaecc9b90ac38a17e14d51e374f
 Represents a factory for creating \mbox{\hyperlink{classIngredient}{Ingredient}} objects. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classIngredientFactory_adf661d5cceb7d47ad8a193f28a8b9246}\label{classIngredientFactory_adf661d5cceb7d47ad8a193f28a8b9246}} 
+\mbox{\Hypertarget{classIngredientFactory_aeaecc9b90ac38a17e14d51e374ff4f3f}\label{classIngredientFactory_aeaecc9b90ac38a17e14d51e374ff4f3f}} 
+\index{IngredientFactory@{IngredientFactory}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!IngredientFactory@{IngredientFactory}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void Ingredient\+Factory\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Cleans up resources and performs necessary cleanup operations. 
+
+Cleans up the ingredient pool by deleting all created \mbox{\hyperlink{classIngredient}{Ingredient}} objects. This function should be called when the application is shutting down to prevent memory leaks. \mbox{\Hypertarget{classIngredientFactory_adf661d5cceb7d47ad8a193f28a8b9246}\label{classIngredientFactory_adf661d5cceb7d47ad8a193f28a8b9246}} 
 \index{IngredientFactory@{IngredientFactory}!getIngredient@{getIngredient}}
 \index{getIngredient@{getIngredient}!IngredientFactory@{IngredientFactory}}
 \doxysubsubsection{\texorpdfstring{getIngredient()}{getIngredient()}}
@@ -35,6 +44,8 @@ Represents a factory for creating \mbox{\hyperlink{classIngredient}{Ingredient}}
 
 Gets an ingredient object based on the provided name and price. 
 
+Gets an ingredient from the ingredient pool. If the ingredient with the given name is not in the pool, creates a new one and adds it to the pool.
+
 
 \begin{DoxyParams}{Parameters}
 {\em name} & The name of the ingredient. \\
@@ -43,7 +54,17 @@ Gets an ingredient object based on the provided name and price.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Pointer to the \mbox{\hyperlink{classIngredient}{Ingredient}} object created with the given name and price. 
+Pointer to the \mbox{\hyperlink{classIngredient}{Ingredient}} object created with the given name and price.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the ingredient. \\
+\hline
+{\em price} & The price of the ingredient. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the \mbox{\hyperlink{classIngredient}{Ingredient}} object. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classIngredientFactory_ad61c901d9cca72d209462128c4ce46f0}\label{classIngredientFactory_ad61c901d9cca72d209462128c4ce46f0}} 
 \index{IngredientFactory@{IngredientFactory}!getIngredientCount@{getIngredientCount}}
@@ -55,8 +76,12 @@ Pointer to the \mbox{\hyperlink{classIngredient}{Ingredient}} object created wit
 
 Gets the total count of ingredients in the factory. 
 
+Gets the total count of unique ingredients in the ingredient pool.
+
 \begin{DoxyReturn}{Returns}
-The total count of ingredients in the factory. 
+The total count of ingredients in the factory.
+
+The total count of unique ingredients. 
 \end{DoxyReturn}
 
 

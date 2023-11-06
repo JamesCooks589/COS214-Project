@@ -2,8 +2,8 @@
  * @file Bill.cpp
  * @brief Implementation file for the Bill class.
  *        This file contains the implementation of methods to manage restaurant bills.
- * @author [Ze-Lin Zhang]
- * @date [28/10/23]
+ * @author Ze-Lin Zhang
+ * @date 28/10/23
  */
 
 #include "Bill.h"

@@ -98,9 +98,8 @@ Collaboration diagram for Flour:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae09d800aa00629806eecd80af8450576"><td class="memItemLeft" align="right" valign="top"><a id="ae09d800aa00629806eecd80af8450576"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlour.html#ae09d800aa00629806eecd80af8450576">Flour</a> ()</td></tr>
-<tr class="memdesc:ae09d800aa00629806eecd80af8450576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the <a class="el" href="classFlour.html" title="Represents a type of vegan food derived from Vegan class.">Flour</a> class. Initializes a new instance of <a class="el" href="classFlour.html" title="Represents a type of vegan food derived from Vegan class.">Flour</a> with default values. <br /></td></tr>
+<tr class="memitem:ae09d800aa00629806eecd80af8450576"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlour.html#ae09d800aa00629806eecd80af8450576">Flour</a> ()</td></tr>
+<tr class="memdesc:ae09d800aa00629806eecd80af8450576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the <a class="el" href="classFlour.html" title="Represents a type of vegan food derived from Vegan class.">Flour</a> class. Initializes a new instance of <a class="el" href="classFlour.html" title="Represents a type of vegan food derived from Vegan class.">Flour</a> with default values.  <a href="classFlour.html#ae09d800aa00629806eecd80af8450576">More...</a><br /></td></tr>
 <tr class="separator:ae09d800aa00629806eecd80af8450576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32fd36750a78d6a8514e8ec44e526f20"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlour.html#a32fd36750a78d6a8514e8ec44e526f20">cookFood</a> (std::vector&lt; std::string &gt; orderDetails, <a class="el" href="classPlate.html">Plate</a> *plate) override</td></tr>
 <tr class="memdesc:a32fd36750a78d6a8514e8ec44e526f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cooks the food based on the provided order details and plate.  <a href="classFlour.html#a32fd36750a78d6a8514e8ec44e526f20">More...</a><br /></td></tr>
@@ -139,7 +138,28 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a type of vegan food derived from <a class="el" href="classVegan.html" title="Represents a vegan pizza derived from PizzaCreator.">Vegan</a> class. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae09d800aa00629806eecd80af8450576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae09d800aa00629806eecd80af8450576">&#9670;&nbsp;</a></span>Flour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Flour::Flour </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default constructor for the <a class="el" href="classFlour.html" title="Represents a type of vegan food derived from Vegan class.">Flour</a> class. Initializes a new instance of <a class="el" href="classFlour.html" title="Represents a type of vegan food derived from Vegan class.">Flour</a> with default values. </p>
+<p>Default constructor for the <a class="el" href="classFlour.html" title="Represents a type of vegan food derived from Vegan class.">Flour</a> class. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a32fd36750a78d6a8514e8ec44e526f20"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a32fd36750a78d6a8514e8ec44e526f20">&#9670;&nbsp;</a></span>cookFood()</h2>
 
@@ -175,10 +195,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Cooks the food based on the provided order details and plate. </p>
+<p>Cooks food items based on flour and adds them to the plate.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">orderDetails</td><td>The details of the food order. </td></tr>
-    <tr><td class="paramname">plate</td><td>Pointer to the <a class="el" href="classPlate.html" title="Represents a plate containing food items for a customer order.">Plate</a> object where the cooked food is placed. Cooks the Flour-based food using the provided order details and places it on the plate. </td></tr>
+    <tr><td class="paramname">plate</td><td>Pointer to the <a class="el" href="classPlate.html" title="Represents a plate containing food items for a customer order.">Plate</a> object where the cooked food is placed. Cooks the Flour-based food using the provided order details and places it on the plate.</td></tr>
+    <tr><td class="paramname">orderDetails</td><td>A vector containing the food items to be cooked. </td></tr>
+    <tr><td class="paramname">plate</td><td>Pointer to the <a class="el" href="classPlate.html" title="Represents a plate containing food items for a customer order.">Plate</a> object where cooked food items are added. </td></tr>
   </table>
   </dd>
 </dl>

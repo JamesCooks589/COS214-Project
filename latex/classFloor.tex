@@ -14,7 +14,6 @@ Represents the floor of the restaurant with tables and waiters.
 \item 
 \mbox{\hyperlink{classFloor_a9aaef86e0590fa1c6b8382b648aa25d1}{Floor}} (int num\+Waiters, \mbox{\hyperlink{classKitchen}{Kitchen}} $\ast$kitchen)
 \begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classFloor}{Floor}} class. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classFloor_ae1b805579f18a76fe2754a3601202e80}\label{classFloor_ae1b805579f18a76fe2754a3601202e80}} 
 \mbox{\hyperlink{classFloor_ae1b805579f18a76fe2754a3601202e80}{$\sim$\+Floor}} ()
 \begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classFloor}{Floor}} class. Cleans up resources and performs necessary cleanup operations. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ \mbox{\hyperlink{classFloor_a770f94e8b74a484cceac89d420070165}{get\+Table}} (int table\+ID)
@@ -72,10 +71,24 @@ Constructor for the \mbox{\hyperlink{classFloor}{Floor}} class.
 \begin{DoxyParams}{Parameters}
 {\em num\+Waiters} & The number of waiters available on the floor. \\
 \hline
-{\em kitchen} & Pointer to the \mbox{\hyperlink{classKitchen}{Kitchen}} object associated with the floor. Initializes a new instance of \mbox{\hyperlink{classFloor}{Floor}} with the given number of waiters and kitchen. \\
+{\em kitchen} & Pointer to the \mbox{\hyperlink{classKitchen}{Kitchen}} object associated with the floor. Initializes a new instance of \mbox{\hyperlink{classFloor}{Floor}} with the given number of waiters and kitchen.\\
+\hline
+{\em num\+Waiters} & Number of waiters to be initialized on the floor. \\
+\hline
+{\em kitchen} & Pointer to the \mbox{\hyperlink{classKitchen}{Kitchen}} object associated with the floor. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classFloor_ae1b805579f18a76fe2754a3601202e80}\label{classFloor_ae1b805579f18a76fe2754a3601202e80}} 
+\index{Floor@{Floor}!````~Floor@{$\sim$Floor}}
+\index{````~Floor@{$\sim$Floor}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{$\sim$Floor()}{~Floor()}}
+{\footnotesize\ttfamily Floor\+::$\sim$\+Floor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Destructor for the \mbox{\hyperlink{classFloor}{Floor}} class. Cleans up resources and performs necessary cleanup operations. 
+
+Destructor for the \mbox{\hyperlink{classFloor}{Floor}} class. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classFloor_af3c1e65c57c097040fd1fcb623f5f515}\label{classFloor_af3c1e65c57c097040fd1fcb623f5f515}} 
@@ -90,7 +103,9 @@ Adds a table to the floor.
 
 
 \begin{DoxyParams}{Parameters}
-{\em table} & Pointer to the \mbox{\hyperlink{classTableComponent}{Table\+Component}} object to be added. \\
+{\em table} & Pointer to the \mbox{\hyperlink{classTableComponent}{Table\+Component}} object to be added.\\
+\hline
+{\em table} & Pointer to the \mbox{\hyperlink{classTableComponent}{Table\+Component}} object representing the table to be added. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classFloor_a5ac1c42d905309111236e2d4f325fec6}\label{classFloor_a5ac1c42d905309111236e2d4f325fec6}} 
@@ -240,13 +255,23 @@ The number of vacant tables on the floor.
 
 Merges tables based on the group size. 
 
+Merges tables to accommodate a larger group.
+
 
 \begin{DoxyParams}{Parameters}
 {\em group\+Size} & The size of the group for which tables need to be merged. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Pointer to the merged \mbox{\hyperlink{classTableComponent}{Table\+Component}} object. 
+Pointer to the merged \mbox{\hyperlink{classTableComponent}{Table\+Component}} object.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em group\+Size} & Size of the customer group to be accommodated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{classTableComponent}{Table\+Component}} object representing the merged table group, or nullptr if merge is not possible. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classFloor_af70c29198092d3367f54497b775696ad}\label{classFloor_af70c29198092d3367f54497b775696ad}} 
 \index{Floor@{Floor}!removeTable@{removeTable}}
@@ -260,7 +285,9 @@ Removes a table from the floor.
 
 
 \begin{DoxyParams}{Parameters}
-{\em table} & Pointer to the \mbox{\hyperlink{classTableComponent}{Table\+Component}} object to be removed. \\
+{\em table} & Pointer to the \mbox{\hyperlink{classTableComponent}{Table\+Component}} object to be removed.\\
+\hline
+{\em table} & Pointer to the \mbox{\hyperlink{classTableComponent}{Table\+Component}} object representing the table to be removed. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classFloor_a48668e258a965e8f8cc319faea538bf5}\label{classFloor_a48668e258a965e8f8cc319faea538bf5}} 

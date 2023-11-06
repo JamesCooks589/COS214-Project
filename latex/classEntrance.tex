@@ -40,7 +40,9 @@ Constructor for the \mbox{\hyperlink{classEntrance}{Entrance}} class.
 
 
 \begin{DoxyParams}{Parameters}
-{\em floor} & Pointer to the \mbox{\hyperlink{classFloor}{Floor}} object where customers will be seated. Initializes a new instance of \mbox{\hyperlink{classEntrance}{Entrance}} with the given floor. \\
+{\em floor} & Pointer to the \mbox{\hyperlink{classFloor}{Floor}} object where customers will be seated. Initializes a new instance of \mbox{\hyperlink{classEntrance}{Entrance}} with the given floor.\\
+\hline
+{\em floor} & Pointer to the \mbox{\hyperlink{classFloor}{Floor}} object representing the restaurant floor. \\
 \hline
 \end{DoxyParams}
 
@@ -58,7 +60,9 @@ Adds a customer group to the entrance queue.
 
 
 \begin{DoxyParams}{Parameters}
-{\em group} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object representing the group to be added. \\
+{\em group} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object representing the group to be added.\\
+\hline
+{\em group} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object representing the customer group. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classEntrance_a91cf63e140467a6dcc11bded80191c39}\label{classEntrance_a91cf63e140467a6dcc11bded80191c39}} 
@@ -72,7 +76,9 @@ Adds a customer group to the entrance queue.
 Checks if the entrance queue is empty. 
 
 \begin{DoxyReturn}{Returns}
-True if the entrance queue is empty, false otherwise. 
+True if the entrance queue is empty, false otherwise.
+
+True if the queue is empty, false otherwise. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classEntrance_a87c64f9a5e6896a162926acadcfe9480}\label{classEntrance_a87c64f9a5e6896a162926acadcfe9480}} 
 \index{Entrance@{Entrance}!removeGroup@{removeGroup}}
@@ -86,7 +92,9 @@ Removes a customer group from the entrance queue.
 
 
 \begin{DoxyParams}{Parameters}
-{\em group} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object representing the group to be removed. \\
+{\em group} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object representing the group to be removed.\\
+\hline
+{\em group} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object representing the customer group. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classEntrance_a6e2062dda83ea0d24075ec7127c78bde}\label{classEntrance_a6e2062dda83ea0d24075ec7127c78bde}} 
@@ -99,8 +107,12 @@ Removes a customer group from the entrance queue.
 
 Seats a customer group from the entrance queue on the restaurant floor. 
 
+Attempts to seat a customer group from the entrance queue based on available tables.
+
 \begin{DoxyReturn}{Returns}
-True if a group is successfully seated, false otherwise. 
+True if a group is successfully seated, false otherwise.
+
+True if the group is successfully seated, false otherwise. 
 \end{DoxyReturn}
 
 

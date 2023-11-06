@@ -112,9 +112,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e58056fc5818614fee569a3ab31b4f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaiter.html#a5e58056fc5818614fee569a3ab31b4f6">billSignal</a> (<a class="el" href="classCustomerComponent.html">CustomerComponent</a> *customer)</td></tr>
 <tr class="memdesc:a5e58056fc5818614fee569a3ab31b4f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the waiter to generate a bill for a customer.  <a href="classWaiter.html#a5e58056fc5818614fee569a3ab31b4f6">More...</a><br /></td></tr>
 <tr class="separator:a5e58056fc5818614fee569a3ab31b4f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2d516cf6ed56c2efc5b882f212b4faf"><td class="memItemLeft" align="right" valign="top"><a id="ad2d516cf6ed56c2efc5b882f212b4faf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaiter.html#ad2d516cf6ed56c2efc5b882f212b4faf">signalReadyOrder</a> ()</td></tr>
-<tr class="memdesc:ad2d516cf6ed56c2efc5b882f212b4faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the waiter that an order is ready to be served. <br /></td></tr>
+<tr class="memitem:ad2d516cf6ed56c2efc5b882f212b4faf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaiter.html#ad2d516cf6ed56c2efc5b882f212b4faf">signalReadyOrder</a> ()</td></tr>
+<tr class="memdesc:ad2d516cf6ed56c2efc5b882f212b4faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the waiter that an order is ready to be served.  <a href="classWaiter.html#ad2d516cf6ed56c2efc5b882f212b4faf">More...</a><br /></td></tr>
 <tr class="separator:ad2d516cf6ed56c2efc5b882f212b4faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3eac8a78439feb99b0bb50380f8597d"><td class="memItemLeft" align="right" valign="top"><a id="aa3eac8a78439feb99b0bb50380f8597d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaiter.html#aa3eac8a78439feb99b0bb50380f8597d">~Waiter</a> ()</td></tr>
@@ -166,7 +165,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   <table class="params">
     <tr><td class="paramname">kitchen</td><td>Pointer to the <a class="el" href="classKitchen.html" title="Represents the kitchen area of the restaurant with chefs and orders.">Kitchen</a> object for processing orders. </td></tr>
     <tr><td class="paramname">name</td><td>The name of the waiter. </td></tr>
-    <tr><td class="paramname">floor</td><td>Pointer to the <a class="el" href="classFloor.html" title="Represents the floor of the restaurant with tables and waiters.">Floor</a> object representing the restaurant floor plan. Initializes a new instance of <a class="el" href="classWaiter.html" title="Represents a waiter in the restaurant derived from PrototypeWaiter.">Waiter</a> with the given kitchen, name, and floor. </td></tr>
+    <tr><td class="paramname">floor</td><td>Pointer to the <a class="el" href="classFloor.html" title="Represents the floor of the restaurant with tables and waiters.">Floor</a> object representing the restaurant floor plan. Initializes a new instance of <a class="el" href="classWaiter.html" title="Represents a waiter in the restaurant derived from PrototypeWaiter.">Waiter</a> with the given kitchen, name, and floor.</td></tr>
+    <tr><td class="paramname">kitchen</td><td>Pointer to the <a class="el" href="classKitchen.html" title="Represents the kitchen area of the restaurant with chefs and orders.">Kitchen</a> object associated with the waiter. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the waiter. </td></tr>
+    <tr><td class="paramname">floor</td><td>Pointer to the <a class="el" href="classFloor.html" title="Represents the floor of the restaurant with tables and waiters.">Floor</a> object associated with the waiter. </td></tr>
   </table>
   </dd>
 </dl>
@@ -199,9 +201,11 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 
 <p>Notifies the waiter to generate a bill for a customer. </p>
+<p>Receive a signal to deliver the bill to the customer and handle the payment process.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">customer</td><td>Pointer to the <a class="el" href="classCustomerComponent.html" title="Represents a component of the customer, such as a customer or a group of customers.">CustomerComponent</a> object for billing. </td></tr>
+    <tr><td class="paramname">customer</td><td>Pointer to the <a class="el" href="classCustomerComponent.html" title="Represents a component of the customer, such as a customer or a group of customers.">CustomerComponent</a> object for billing.</td></tr>
+    <tr><td class="paramname">customer</td><td>Pointer to the <a class="el" href="classCustomerComponent.html" title="Represents a component of the customer, such as a customer or a group of customers.">CustomerComponent</a> object to whom the bill is delivered. </td></tr>
   </table>
   </dd>
 </dl>
@@ -234,7 +238,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 
 <p>Creates a clone of the waiter. </p>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to the cloned <a class="el" href="classWaiter.html" title="Represents a waiter in the restaurant derived from PrototypeWaiter.">Waiter</a> object. </dd></dl>
+<p>Clone the <a class="el" href="classWaiter.html" title="Represents a waiter in the restaurant derived from PrototypeWaiter.">Waiter</a> object, creating a new <a class="el" href="classWaiter.html" title="Represents a waiter in the restaurant derived from PrototypeWaiter.">Waiter</a> with the same kitchen, name, and floor.</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the cloned <a class="el" href="classWaiter.html" title="Represents a waiter in the restaurant derived from PrototypeWaiter.">Waiter</a> object.</dd>
+<dd>
+A cloned <a class="el" href="classWaiter.html" title="Represents a waiter in the restaurant derived from PrototypeWaiter.">Waiter</a> object. </dd></dl>
 
 <p>Implements <a class="el" href="classPrototypeWaiter.html#a2175dc09053d597564a981635ad57686">PrototypeWaiter</a>.</p>
 
@@ -264,6 +271,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 
 <p>Gets the name of the waiter. </p>
+<p>Get the name of the waiter.</p>
 <dl class="section return"><dt>Returns</dt><dd>The name of the waiter. </dd></dl>
 
 <p>Implements <a class="el" href="classPrototypeWaiter.html#ac0a4278c8e319bcb916abf18c1f14653">PrototypeWaiter</a>.</p>
@@ -295,6 +303,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 
 <p>Notifies the waiter about a customer's order. </p>
+<p>Receive a signal to take the order from the customer and pass the order to the kitchen.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">customer</td><td>Pointer to the <a class="el" href="classCustomerComponent.html" title="Represents a component of the customer, such as a customer or a group of customers.">CustomerComponent</a> object placing the order. </td></tr>
@@ -331,14 +340,46 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 
 <p>Sets the name of the waiter. </p>
+<p>Set the name of the waiter.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>The name of the waiter. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the waiter.</td></tr>
+    <tr><td class="paramname">name</td><td>The new name for the waiter. </td></tr>
   </table>
   </dd>
 </dl>
 
 <p>Implements <a class="el" href="classPrototypeWaiter.html#a54833486044bb8df3e1d3b847ebbf358">PrototypeWaiter</a>.</p>
+
+</div>
+</div>
+<a id="ad2d516cf6ed56c2efc5b882f212b4faf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2d516cf6ed56c2efc5b882f212b4faf">&#9670;&nbsp;</a></span>signalReadyOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Waiter::signalReadyOrder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifies the waiter that an order is ready to be served. </p>
+<p>Receive a signal that the order is ready and deliver the order to the customer. </p>
+
+<p>Implements <a class="el" href="classPrototypeWaiter.html#aeb237f3d846d409f23cdf591c71c3ee6">PrototypeWaiter</a>.</p>
 
 </div>
 </div>

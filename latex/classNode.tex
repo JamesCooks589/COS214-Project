@@ -14,7 +14,6 @@ Represents a node in a linked list containing \mbox{\hyperlink{classCustomerComp
 \item 
 \mbox{\hyperlink{classNode_ad46eae0f3de8a7a371bf1dd5cbb32a7d}{Node}} (\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$group)
 \begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classNode}{Node}} class. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classNode_aa0840c3cb5c7159be6d992adecd2097c}\label{classNode_aa0840c3cb5c7159be6d992adecd2097c}} 
 \mbox{\hyperlink{classNode_aa0840c3cb5c7159be6d992adecd2097c}{$\sim$\+Node}} ()
 \begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classNode}{Node}} class. Cleans up resources and performs necessary cleanup operations. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$ \mbox{\hyperlink{classNode_aa54ff79ab6436c93a9b13930693945c0}{get\+Group}} () const
@@ -41,10 +40,22 @@ Constructor for the \mbox{\hyperlink{classNode}{Node}} class.
 
 
 \begin{DoxyParams}{Parameters}
-{\em group} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object to be stored in the node. Initializes a new instance of \mbox{\hyperlink{classNode}{Node}} with the given \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object. \\
+{\em group} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object to be stored in the node. Initializes a new instance of \mbox{\hyperlink{classNode}{Node}} with the given \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object.\\
+\hline
+{\em group} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object that the node represents. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classNode_aa0840c3cb5c7159be6d992adecd2097c}\label{classNode_aa0840c3cb5c7159be6d992adecd2097c}} 
+\index{Node@{Node}!````~Node@{$\sim$Node}}
+\index{````~Node@{$\sim$Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{$\sim$Node()}{~Node()}}
+{\footnotesize\ttfamily Node\+::$\sim$\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Destructor for the \mbox{\hyperlink{classNode}{Node}} class. Cleans up resources and performs necessary cleanup operations. 
+
+Destructor for the \mbox{\hyperlink{classNode}{Node}} class. Recursively deletes the next nodes in the linked list. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classNode_aa54ff79ab6436c93a9b13930693945c0}\label{classNode_aa54ff79ab6436c93a9b13930693945c0}} 
@@ -57,8 +68,12 @@ Constructor for the \mbox{\hyperlink{classNode}{Node}} class.
 
 Gets the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object stored in the node. 
 
+Gets the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object associated with the node.
+
 \begin{DoxyReturn}{Returns}
-Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object stored in the node. 
+Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object stored in the node.
+
+Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classNode_a7207ac6b9786567730715f0d2a230764}\label{classNode_a7207ac6b9786567730715f0d2a230764}} 
 \index{Node@{Node}!getNext@{getNext}}
@@ -70,8 +85,12 @@ Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} ob
 
 Gets the next node in the linked list. 
 
+Gets the pointer to the next node in the linked list.
+
 \begin{DoxyReturn}{Returns}
-Pointer to the next \mbox{\hyperlink{classNode}{Node}} object in the linked list. 
+Pointer to the next \mbox{\hyperlink{classNode}{Node}} object in the linked list.
+
+Pointer to the next node. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classNode_ae0062432733265c491000494625c3a04}\label{classNode_ae0062432733265c491000494625c3a04}} 
 \index{Node@{Node}!setNext@{setNext}}
@@ -85,7 +104,9 @@ Sets the next node in the linked list.
 
 
 \begin{DoxyParams}{Parameters}
-{\em next} & Pointer to the next \mbox{\hyperlink{classNode}{Node}} object to be set. \\
+{\em next} & Pointer to the next \mbox{\hyperlink{classNode}{Node}} object to be set.\\
+\hline
+{\em next} & Pointer to the next node to be set. \\
 \hline
 \end{DoxyParams}
 

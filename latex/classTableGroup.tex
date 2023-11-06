@@ -44,7 +44,6 @@ virtual vector$<$ \mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast
 \begin{DoxyCompactList}\small\item\em Splits the group into individual table components. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classTableGroup_a5ca04a9b090ae1111937a0c074387776}{is\+Empty}} ()
 \begin{DoxyCompactList}\small\item\em Checks if the table group is empty (does not contain any tables). \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTableGroup_ac46ee16b86e75112ac70e9eac0f70866}\label{classTableGroup_ac46ee16b86e75112ac70e9eac0f70866}} 
 \mbox{\hyperlink{classTableGroup_ac46ee16b86e75112ac70e9eac0f70866}{$\sim$\+Table\+Group}} ()
 \begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classTableGroup}{Table\+Group}} class. Cleans up resources and performs necessary cleanup operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -68,7 +67,17 @@ Constructor for the \mbox{\hyperlink{classTableGroup}{Table\+Group}} class.
 {\em id} & The unique identifier of the table group. Initializes a new instance of \mbox{\hyperlink{classTableGroup}{Table\+Group}} with the given ID and an empty vector of tables. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classTableGroup_ac46ee16b86e75112ac70e9eac0f70866}\label{classTableGroup_ac46ee16b86e75112ac70e9eac0f70866}} 
+\index{TableGroup@{TableGroup}!````~TableGroup@{$\sim$TableGroup}}
+\index{````~TableGroup@{$\sim$TableGroup}!TableGroup@{TableGroup}}
+\doxysubsubsection{\texorpdfstring{$\sim$TableGroup()}{~TableGroup()}}
+{\footnotesize\ttfamily Table\+Group\+::$\sim$\+Table\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Destructor for the \mbox{\hyperlink{classTableGroup}{Table\+Group}} class. Cleans up resources and performs necessary cleanup operations. 
+
+Destructor for the \mbox{\hyperlink{classTableGroup}{Table\+Group}} class. Deletes all table components in the group and clears the group vector. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classTableGroup_a3746fdc171a40161e1a285b337400ba3}\label{classTableGroup_a3746fdc171a40161e1a285b337400ba3}} 
@@ -81,9 +90,13 @@ Constructor for the \mbox{\hyperlink{classTableGroup}{Table\+Group}} class.
 
 Adds a table component to the group. 
 
+Add a table component to the group.
+
 
 \begin{DoxyParams}{Parameters}
-{\em table\+To\+Add} & Pointer to the \mbox{\hyperlink{classTableComponent}{Table\+Component}} object to be added to the group. \\
+{\em table\+To\+Add} & Pointer to the \mbox{\hyperlink{classTableComponent}{Table\+Component}} object to be added to the group.\\
+\hline
+{\em table\+To\+Add} & Pointer to the table component to be added to the group. \\
 \hline
 \end{DoxyParams}
 
@@ -100,8 +113,12 @@ Reimplemented from \mbox{\hyperlink{classTableComponent_a01287d1a8c7ba2406f610fe
 
 Gets the combined capacity of all tables in the group. 
 
+Calculate the total capacity of all tables in the group.
+
 \begin{DoxyReturn}{Returns}
-The total capacity of the table group. 
+The total capacity of the table group.
+
+The total capacity of the tables in the group. 
 \end{DoxyReturn}
 
 
@@ -117,8 +134,12 @@ Implements \mbox{\hyperlink{classTableComponent_a7e7cb3629f25558318ed7c8ed2c9763
 
 Checks if the table group is empty (does not contain any tables). 
 
+Check if the table group is empty.
+
 \begin{DoxyReturn}{Returns}
-True if the table group does not contain any tables, false otherwise. 
+True if the table group does not contain any tables, false otherwise.
+
+True if the group is empty, false otherwise. 
 \end{DoxyReturn}
 
 
@@ -134,8 +155,12 @@ Reimplemented from \mbox{\hyperlink{classTableComponent_aa23bcc74e58a947697800f2
 
 Removes a table component from the group. 
 
+Remove and return a table component from the group.
+
 \begin{DoxyReturn}{Returns}
-Pointer to the removed \mbox{\hyperlink{classTableComponent}{Table\+Component}} object. 
+Pointer to the removed \mbox{\hyperlink{classTableComponent}{Table\+Component}} object.
+
+Pointer to the removed table component, or nullptr if the group is empty. 
 \end{DoxyReturn}
 
 
@@ -151,8 +176,12 @@ Reimplemented from \mbox{\hyperlink{classTableComponent_a87dfeccafd48005efa66910
 
 Splits the group into individual table components. 
 
+Split the table group, returning a vector of table components.
+
 \begin{DoxyReturn}{Returns}
-Vector of pointers to individual \mbox{\hyperlink{classTableComponent}{Table\+Component}} objects split from the group. 
+Vector of pointers to individual \mbox{\hyperlink{classTableComponent}{Table\+Component}} objects split from the group.
+
+A vector of pointers to table components representing the split group. 
 \end{DoxyReturn}
 
 

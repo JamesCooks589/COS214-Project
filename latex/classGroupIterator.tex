@@ -14,14 +14,12 @@ Represents an iterator for iterating through customer groups.
 \item 
 \mbox{\hyperlink{classGroupIterator_a35333876c3182fff25a69908885e3631}{Group\+Iterator}} (\mbox{\hyperlink{classNode}{Node}} $\ast$head)
 \begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classGroupIterator}{Group\+Iterator}} class. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classGroupIterator_a596747baa613e44590f96da747dd9af7}\label{classGroupIterator_a596747baa613e44590f96da747dd9af7}} 
 \mbox{\hyperlink{classGroupIterator_a596747baa613e44590f96da747dd9af7}{$\sim$\+Group\+Iterator}} ()
 \begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classGroupIterator}{Group\+Iterator}} class. Cleans up resources and performs necessary cleanup operations. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classGroupIterator_a0fdedbff9b7953a76acd097a56742a2b}{has\+Next}} ()
 \begin{DoxyCompactList}\small\item\em Checks if there is a next element in the linked list. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$ \mbox{\hyperlink{classGroupIterator_ae177c9d7ccf1d89e92373c1d35a966b8}{get\+Current}} ()
 \begin{DoxyCompactList}\small\item\em Gets the current customer component pointed by the iterator. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classGroupIterator_ab4e5db840a4037e1694a709f20a26eac}\label{classGroupIterator_ab4e5db840a4037e1694a709f20a26eac}} 
 void \mbox{\hyperlink{classGroupIterator_ab4e5db840a4037e1694a709f20a26eac}{next}} ()
 \begin{DoxyCompactList}\small\item\em Moves the iterator to the next element in the linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -42,10 +40,22 @@ Constructor for the \mbox{\hyperlink{classGroupIterator}{Group\+Iterator}} class
 
 
 \begin{DoxyParams}{Parameters}
-{\em head} & Pointer to the head node of the linked list. Initializes a new instance of \mbox{\hyperlink{classGroupIterator}{Group\+Iterator}} with the given head node. \\
+{\em head} & Pointer to the head node of the linked list. Initializes a new instance of \mbox{\hyperlink{classGroupIterator}{Group\+Iterator}} with the given head node.\\
+\hline
+{\em head} & Pointer to the head node of the linked list. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classGroupIterator_a596747baa613e44590f96da747dd9af7}\label{classGroupIterator_a596747baa613e44590f96da747dd9af7}} 
+\index{GroupIterator@{GroupIterator}!````~GroupIterator@{$\sim$GroupIterator}}
+\index{````~GroupIterator@{$\sim$GroupIterator}!GroupIterator@{GroupIterator}}
+\doxysubsubsection{\texorpdfstring{$\sim$GroupIterator()}{~GroupIterator()}}
+{\footnotesize\ttfamily Group\+Iterator\+::$\sim$\+Group\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Destructor for the \mbox{\hyperlink{classGroupIterator}{Group\+Iterator}} class. Cleans up resources and performs necessary cleanup operations. 
+
+Destructor for the \mbox{\hyperlink{classGroupIterator}{Group\+Iterator}} class. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classGroupIterator_ae177c9d7ccf1d89e92373c1d35a966b8}\label{classGroupIterator_ae177c9d7ccf1d89e92373c1d35a966b8}} 
@@ -58,8 +68,12 @@ Constructor for the \mbox{\hyperlink{classGroupIterator}{Group\+Iterator}} class
 
 Gets the current customer component pointed by the iterator. 
 
+Gets the current customer group pointed by the iterator.
+
 \begin{DoxyReturn}{Returns}
-Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object representing the current element. 
+Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object representing the current element.
+
+Pointer to the current customer group. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classGroupIterator_a0fdedbff9b7953a76acd097a56742a2b}\label{classGroupIterator_a0fdedbff9b7953a76acd097a56742a2b}} 
 \index{GroupIterator@{GroupIterator}!hasNext@{hasNext}}
@@ -71,10 +85,24 @@ Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} ob
 
 Checks if there is a next element in the linked list. 
 
-\begin{DoxyReturn}{Returns}
-True if there is a next element, false otherwise. 
-\end{DoxyReturn}
+Checks if there is a next customer group in the linked list.
 
+\begin{DoxyReturn}{Returns}
+True if there is a next element, false otherwise.
+
+true if there is a next group, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGroupIterator_ab4e5db840a4037e1694a709f20a26eac}\label{classGroupIterator_ab4e5db840a4037e1694a709f20a26eac}} 
+\index{GroupIterator@{GroupIterator}!next@{next}}
+\index{next@{next}!GroupIterator@{GroupIterator}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily void Group\+Iterator\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Moves the iterator to the next element in the linked list. 
+
+Moves the iterator to the next customer group in the linked list. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

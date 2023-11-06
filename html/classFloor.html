@@ -79,9 +79,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9aaef86e0590fa1c6b8382b648aa25d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#a9aaef86e0590fa1c6b8382b648aa25d1">Floor</a> (int numWaiters, <a class="el" href="classKitchen.html">Kitchen</a> *kitchen)</td></tr>
 <tr class="memdesc:a9aaef86e0590fa1c6b8382b648aa25d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classFloor.html" title="Represents the floor of the restaurant with tables and waiters.">Floor</a> class.  <a href="classFloor.html#a9aaef86e0590fa1c6b8382b648aa25d1">More...</a><br /></td></tr>
 <tr class="separator:a9aaef86e0590fa1c6b8382b648aa25d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1b805579f18a76fe2754a3601202e80"><td class="memItemLeft" align="right" valign="top"><a id="ae1b805579f18a76fe2754a3601202e80"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#ae1b805579f18a76fe2754a3601202e80">~Floor</a> ()</td></tr>
-<tr class="memdesc:ae1b805579f18a76fe2754a3601202e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for the <a class="el" href="classFloor.html" title="Represents the floor of the restaurant with tables and waiters.">Floor</a> class. Cleans up resources and performs necessary cleanup operations. <br /></td></tr>
+<tr class="memitem:ae1b805579f18a76fe2754a3601202e80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#ae1b805579f18a76fe2754a3601202e80">~Floor</a> ()</td></tr>
+<tr class="memdesc:ae1b805579f18a76fe2754a3601202e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for the <a class="el" href="classFloor.html" title="Represents the floor of the restaurant with tables and waiters.">Floor</a> class. Cleans up resources and performs necessary cleanup operations.  <a href="classFloor.html#ae1b805579f18a76fe2754a3601202e80">More...</a><br /></td></tr>
 <tr class="separator:ae1b805579f18a76fe2754a3601202e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a770f94e8b74a484cceac89d420070165"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTableComponent.html">TableComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFloor.html#a770f94e8b74a484cceac89d420070165">getTable</a> (int tableID)</td></tr>
 <tr class="memdesc:a770f94e8b74a484cceac89d420070165"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the table component based on the table ID.  <a href="classFloor.html#a770f94e8b74a484cceac89d420070165">More...</a><br /></td></tr>
@@ -169,10 +168,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">numWaiters</td><td>The number of waiters available on the floor. </td></tr>
-    <tr><td class="paramname">kitchen</td><td>Pointer to the <a class="el" href="classKitchen.html" title="Represents the kitchen area of the restaurant with chefs and orders.">Kitchen</a> object associated with the floor. Initializes a new instance of <a class="el" href="classFloor.html" title="Represents the floor of the restaurant with tables and waiters.">Floor</a> with the given number of waiters and kitchen. </td></tr>
+    <tr><td class="paramname">kitchen</td><td>Pointer to the <a class="el" href="classKitchen.html" title="Represents the kitchen area of the restaurant with chefs and orders.">Kitchen</a> object associated with the floor. Initializes a new instance of <a class="el" href="classFloor.html" title="Represents the floor of the restaurant with tables and waiters.">Floor</a> with the given number of waiters and kitchen.</td></tr>
+    <tr><td class="paramname">numWaiters</td><td>Number of waiters to be initialized on the floor. </td></tr>
+    <tr><td class="paramname">kitchen</td><td>Pointer to the <a class="el" href="classKitchen.html" title="Represents the kitchen area of the restaurant with chefs and orders.">Kitchen</a> object associated with the floor. </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ae1b805579f18a76fe2754a3601202e80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1b805579f18a76fe2754a3601202e80">&#9670;&nbsp;</a></span>~Floor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Floor::~Floor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor for the <a class="el" href="classFloor.html" title="Represents the floor of the restaurant with tables and waiters.">Floor</a> class. Cleans up resources and performs necessary cleanup operations. </p>
+<p>Destructor for the <a class="el" href="classFloor.html" title="Represents the floor of the restaurant with tables and waiters.">Floor</a> class. </p>
 
 </div>
 </div>
@@ -196,7 +217,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>Adds a table to the floor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">table</td><td>Pointer to the <a class="el" href="classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent.">TableComponent</a> object to be added. </td></tr>
+    <tr><td class="paramname">table</td><td>Pointer to the <a class="el" href="classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent.">TableComponent</a> object to be added.</td></tr>
+    <tr><td class="paramname">table</td><td>Pointer to the <a class="el" href="classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent.">TableComponent</a> object representing the table to be added. </td></tr>
   </table>
   </dd>
 </dl>
@@ -433,13 +455,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Merges tables based on the group size. </p>
+<p>Merges tables to accommodate a larger group.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">groupSize</td><td>The size of the group for which tables need to be merged. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to the merged <a class="el" href="classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent.">TableComponent</a> object. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the merged <a class="el" href="classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent.">TableComponent</a> object.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupSize</td><td>Size of the customer group to be accommodated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the <a class="el" href="classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent.">TableComponent</a> object representing the merged table group, or nullptr if merge is not possible. </dd></dl>
 
 </div>
 </div>
@@ -462,7 +492,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>Removes a table from the floor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">table</td><td>Pointer to the <a class="el" href="classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent.">TableComponent</a> object to be removed. </td></tr>
+    <tr><td class="paramname">table</td><td>Pointer to the <a class="el" href="classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent.">TableComponent</a> object to be removed.</td></tr>
+    <tr><td class="paramname">table</td><td>Pointer to the <a class="el" href="classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent.">TableComponent</a> object representing the table to be removed. </td></tr>
   </table>
   </dd>
 </dl>

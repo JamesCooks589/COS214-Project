@@ -114,7 +114,8 @@ Public Member Functions</h2></td></tr>
 <p>Constructor for the <a class="el" href="classEntrance.html" title="Represents the entrance area for customers entering the restaurant.">Entrance</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">floor</td><td>Pointer to the <a class="el" href="classFloor.html" title="Represents the floor of the restaurant with tables and waiters.">Floor</a> object where customers will be seated. Initializes a new instance of <a class="el" href="classEntrance.html" title="Represents the entrance area for customers entering the restaurant.">Entrance</a> with the given floor. </td></tr>
+    <tr><td class="paramname">floor</td><td>Pointer to the <a class="el" href="classFloor.html" title="Represents the floor of the restaurant with tables and waiters.">Floor</a> object where customers will be seated. Initializes a new instance of <a class="el" href="classEntrance.html" title="Represents the entrance area for customers entering the restaurant.">Entrance</a> with the given floor.</td></tr>
+    <tr><td class="paramname">floor</td><td>Pointer to the <a class="el" href="classFloor.html" title="Represents the floor of the restaurant with tables and waiters.">Floor</a> object representing the restaurant floor. </td></tr>
   </table>
   </dd>
 </dl>
@@ -141,7 +142,8 @@ Public Member Functions</h2></td></tr>
 <p>Adds a customer group to the entrance queue. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">group</td><td>Pointer to the <a class="el" href="classCustomerComponent.html" title="Represents a component of the customer, such as a customer or a group of customers.">CustomerComponent</a> object representing the group to be added. </td></tr>
+    <tr><td class="paramname">group</td><td>Pointer to the <a class="el" href="classCustomerComponent.html" title="Represents a component of the customer, such as a customer or a group of customers.">CustomerComponent</a> object representing the group to be added.</td></tr>
+    <tr><td class="paramname">group</td><td>Pointer to the <a class="el" href="classCustomerComponent.html" title="Represents a component of the customer, such as a customer or a group of customers.">CustomerComponent</a> object representing the customer group. </td></tr>
   </table>
   </dd>
 </dl>
@@ -164,7 +166,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Checks if the entrance queue is empty. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if the entrance queue is empty, false otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the entrance queue is empty, false otherwise.</dd>
+<dd>
+True if the queue is empty, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -187,7 +191,8 @@ Public Member Functions</h2></td></tr>
 <p>Removes a customer group from the entrance queue. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">group</td><td>Pointer to the <a class="el" href="classCustomerComponent.html" title="Represents a component of the customer, such as a customer or a group of customers.">CustomerComponent</a> object representing the group to be removed. </td></tr>
+    <tr><td class="paramname">group</td><td>Pointer to the <a class="el" href="classCustomerComponent.html" title="Represents a component of the customer, such as a customer or a group of customers.">CustomerComponent</a> object representing the group to be removed.</td></tr>
+    <tr><td class="paramname">group</td><td>Pointer to the <a class="el" href="classCustomerComponent.html" title="Represents a component of the customer, such as a customer or a group of customers.">CustomerComponent</a> object representing the customer group. </td></tr>
   </table>
   </dd>
 </dl>
@@ -210,7 +215,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Seats a customer group from the entrance queue on the restaurant floor. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if a group is successfully seated, false otherwise. </dd></dl>
+<p>Attempts to seat a customer group from the entrance queue based on available tables.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if a group is successfully seated, false otherwise.</dd>
+<dd>
+True if the group is successfully seated, false otherwise. </dd></dl>
 
 </div>
 </div>

@@ -32,7 +32,6 @@ Collaboration diagram for Flour\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classFlour_ae09d800aa00629806eecd80af8450576}\label{classFlour_ae09d800aa00629806eecd80af8450576}} 
 \mbox{\hyperlink{classFlour_ae09d800aa00629806eecd80af8450576}{Flour}} ()
 \begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{classFlour}{Flour}} class. Initializes a new instance of \mbox{\hyperlink{classFlour}{Flour}} with default values. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classFlour_a32fd36750a78d6a8514e8ec44e526f20}{cook\+Food}} (std\+::vector$<$ std\+::string $>$ order\+Details, \mbox{\hyperlink{classPlate}{Plate}} $\ast$plate) override
@@ -42,6 +41,19 @@ virtual void \mbox{\hyperlink{classFlour_a32fd36750a78d6a8514e8ec44e526f20}{cook
 
 \doxysubsection{Detailed Description}
 Represents a type of vegan food derived from \mbox{\hyperlink{classVegan}{Vegan}} class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFlour_ae09d800aa00629806eecd80af8450576}\label{classFlour_ae09d800aa00629806eecd80af8450576}} 
+\index{Flour@{Flour}!Flour@{Flour}}
+\index{Flour@{Flour}!Flour@{Flour}}
+\doxysubsubsection{\texorpdfstring{Flour()}{Flour()}}
+{\footnotesize\ttfamily Flour\+::\+Flour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \mbox{\hyperlink{classFlour}{Flour}} class. Initializes a new instance of \mbox{\hyperlink{classFlour}{Flour}} with default values. 
+
+Default constructor for the \mbox{\hyperlink{classFlour}{Flour}} class. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classFlour_a32fd36750a78d6a8514e8ec44e526f20}\label{classFlour_a32fd36750a78d6a8514e8ec44e526f20}} 
@@ -54,11 +66,17 @@ Represents a type of vegan food derived from \mbox{\hyperlink{classVegan}{Vegan}
 
 Cooks the food based on the provided order details and plate. 
 
+Cooks food items based on flour and adds them to the plate.
+
 
 \begin{DoxyParams}{Parameters}
 {\em order\+Details} & The details of the food order. \\
 \hline
-{\em plate} & Pointer to the \mbox{\hyperlink{classPlate}{Plate}} object where the cooked food is placed. Cooks the Flour-\/based food using the provided order details and places it on the plate. \\
+{\em plate} & Pointer to the \mbox{\hyperlink{classPlate}{Plate}} object where the cooked food is placed. Cooks the Flour-\/based food using the provided order details and places it on the plate.\\
+\hline
+{\em order\+Details} & A vector containing the food items to be cooked. \\
+\hline
+{\em plate} & Pointer to the \mbox{\hyperlink{classPlate}{Plate}} object where cooked food items are added. \\
 \hline
 \end{DoxyParams}
 

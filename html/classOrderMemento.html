@@ -119,7 +119,9 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tableNumber</td><td>The table number associated with the order. </td></tr>
-    <tr><td class="paramname">customerOrders</td><td>Vector of vectors representing the items in the order. Initializes a new instance of <a class="el" href="classOrderMemento.html" title="Represents a memento containing the state of a customer order.">OrderMemento</a> with the given table number and customer orders. </td></tr>
+    <tr><td class="paramname">customerOrders</td><td>Vector of vectors representing the items in the order. Initializes a new instance of <a class="el" href="classOrderMemento.html" title="Represents a memento containing the state of a customer order.">OrderMemento</a> with the given table number and customer orders.</td></tr>
+    <tr><td class="paramname">tableNumber</td><td>The table number associated with the order. </td></tr>
+    <tr><td class="paramname">customerOrders</td><td>A vector containing customer-wise order details. </td></tr>
   </table>
   </dd>
 </dl>
@@ -143,7 +145,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the vector of vectors representing customer orders in the order memento. </p>
-<dl class="section return"><dt>Returns</dt><dd>Vector of vectors containing customer order details in the order memento. </dd></dl>
+<p>Gets the customer-wise order details stored in the memento.</p>
+<dl class="section return"><dt>Returns</dt><dd>Vector of vectors containing customer order details in the order memento.</dd>
+<dd>
+A vector containing customer-wise order details. </dd></dl>
 
 </div>
 </div>
@@ -163,7 +168,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the table number associated with the order memento. </p>
-<dl class="section return"><dt>Returns</dt><dd>The table number of the order memento. </dd></dl>
+<p>Gets the table number stored in the memento.</p>
+<dl class="section return"><dt>Returns</dt><dd>The table number of the order memento.</dd>
+<dd>
+The table number associated with the order. </dd></dl>
 
 </div>
 </div>

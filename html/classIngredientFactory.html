@@ -82,14 +82,41 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad61c901d9cca72d209462128c4ce46f0"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIngredientFactory.html#ad61c901d9cca72d209462128c4ce46f0">getIngredientCount</a> ()</td></tr>
 <tr class="memdesc:ad61c901d9cca72d209462128c4ce46f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the total count of ingredients in the factory.  <a href="classIngredientFactory.html#ad61c901d9cca72d209462128c4ce46f0">More...</a><br /></td></tr>
 <tr class="separator:ad61c901d9cca72d209462128c4ce46f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaecc9b90ac38a17e14d51e374ff4f3f"><td class="memItemLeft" align="right" valign="top"><a id="aeaecc9b90ac38a17e14d51e374ff4f3f"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIngredientFactory.html#aeaecc9b90ac38a17e14d51e374ff4f3f">cleanup</a> ()</td></tr>
-<tr class="memdesc:aeaecc9b90ac38a17e14d51e374ff4f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans up resources and performs necessary cleanup operations. <br /></td></tr>
+<tr class="memitem:aeaecc9b90ac38a17e14d51e374ff4f3f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIngredientFactory.html#aeaecc9b90ac38a17e14d51e374ff4f3f">cleanup</a> ()</td></tr>
+<tr class="memdesc:aeaecc9b90ac38a17e14d51e374ff4f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans up resources and performs necessary cleanup operations.  <a href="classIngredientFactory.html#aeaecc9b90ac38a17e14d51e374ff4f3f">More...</a><br /></td></tr>
 <tr class="separator:aeaecc9b90ac38a17e14d51e374ff4f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a factory for creating <a class="el" href="classIngredient.html" title="Represents an ingredient used in food preparation.">Ingredient</a> objects. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aeaecc9b90ac38a17e14d51e374ff4f3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaecc9b90ac38a17e14d51e374ff4f3f">&#9670;&nbsp;</a></span>cleanup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IngredientFactory::cleanup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cleans up resources and performs necessary cleanup operations. </p>
+<p>Cleans up the ingredient pool by deleting all created <a class="el" href="classIngredient.html" title="Represents an ingredient used in food preparation.">Ingredient</a> objects. This function should be called when the application is shutting down to prevent memory leaks. </p>
+
+</div>
+</div>
 <a id="adf661d5cceb7d47ad8a193f28a8b9246"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf661d5cceb7d47ad8a193f28a8b9246">&#9670;&nbsp;</a></span>getIngredient()</h2>
 
@@ -125,6 +152,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div><div class="memdoc">
 
 <p>Gets an ingredient object based on the provided name and price. </p>
+<p>Gets an ingredient from the ingredient pool. If the ingredient with the given name is not in the pool, creates a new one and adds it to the pool.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>The name of the ingredient. </td></tr>
@@ -132,7 +160,15 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to the <a class="el" href="classIngredient.html" title="Represents an ingredient used in food preparation.">Ingredient</a> object created with the given name and price. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the <a class="el" href="classIngredient.html" title="Represents an ingredient used in food preparation.">Ingredient</a> object created with the given name and price.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of the ingredient. </td></tr>
+    <tr><td class="paramname">price</td><td>The price of the ingredient. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the <a class="el" href="classIngredient.html" title="Represents an ingredient used in food preparation.">Ingredient</a> object. </dd></dl>
 
 </div>
 </div>
@@ -160,7 +196,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div><div class="memdoc">
 
 <p>Gets the total count of ingredients in the factory. </p>
-<dl class="section return"><dt>Returns</dt><dd>The total count of ingredients in the factory. </dd></dl>
+<p>Gets the total count of unique ingredients in the ingredient pool.</p>
+<dl class="section return"><dt>Returns</dt><dd>The total count of ingredients in the factory.</dd>
+<dd>
+The total count of unique ingredients. </dd></dl>
 
 </div>
 </div>

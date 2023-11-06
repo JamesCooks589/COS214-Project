@@ -85,9 +85,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9540b8c07b1e434995bf6816f61b30d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOrder.html#a9540b8c07b1e434995bf6816f61b30d2">restoreFromMemento</a> (const <a class="el" href="classOrderMemento.html">OrderMemento</a> &amp;memento)</td></tr>
 <tr class="memdesc:a9540b8c07b1e434995bf6816f61b30d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores the order state from a memento.  <a href="classOrder.html#a9540b8c07b1e434995bf6816f61b30d2">More...</a><br /></td></tr>
 <tr class="separator:a9540b8c07b1e434995bf6816f61b30d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a0ffa4b438fc3f8b5847da148c7c868"><td class="memItemLeft" align="right" valign="top"><a id="a0a0ffa4b438fc3f8b5847da148c7c868"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOrder.html#a0a0ffa4b438fc3f8b5847da148c7c868">printOrder</a> ()</td></tr>
-<tr class="memdesc:a0a0ffa4b438fc3f8b5847da148c7c868"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the details of the order. <br /></td></tr>
+<tr class="memitem:a0a0ffa4b438fc3f8b5847da148c7c868"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOrder.html#a0a0ffa4b438fc3f8b5847da148c7c868">printOrder</a> ()</td></tr>
+<tr class="memdesc:a0a0ffa4b438fc3f8b5847da148c7c868"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the details of the order.  <a href="classOrder.html#a0a0ffa4b438fc3f8b5847da148c7c868">More...</a><br /></td></tr>
 <tr class="separator:a0a0ffa4b438fc3f8b5847da148c7c868"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99ea64b45b38c884325176ab4b56484b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOrder.html#a99ea64b45b38c884325176ab4b56484b">getTableNumber</a> ()</td></tr>
 <tr class="memdesc:a99ea64b45b38c884325176ab4b56484b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the table number associated with the order.  <a href="classOrder.html#a99ea64b45b38c884325176ab4b56484b">More...</a><br /></td></tr>
@@ -138,7 +137,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tableNumber</td><td>The table number associated with the order. </td></tr>
-    <tr><td class="paramname">customerOrders</td><td>Vector of vectors representing the items in the order. Initializes a new instance of <a class="el" href="classOrder.html" title="Represents a customer order in a restaurant.">Order</a> with the given table number and customer orders. </td></tr>
+    <tr><td class="paramname">customerOrders</td><td>Vector of vectors representing the items in the order. Initializes a new instance of <a class="el" href="classOrder.html" title="Represents a customer order in a restaurant.">Order</a> with the given table number and customer orders.</td></tr>
+    <tr><td class="paramname">tableNumber</td><td>The number of the table placing the order. </td></tr>
+    <tr><td class="paramname">customerOrders</td><td>A vector containing customer-wise order details. </td></tr>
   </table>
   </dd>
 </dl>
@@ -162,7 +163,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Creates a memento for the current order state. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classOrderMemento.html" title="Represents a memento containing the state of a customer order.">OrderMemento</a> object representing the current state of the order. </dd></dl>
+<p>Creates a memento of the current order state.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classOrderMemento.html" title="Represents a memento containing the state of a customer order.">OrderMemento</a> object representing the current state of the order.</dd>
+<dd>
+An <a class="el" href="classOrderMemento.html" title="Represents a memento containing the state of a customer order.">OrderMemento</a> object representing the current order state. </dd></dl>
 
 </div>
 </div>
@@ -182,7 +186,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Gets the vector of vectors representing customer orders. </p>
-<dl class="section return"><dt>Returns</dt><dd>Vector of vectors containing customer order details. </dd></dl>
+<p>Gets the customer orders.</p>
+<dl class="section return"><dt>Returns</dt><dd>Vector of vectors containing customer order details.</dd>
+<dd>
+A vector containing customer-wise order details. </dd></dl>
 
 </div>
 </div>
@@ -202,7 +209,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Gets the order details as a formatted string. </p>
-<dl class="section return"><dt>Returns</dt><dd>Formatted string containing order details. </dd></dl>
+<p>Gets the order details.</p>
+<dl class="section return"><dt>Returns</dt><dd>Formatted string containing order details.</dd>
+<dd>
+A string containing the order details. </dd></dl>
 
 </div>
 </div>
@@ -222,7 +232,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Gets the table number associated with the order. </p>
-<dl class="section return"><dt>Returns</dt><dd>The table number of the order. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The table number of the order.</dd>
+<dd>
+The table number. </dd></dl>
 
 </div>
 </div>
@@ -236,20 +248,48 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td class="memname">bool Order::IsValidOrderDetails </td>
           <td>(</td>
           <td class="paramtype">vector&lt; string &gt;&#160;</td>
-          <td class="paramname"><em>customerOrder</em></td><td>)</td>
+          <td class="paramname"><em>orderDetails</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Checks if the customer order details are valid. </p>
+<p>Checks if the given order details are valid.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">customerOrder</td><td>Vector of strings representing the customer order. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the order details are valid, false otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the order details are valid, false otherwise.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orderDetails</td><td>A vector containing food items for a customer's order. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if all ingredients in orderDetails are valid, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a0a0ffa4b438fc3f8b5847da148c7c868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a0ffa4b438fc3f8b5847da148c7c868">&#9670;&nbsp;</a></span>printOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Order::printOrder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints the details of the order. </p>
+<p>Prints the order details to the console. </p>
 
 </div>
 </div>
@@ -270,9 +310,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Restores the order state from a memento. </p>
+<p>Restores the order state from a given memento.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">memento</td><td>The <a class="el" href="classOrderMemento.html" title="Represents a memento containing the state of a customer order.">OrderMemento</a> object containing the state to be restored. </td></tr>
+    <tr><td class="paramname">memento</td><td>The <a class="el" href="classOrderMemento.html" title="Represents a memento containing the state of a customer order.">OrderMemento</a> object containing the state to be restored.</td></tr>
+    <tr><td class="paramname">memento</td><td>The <a class="el" href="classOrderMemento.html" title="Represents a memento containing the state of a customer order.">OrderMemento</a> object containing the desired order state. </td></tr>
   </table>
   </dd>
 </dl>
@@ -296,13 +338,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Trims leading and trailing whitespace from a string. </p>
+<p>Trims leading and trailing spaces from a string.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">str</td><td>The input string to be trimmed. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Trimmed string with leading and trailing whitespace removed. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Trimmed string with leading and trailing whitespace removed.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The string to be trimmed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The trimmed string. </dd></dl>
 
 </div>
 </div>

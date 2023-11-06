@@ -3,8 +3,8 @@
 * @brief Declaration of the Order class.
 *        This file contains the declaration of the Order class,
 *        which represents a customer order in a restaurant.
-* @author [Ze-Lin Zhang]
-* @date [28/10/23]
+* @author Ze-Lin Zhang
+* @date 28/10/23
 */
 
 #pragma once
