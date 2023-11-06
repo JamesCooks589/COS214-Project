@@ -2,8 +2,8 @@
  * @file Chef.cpp
  * @brief Implementation file for the Chef class.
  *        This file contains the implementation of methods related to chefs and their actions.
- * @author [Author Name]
- * @date [Creation Date]
+ * @author James Cooks
+ * @date 22/10/2023
  */
 
 #include "Chef.h"
