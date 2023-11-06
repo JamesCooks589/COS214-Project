@@ -3,8 +3,8 @@
 * @brief Declaration of the TableComponent class.
 *        This file contains the declaration of the TableComponent class,
 *        which represents a component of a table in the restaurant derived from CustomerComponent.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Lloyd Creighton
+* @date 28 October 2023
 */
 
 #pragma once

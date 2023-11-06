@@ -2,8 +2,8 @@
  * @file CustomerComponent.cpp
  * @brief Implementation file for the CustomerComponent class.
  *        This file contains the implementation of methods related to customer components.
- * @author [Author Name]
- * @date [Creation Date]
+ * @author Lloyd Creighton
+ * @date 28 October 2023
  */
 
 #include "CustomerComponent.h"

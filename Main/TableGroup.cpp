@@ -2,8 +2,8 @@
  * @file TableGroup.cpp
  * @brief Implementation file for the TableGroup class.
  *        This file contains the implementation of methods to handle table group operations.
- * @author [Author Name]
- * @date [Creation Date]
+ * @author Lloyd Creighton
+ * @date 28 October 2023
  */
  
  #include "TableGroup.h"

@@ -3,8 +3,8 @@
 * @brief Declaration of the CustomerComponent class.
 *        This file contains the declaration of the CustomerComponent class,
 *        which represents a component of the customer, such as a customer or a group of customers.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Lloyd Creighton
+* @date 28 October 2023
 */
 
 #pragma once

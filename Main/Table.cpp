@@ -1,8 +1,8 @@
-/*
- * File: Table.cpp
- * Author: [Author Name]
- * Created on: [Creation Date]
- * Description: Implementation file for the Table class. Contains the member function definitions.
+/**
+ * @file: Table.cpp
+ * @author Lloyd Creighton
+ * @date 28 October 2023
+ * @brief: Implementation file for the Table class. Contains the member function definitions.
  */
 
 #include "Table.h"

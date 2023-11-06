@@ -2,8 +2,8 @@
  * @file CustomerGroup.cpp
  * @brief Implementation file for the CustomerGroup class.
  *        This file contains the implementation of methods related to customer groups.
- * @author [Author Name]
- * @date [Creation Date]
+ * @author Lloyd Creighton
+ * @date 28 October 2023
  */
 
 #include "CustomerGroup.h"

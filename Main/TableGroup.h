@@ -3,8 +3,8 @@
 * @brief Declaration of the TableGroup class.
 *        This file contains the declaration of the TableGroup class,
 *        which represents a group of tables in the restaurant derived from TableComponent.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Lloyd Creighton
+* @date 28 October 2023
 */
 
 #pragma once

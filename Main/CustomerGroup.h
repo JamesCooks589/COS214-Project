@@ -3,8 +3,8 @@
 * @brief Declaration of the CustomerGroup class.
 *        This file contains the declaration of the CustomerGroup class,
 *        which represents a group of customers and inherits from CustomerComponent.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Lloyd Creighton
+* @date 28 October 2023
 */
 
 #pragma once

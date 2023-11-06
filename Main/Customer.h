@@ -3,8 +3,8 @@
 * @brief Declaration of the Customer class.
 *        This file contains the declaration of the Customer class,
 *        which represents a customer and inherits from CustomerComponent.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Lloyd Creighton
+* @date 28 October 2023
 */
 
 #pragma once
