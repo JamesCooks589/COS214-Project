@@ -3,8 +3,8 @@
 * @brief Declaration of the Waiter class.
 *        This file contains the declaration of the Waiter class,
 *        which represents a waiter in the restaurant derived from PrototypeWaiter.
-* @author [Author Name]
-* @date [Creation Date]
+* @author Carter Shin
+* @date 4 November 2023
 */
 
 #pragma once
