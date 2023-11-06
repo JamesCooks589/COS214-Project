@@ -1,0 +1,78 @@
+\hypertarget{classOrderMemento}{}\doxysection{Order\+Memento Class Reference}
+\label{classOrderMemento}\index{OrderMemento@{OrderMemento}}
+
+
+Represents a memento containing the state of a customer order.  
+
+
+
+
+{\ttfamily \#include $<$Order\+Memento.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOrderMemento_aa6cc61d7a5ee7debffe8009e36f71da7}{Order\+Memento}} (int table\+Number, std\+::vector$<$ std\+::vector$<$ std\+::string $>$$>$ customer\+Orders)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} class. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classOrderMemento_aacfbc9f5c2a8b317789a6fb73f931788}{get\+Table\+Number}} () const
+\begin{DoxyCompactList}\small\item\em Gets the table number associated with the order memento. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classOrderMemento_aa53b13ff811287b41c6336c4a51a7fb2}{get\+Customer\+Orders}} () const
+\begin{DoxyCompactList}\small\item\em Gets the vector of vectors representing customer orders in the order memento. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a memento containing the state of a customer order. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classOrderMemento_aa6cc61d7a5ee7debffe8009e36f71da7}\label{classOrderMemento_aa6cc61d7a5ee7debffe8009e36f71da7}} 
+\index{OrderMemento@{OrderMemento}!OrderMemento@{OrderMemento}}
+\index{OrderMemento@{OrderMemento}!OrderMemento@{OrderMemento}}
+\doxysubsubsection{\texorpdfstring{OrderMemento()}{OrderMemento()}}
+{\footnotesize\ttfamily Order\+Memento\+::\+Order\+Memento (\begin{DoxyParamCaption}\item[{int}]{table\+Number,  }\item[{std\+::vector$<$ std\+::vector$<$ std\+::string $>$$>$}]{customer\+Orders }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Number} & The table number associated with the order. \\
+\hline
+{\em customer\+Orders} & Vector of vectors representing the items in the order. Initializes a new instance of \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} with the given table number and customer orders. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classOrderMemento_aa53b13ff811287b41c6336c4a51a7fb2}\label{classOrderMemento_aa53b13ff811287b41c6336c4a51a7fb2}} 
+\index{OrderMemento@{OrderMemento}!getCustomerOrders@{getCustomerOrders}}
+\index{getCustomerOrders@{getCustomerOrders}!OrderMemento@{OrderMemento}}
+\doxysubsubsection{\texorpdfstring{getCustomerOrders()}{getCustomerOrders()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ Order\+Memento\+::get\+Customer\+Orders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the vector of vectors representing customer orders in the order memento. 
+
+\begin{DoxyReturn}{Returns}
+Vector of vectors containing customer order details in the order memento. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOrderMemento_aacfbc9f5c2a8b317789a6fb73f931788}\label{classOrderMemento_aacfbc9f5c2a8b317789a6fb73f931788}} 
+\index{OrderMemento@{OrderMemento}!getTableNumber@{getTableNumber}}
+\index{getTableNumber@{getTableNumber}!OrderMemento@{OrderMemento}}
+\doxysubsubsection{\texorpdfstring{getTableNumber()}{getTableNumber()}}
+{\footnotesize\ttfamily int Order\+Memento\+::get\+Table\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the table number associated with the order memento. 
+
+\begin{DoxyReturn}{Returns}
+The table number of the order memento. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{OrderMemento_8h}{Order\+Memento.\+h}}\item 
+Main/\mbox{\hyperlink{OrderMemento_8cpp}{Order\+Memento.\+cpp}}\end{DoxyCompactItemize}

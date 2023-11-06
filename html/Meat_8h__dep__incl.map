@@ -1,0 +1,5 @@
+<map id="Main/Meat.h" name="Main/Meat.h">
+<area shape="rect" id="node1" title="Declaration of the Meat class. This file contains the declaration of the Meat class,..." alt="" coords="96,5,199,32"/>
+<area shape="rect" id="node2" href="$Meat_8cpp.html" title="Implementation file for the Meat class. This file contains the implementation of methods to cook Meat..." alt="" coords="5,80,124,107"/>
+<area shape="rect" id="node3" href="$ToppingChef_8cpp.html" title="Implementation file for the ToppingChef class. This file contains the implementation of methods to cr..." alt="" coords="148,80,312,107"/>
+</map>

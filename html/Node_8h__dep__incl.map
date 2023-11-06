@@ -1,0 +1,11 @@
+<map id="Main/Node.h" name="Main/Node.h">
+<area shape="rect" id="node1" title="Declaration of the Node class. This file contains the declaration of the Node class,..." alt="" coords="194,5,298,32"/>
+<area shape="rect" id="node2" href="$GroupIterator_8h.html" title="Declaration of the GroupIterator class. This file contains the declaration of the GroupIterator class..." alt="" coords="168,80,324,107"/>
+<area shape="rect" id="node3" href="$LinkedList_8h.html" title="Declaration of the LinkedList class. This file contains the declaration of the LinkedList class,..." alt="" coords="68,155,203,181"/>
+<area shape="rect" id="node9" href="$Node_8cpp.html" title="Implementation file for the Node class. This file contains the implementation of methods to manage no..." alt="" coords="348,80,467,107"/>
+<area shape="rect" id="node4" href="$Entrance_8h.html" title="Declaration of the Entrance class. This file contains the declaration of the Entrance class,..." alt="" coords="180,229,307,256"/>
+<area shape="rect" id="node8" href="$GroupIterator_8cpp.html" title="Implementation file for the GroupIterator class. This file contains the implementation of the GroupIt..." alt="" coords="281,155,451,181"/>
+<area shape="rect" id="node7" href="$LinkedList_8cpp.html" title="Implementation file for the LinkedList class. This file contains the implementation of methods to man..." alt="" coords="5,229,156,256"/>
+<area shape="rect" id="node5" href="$Entrance_8cpp.html" title="Implementation file for the Entrance class. This file contains the implementation of methods related ..." alt="" coords="95,304,237,331"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="Main file for the pizzeria simulation program. This file contains the entry point of the program and ..." alt="" coords="261,304,380,331"/>
+</map>

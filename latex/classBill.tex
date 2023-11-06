@@ -1,0 +1,86 @@
+\hypertarget{classBill}{}\doxysection{Bill Class Reference}
+\label{classBill}\index{Bill@{Bill}}
+
+
+Represents a bill for a customer\textquotesingle{}s order.  
+
+
+
+
+{\ttfamily \#include $<$Bill.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBill_abfd2488c4a3892979a3d423ce7b9c32e}{Bill}} (int order\+Id)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classBill}{Bill}} class. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBill_ac3d6c73ecdb28d17cd7e78dc5dbab2c4}{calculate\+Total\+Amount}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total amount for the bill. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBill_a12164e1d0b7d19a59a7b51162e5368fb}{print\+Bill}} ()
+\begin{DoxyCompactList}\small\item\em Prints the bill with details of food items and total amount. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a bill for a customer\textquotesingle{}s order. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBill_abfd2488c4a3892979a3d423ce7b9c32e}\label{classBill_abfd2488c4a3892979a3d423ce7b9c32e}} 
+\index{Bill@{Bill}!Bill@{Bill}}
+\index{Bill@{Bill}!Bill@{Bill}}
+\doxysubsubsection{\texorpdfstring{Bill()}{Bill()}}
+{\footnotesize\ttfamily Bill\+::\+Bill (\begin{DoxyParamCaption}\item[{int}]{order\+Id }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classBill}{Bill}} class. 
+
+Constructor for the \mbox{\hyperlink{classBill}{Bill}} class. Retrieves order details from \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} and initializes the \mbox{\hyperlink{classBill}{Bill}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Id} & The unique identifier for the order.\\
+\hline
+{\em order\+Id} & The unique identifier for the order. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if there is an error retrieving order details. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBill_ac3d6c73ecdb28d17cd7e78dc5dbab2c4}\label{classBill_ac3d6c73ecdb28d17cd7e78dc5dbab2c4}} 
+\index{Bill@{Bill}!calculateTotalAmount@{calculateTotalAmount}}
+\index{calculateTotalAmount@{calculateTotalAmount}!Bill@{Bill}}
+\doxysubsubsection{\texorpdfstring{calculateTotalAmount()}{calculateTotalAmount()}}
+{\footnotesize\ttfamily double Bill\+::calculate\+Total\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the total amount for the bill. 
+
+Calculates the total amount of the bill based on the food items ordered.
+
+\begin{DoxyReturn}{Returns}
+The total amount for the order.
+
+The total amount of the bill. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBill_a12164e1d0b7d19a59a7b51162e5368fb}\label{classBill_a12164e1d0b7d19a59a7b51162e5368fb}} 
+\index{Bill@{Bill}!printBill@{printBill}}
+\index{printBill@{printBill}!Bill@{Bill}}
+\doxysubsubsection{\texorpdfstring{printBill()}{printBill()}}
+{\footnotesize\ttfamily void Bill\+::print\+Bill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints the bill with details of food items and total amount. 
+
+Prints the bill details including order ID, food items, and total amount. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{Bill_8h}{Bill.\+h}}\item 
+Main/\mbox{\hyperlink{Bill_8cpp}{Bill.\+cpp}}\end{DoxyCompactItemize}

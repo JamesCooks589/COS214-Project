@@ -1,0 +1,10 @@
+<map id="Main/TableGroup.h" name="Main/TableGroup.h">
+<area shape="rect" id="node1" title="Declaration of the TableGroup class. This file contains the declaration of the TableGroup class,..." alt="" coords="313,5,456,32"/>
+<area shape="rect" id="node2" href="$floor_8h_source.html" title=" " alt="" coords="259,80,358,107"/>
+<area shape="rect" id="node8" href="$TableGroup_8cpp.html" title="Implementation file for the TableGroup class. This file contains the implementation of methods to han..." alt="" coords="383,80,541,107"/>
+<area shape="rect" id="node3" href="$Entrance_8h.html" title="Declaration of the Entrance class. This file contains the declaration of the Entrance class,..." alt="" coords="91,155,217,181"/>
+<area shape="rect" id="node6" href="$Kitchen_8cpp.html" title="Implementation file for the Kitchen class. This file contains the implementation of methods to handle..." alt="" coords="241,155,376,181"/>
+<area shape="rect" id="node7" href="$Waiter_8cpp.html" title="Implementation file for the Waiter class. This file contains the implementation of methods to handle ..." alt="" coords="400,155,527,181"/>
+<area shape="rect" id="node4" href="$Entrance_8cpp.html" title="Implementation file for the Entrance class. This file contains the implementation of methods related ..." alt="" coords="5,229,148,256"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="Main file for the pizzeria simulation program. This file contains the entry point of the program and ..." alt="" coords="172,229,291,256"/>
+</map>

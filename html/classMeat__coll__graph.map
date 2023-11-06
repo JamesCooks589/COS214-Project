@@ -1,0 +1,6 @@
+<map id="Meat" name="Meat">
+<area shape="rect" id="node1" title="Represents a type of non&#45;vegan food derived from Nonvegan class." alt="" coords="30,233,85,260"/>
+<area shape="rect" id="node2" href="$classNonvegan.html" title="Represents a type of pizza creator for non&#45;vegan pizzas." alt="" coords="13,157,101,184"/>
+<area shape="rect" id="node3" href="$classPizzaCreator.html" title="Represents a pizza creator derived from the Chef class." alt="" coords="5,81,109,108"/>
+<area shape="rect" id="node4" href="$classChef.html" title="Represents a chef capable of cooking food and handling orders." alt="" coords="31,5,83,32"/>
+</map>

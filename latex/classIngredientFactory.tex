@@ -1,0 +1,66 @@
+\hypertarget{classIngredientFactory}{}\doxysection{Ingredient\+Factory Class Reference}
+\label{classIngredientFactory}\index{IngredientFactory@{IngredientFactory}}
+
+
+Represents a factory for creating \mbox{\hyperlink{classIngredient}{Ingredient}} objects.  
+
+
+
+
+{\ttfamily \#include $<$Ingredient\+Factory.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ \mbox{\hyperlink{classIngredientFactory_adf661d5cceb7d47ad8a193f28a8b9246}{get\+Ingredient}} (const std\+::string \&name, double price)
+\begin{DoxyCompactList}\small\item\em Gets an ingredient object based on the provided name and price. \end{DoxyCompactList}\item 
+static size\+\_\+t \mbox{\hyperlink{classIngredientFactory_ad61c901d9cca72d209462128c4ce46f0}{get\+Ingredient\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Gets the total count of ingredients in the factory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIngredientFactory_aeaecc9b90ac38a17e14d51e374ff4f3f}\label{classIngredientFactory_aeaecc9b90ac38a17e14d51e374ff4f3f}} 
+static void \mbox{\hyperlink{classIngredientFactory_aeaecc9b90ac38a17e14d51e374ff4f3f}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Cleans up resources and performs necessary cleanup operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a factory for creating \mbox{\hyperlink{classIngredient}{Ingredient}} objects. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIngredientFactory_adf661d5cceb7d47ad8a193f28a8b9246}\label{classIngredientFactory_adf661d5cceb7d47ad8a193f28a8b9246}} 
+\index{IngredientFactory@{IngredientFactory}!getIngredient@{getIngredient}}
+\index{getIngredient@{getIngredient}!IngredientFactory@{IngredientFactory}}
+\doxysubsubsection{\texorpdfstring{getIngredient()}{getIngredient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ Ingredient\+Factory\+::get\+Ingredient (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{double}]{price }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets an ingredient object based on the provided name and price. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the ingredient. \\
+\hline
+{\em price} & The price of the ingredient. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{classIngredient}{Ingredient}} object created with the given name and price. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIngredientFactory_ad61c901d9cca72d209462128c4ce46f0}\label{classIngredientFactory_ad61c901d9cca72d209462128c4ce46f0}} 
+\index{IngredientFactory@{IngredientFactory}!getIngredientCount@{getIngredientCount}}
+\index{getIngredientCount@{getIngredientCount}!IngredientFactory@{IngredientFactory}}
+\doxysubsubsection{\texorpdfstring{getIngredientCount()}{getIngredientCount()}}
+{\footnotesize\ttfamily size\+\_\+t Ingredient\+Factory\+::get\+Ingredient\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the total count of ingredients in the factory. 
+
+\begin{DoxyReturn}{Returns}
+The total count of ingredients in the factory. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{IngredientFactory_8h}{Ingredient\+Factory.\+h}}\item 
+Main/\mbox{\hyperlink{IngredientFactory_8cpp}{Ingredient\+Factory.\+cpp}}\end{DoxyCompactItemize}

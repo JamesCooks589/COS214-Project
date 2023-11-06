@@ -1,0 +1,338 @@
+\hypertarget{classCustomerComponent}{}\doxysection{Customer\+Component Class Reference}
+\label{classCustomerComponent}\index{CustomerComponent@{CustomerComponent}}
+
+
+Represents a component of the customer, such as a customer or a group of customers.  
+
+
+
+
+{\ttfamily \#include $<$Customer\+Component.\+h$>$}
+
+
+
+Inheritance diagram for Customer\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classCustomerComponent__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCustomerComponent_a70680f918d2a5457cb2662923bd61fca}{Customer\+Component}} (int id)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} class. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCustomerComponent_aea469fc95c328e8c349f640b589b4a13}{get\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Gets the ID of the customer component. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCustomerComponent_aaf3b3e13a81fcbcdf8acb8d318f788d2}{get\+Table\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Gets the table ID where the customer component is located. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCustomerComponent_a2dca8c8a296acc7e469703beee8c9868}{set\+Table\+ID}} (int id)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to set the table ID for the customer component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCustomerComponent_ae128bab5394b5b288cdf9307ad3d9698}{give\+Plate}} (\mbox{\hyperlink{classPlate}{Plate}} $\ast$plate)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to give a plate to the customer component. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classCustomerComponent_a2c1ecf88a19500139691d39cb64de8f4}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the customer component. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classOrder}{Order}} $\ast$ \mbox{\hyperlink{classCustomerComponent_a1dc3d6bf823e62fea7ea8a21b890c803}{get\+Order}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to get the order of the customer component. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classCustomerComponent_a34033b2b0aa4c6128836dc2de4f0def0}{get\+Size}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to get the size of the customer component. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classCustomerComponent_a22c3f052ef488f3d5f2ad76cfbab67bf}{get\+Happiness}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to get the happiness level of the customer component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomerComponent_a24337e58c687be49350526989b65b6a1}{attach\+Waiter}} (\mbox{\hyperlink{classPrototypeWaiter}{Prototype\+Waiter}} $\ast$waiter)
+\begin{DoxyCompactList}\small\item\em Attaches a waiter to the customer component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomerComponent_a43c22cbc5d23ead6d6562470d7fad3d9}{detach\+Waiter}} ()
+\begin{DoxyCompactList}\small\item\em Detaches the waiter from the customer component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomerComponent_a5185db6ee6d9cecbea3dddd6b7019659}{signal\+To\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Signals the waiter to take the order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomerComponent_a27aea8cd63477bb7620cec932650fca2}{signal\+For\+Bill}} ()
+\begin{DoxyCompactList}\small\item\em Signals the waiter to bring the bill. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCustomerComponent_a960ca46e0c1bf1c288ba42dabb7a4234}{add\+To\+Group}} (\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$comp)
+\begin{DoxyCompactList}\small\item\em Adds a customer component to the group. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCustomerComponent_aaeafbea2bfe492e3210d2958c05a1609}{pay\+Bill}} (double amount, bool split)=0
+\begin{DoxyCompactList}\small\item\em Pays the bill for the customer component. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classCustomerComponent_a114f192a7585e4582279f6b42274b15e}{$\sim$\+Customer\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} class. Cleans up resources and performs necessary cleanup operations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomerComponent_a16aad7b0a5f2a2c41edfe4ac84beccbe}\label{classCustomerComponent_a16aad7b0a5f2a2c41edfe4ac84beccbe}} 
+virtual void \mbox{\hyperlink{classCustomerComponent_a16aad7b0a5f2a2c41edfe4ac84beccbe}{chef\+Visit}} ()=0
+\begin{DoxyCompactList}\small\item\em Simulates a visit from the chef. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCustomerComponent_a04b56ea82add7dab9e30d3b9dcdf509a}\label{classCustomerComponent_a04b56ea82add7dab9e30d3b9dcdf509a}} 
+int \mbox{\hyperlink{classCustomerComponent_a04b56ea82add7dab9e30d3b9dcdf509a}{table\+ID}}
+\begin{DoxyCompactList}\small\item\em The table ID where the customer component is located. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a component of the customer, such as a customer or a group of customers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCustomerComponent_a70680f918d2a5457cb2662923bd61fca}\label{classCustomerComponent_a70680f918d2a5457cb2662923bd61fca}} 
+\index{CustomerComponent@{CustomerComponent}!CustomerComponent@{CustomerComponent}}
+\index{CustomerComponent@{CustomerComponent}!CustomerComponent@{CustomerComponent}}
+\doxysubsubsection{\texorpdfstring{CustomerComponent()}{CustomerComponent()}}
+{\footnotesize\ttfamily Customer\+Component\+::\+Customer\+Component (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique identifier for the customer component. Initializes a new instance of \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} with the given ID.\\
+\hline
+{\em id} & The unique identifier for the customer component. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCustomerComponent_a114f192a7585e4582279f6b42274b15e}\label{classCustomerComponent_a114f192a7585e4582279f6b42274b15e}} 
+\index{CustomerComponent@{CustomerComponent}!````~CustomerComponent@{$\sim$CustomerComponent}}
+\index{````~CustomerComponent@{$\sim$CustomerComponent}!CustomerComponent@{CustomerComponent}}
+\doxysubsubsection{\texorpdfstring{$\sim$CustomerComponent()}{~CustomerComponent()}}
+{\footnotesize\ttfamily Customer\+Component\+::$\sim$\+Customer\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor for the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} class. Cleans up resources and performs necessary cleanup operations. 
+
+Destructor for the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} class. \mbox{\hyperlink{classWaiter}{Waiter}} deletion is handled upon restaurant destruction, so no specific cleanup is needed. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCustomerComponent_a960ca46e0c1bf1c288ba42dabb7a4234}\label{classCustomerComponent_a960ca46e0c1bf1c288ba42dabb7a4234}} 
+\index{CustomerComponent@{CustomerComponent}!addToGroup@{addToGroup}}
+\index{addToGroup@{addToGroup}!CustomerComponent@{CustomerComponent}}
+\doxysubsubsection{\texorpdfstring{addToGroup()}{addToGroup()}}
+{\footnotesize\ttfamily void Customer\+Component\+::add\+To\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$}]{comp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds a customer component to the group. 
+
+Adds a customer component to a group (not applicable for this class). Default implementation prints a message indicating inapplicability.
+
+
+\begin{DoxyParams}{Parameters}
+{\em comp} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object to be added to the group. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classCustomerGroup_a91f803866cc4e0b18ddd8e6cd815ecf8}{Customer\+Group}}.
+
+\mbox{\Hypertarget{classCustomerComponent_a24337e58c687be49350526989b65b6a1}\label{classCustomerComponent_a24337e58c687be49350526989b65b6a1}} 
+\index{CustomerComponent@{CustomerComponent}!attachWaiter@{attachWaiter}}
+\index{attachWaiter@{attachWaiter}!CustomerComponent@{CustomerComponent}}
+\doxysubsubsection{\texorpdfstring{attachWaiter()}{attachWaiter()}}
+{\footnotesize\ttfamily void Customer\+Component\+::attach\+Waiter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPrototypeWaiter}{Prototype\+Waiter}} $\ast$}]{waiter }\end{DoxyParamCaption})}
+
+
+
+Attaches a waiter to the customer component. 
+
+Attaches a prototype waiter to the customer component.
+
+
+\begin{DoxyParams}{Parameters}
+{\em waiter} & Pointer to the \mbox{\hyperlink{classPrototypeWaiter}{Prototype\+Waiter}} object to be attached. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCustomerComponent_a43c22cbc5d23ead6d6562470d7fad3d9}\label{classCustomerComponent_a43c22cbc5d23ead6d6562470d7fad3d9}} 
+\index{CustomerComponent@{CustomerComponent}!detachWaiter@{detachWaiter}}
+\index{detachWaiter@{detachWaiter}!CustomerComponent@{CustomerComponent}}
+\doxysubsubsection{\texorpdfstring{detachWaiter()}{detachWaiter()}}
+{\footnotesize\ttfamily void Customer\+Component\+::detach\+Waiter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Detaches the waiter from the customer component. 
+
+Detaches the prototype waiter from the customer component. \mbox{\Hypertarget{classCustomerComponent_a22c3f052ef488f3d5f2ad76cfbab67bf}\label{classCustomerComponent_a22c3f052ef488f3d5f2ad76cfbab67bf}} 
+\index{CustomerComponent@{CustomerComponent}!getHappiness@{getHappiness}}
+\index{getHappiness@{getHappiness}!CustomerComponent@{CustomerComponent}}
+\doxysubsubsection{\texorpdfstring{getHappiness()}{getHappiness()}}
+{\footnotesize\ttfamily virtual int Customer\+Component\+::get\+Happiness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to get the happiness level of the customer component. 
+
+\begin{DoxyReturn}{Returns}
+The happiness level of the customer component. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCustomer_ad5c2d2cc1848c1902ed4bdef9ace405b}{Customer}}, and \mbox{\hyperlink{classCustomerGroup_a606f3cc5dfcb76546188ba7564eb5d1c}{Customer\+Group}}.
+
+\mbox{\Hypertarget{classCustomerComponent_aea469fc95c328e8c349f640b589b4a13}\label{classCustomerComponent_aea469fc95c328e8c349f640b589b4a13}} 
+\index{CustomerComponent@{CustomerComponent}!getID@{getID}}
+\index{getID@{getID}!CustomerComponent@{CustomerComponent}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily int Customer\+Component\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the ID of the customer component. 
+
+Gets the unique identifier of the customer component.
+
+\begin{DoxyReturn}{Returns}
+The ID of the customer component.
+
+The unique identifier of the customer component. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomerComponent_a2c1ecf88a19500139691d39cb64de8f4}\label{classCustomerComponent_a2c1ecf88a19500139691d39cb64de8f4}} 
+\index{CustomerComponent@{CustomerComponent}!getName@{getName}}
+\index{getName@{getName}!CustomerComponent@{CustomerComponent}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Customer\+Component\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the name of the customer component. 
+
+Gets the name of the customer component. Default implementation returns \char`\"{}\+Not Applicable\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+The name of the customer component. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classCustomer_a4564927e17d6cea720272b83e1108f90}{Customer}}.
+
+\mbox{\Hypertarget{classCustomerComponent_a1dc3d6bf823e62fea7ea8a21b890c803}\label{classCustomerComponent_a1dc3d6bf823e62fea7ea8a21b890c803}} 
+\index{CustomerComponent@{CustomerComponent}!getOrder@{getOrder}}
+\index{getOrder@{getOrder}!CustomerComponent@{CustomerComponent}}
+\doxysubsubsection{\texorpdfstring{getOrder()}{getOrder()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classOrder}{Order}}$\ast$ Customer\+Component\+::get\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to get the order of the customer component. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{classOrder}{Order}} object representing the customer\textquotesingle{}s order. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCustomerGroup_adec9a0126bb3d6b80f959cc352a87256}{Customer\+Group}}, and \mbox{\hyperlink{classCustomer_ade45d77e8ddbf1365df31ca536a9a5ce}{Customer}}.
+
+\mbox{\Hypertarget{classCustomerComponent_a34033b2b0aa4c6128836dc2de4f0def0}\label{classCustomerComponent_a34033b2b0aa4c6128836dc2de4f0def0}} 
+\index{CustomerComponent@{CustomerComponent}!getSize@{getSize}}
+\index{getSize@{getSize}!CustomerComponent@{CustomerComponent}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily virtual int Customer\+Component\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to get the size of the customer component. 
+
+\begin{DoxyReturn}{Returns}
+The size of the customer component. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCustomerGroup_a15d3d19a8e451ed6fbd049f3332274ba}{Customer\+Group}}, and \mbox{\hyperlink{classCustomer_aeea76d1bc95b67d4e7b1acd2220c0a41}{Customer}}.
+
+\mbox{\Hypertarget{classCustomerComponent_aaf3b3e13a81fcbcdf8acb8d318f788d2}\label{classCustomerComponent_aaf3b3e13a81fcbcdf8acb8d318f788d2}} 
+\index{CustomerComponent@{CustomerComponent}!getTableID@{getTableID}}
+\index{getTableID@{getTableID}!CustomerComponent@{CustomerComponent}}
+\doxysubsubsection{\texorpdfstring{getTableID()}{getTableID()}}
+{\footnotesize\ttfamily int Customer\+Component\+::get\+Table\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the table ID where the customer component is located. 
+
+Gets the table ID associated with the customer component.
+
+\begin{DoxyReturn}{Returns}
+The table ID where the customer component is located.
+
+The table ID of the customer component. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomerComponent_ae128bab5394b5b288cdf9307ad3d9698}\label{classCustomerComponent_ae128bab5394b5b288cdf9307ad3d9698}} 
+\index{CustomerComponent@{CustomerComponent}!givePlate@{givePlate}}
+\index{givePlate@{givePlate}!CustomerComponent@{CustomerComponent}}
+\doxysubsubsection{\texorpdfstring{givePlate()}{givePlate()}}
+{\footnotesize\ttfamily virtual void Customer\+Component\+::give\+Plate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlate}{Plate}} $\ast$}]{plate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to give a plate to the customer component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plate} & Pointer to the \mbox{\hyperlink{classPlate}{Plate}} object to be given to the customer component. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classCustomer_a326415308f4027d2973de48a0cfe08de}{Customer}}, and \mbox{\hyperlink{classCustomerGroup_ad657b980067fa691cda1f48c0f1bb3d3}{Customer\+Group}}.
+
+\mbox{\Hypertarget{classCustomerComponent_aaeafbea2bfe492e3210d2958c05a1609}\label{classCustomerComponent_aaeafbea2bfe492e3210d2958c05a1609}} 
+\index{CustomerComponent@{CustomerComponent}!payBill@{payBill}}
+\index{payBill@{payBill}!CustomerComponent@{CustomerComponent}}
+\doxysubsubsection{\texorpdfstring{payBill()}{payBill()}}
+{\footnotesize\ttfamily virtual void Customer\+Component\+::pay\+Bill (\begin{DoxyParamCaption}\item[{double}]{amount,  }\item[{bool}]{split }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pays the bill for the customer component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The amount to be paid. \\
+\hline
+{\em split} & Flag indicating whether the bill is split or not. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classCustomerGroup_ab33f8f13886ab33737d8ee89cc1664ee}{Customer\+Group}}, and \mbox{\hyperlink{classCustomer_aac2d9f9f9bbc77ac63bf0627d779a6ac}{Customer}}.
+
+\mbox{\Hypertarget{classCustomerComponent_a2dca8c8a296acc7e469703beee8c9868}\label{classCustomerComponent_a2dca8c8a296acc7e469703beee8c9868}} 
+\index{CustomerComponent@{CustomerComponent}!setTableID@{setTableID}}
+\index{setTableID@{setTableID}!CustomerComponent@{CustomerComponent}}
+\doxysubsubsection{\texorpdfstring{setTableID()}{setTableID()}}
+{\footnotesize\ttfamily virtual void Customer\+Component\+::set\+Table\+ID (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to set the table ID for the customer component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The table ID to be set for the customer component. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classCustomer_aa8398b47b3ca9825ba6f7f14026641be}{Customer}}, and \mbox{\hyperlink{classCustomerGroup_acd799ce318f2b3af23684d66f511eeee}{Customer\+Group}}.
+
+\mbox{\Hypertarget{classCustomerComponent_a27aea8cd63477bb7620cec932650fca2}\label{classCustomerComponent_a27aea8cd63477bb7620cec932650fca2}} 
+\index{CustomerComponent@{CustomerComponent}!signalForBill@{signalForBill}}
+\index{signalForBill@{signalForBill}!CustomerComponent@{CustomerComponent}}
+\doxysubsubsection{\texorpdfstring{signalForBill()}{signalForBill()}}
+{\footnotesize\ttfamily void Customer\+Component\+::signal\+For\+Bill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Signals the waiter to bring the bill. 
+
+Signals the prototype waiter to bring the bill to the customer. If no waiter is attached, prints an error message. \mbox{\Hypertarget{classCustomerComponent_a5185db6ee6d9cecbea3dddd6b7019659}\label{classCustomerComponent_a5185db6ee6d9cecbea3dddd6b7019659}} 
+\index{CustomerComponent@{CustomerComponent}!signalToOrder@{signalToOrder}}
+\index{signalToOrder@{signalToOrder}!CustomerComponent@{CustomerComponent}}
+\doxysubsubsection{\texorpdfstring{signalToOrder()}{signalToOrder()}}
+{\footnotesize\ttfamily void Customer\+Component\+::signal\+To\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Signals the waiter to take the order. 
+
+Signals the prototype waiter to take the customer\textquotesingle{}s order. If no waiter is attached, prints an error message. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{CustomerComponent_8h}{Customer\+Component.\+h}}\item 
+Main/\mbox{\hyperlink{CustomerComponent_8cpp}{Customer\+Component.\+cpp}}\end{DoxyCompactItemize}

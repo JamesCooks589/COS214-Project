@@ -1,0 +1,4 @@
+<map id="TableGroup" name="TableGroup">
+<area shape="rect" id="node1" title="Represents a group of tables in the restaurant derived from TableComponent." alt="" coords="23,80,118,107"/>
+<area shape="rect" id="node2" href="$classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent." alt="" coords="5,5,136,32"/>
+</map>

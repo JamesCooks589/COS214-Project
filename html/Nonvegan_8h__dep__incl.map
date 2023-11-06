@@ -1,0 +1,8 @@
+<map id="Main/Nonvegan.h" name="Main/Nonvegan.h">
+<area shape="rect" id="node1" title="Declaration of the Nonvegan class. This file contains the declaration of the Nonvegan class,..." alt="" coords="79,5,215,32"/>
+<area shape="rect" id="node2" href="$Cheese_8h.html" title="Declaration of the Cheese class. This file contains the declaration of the Cheese class,..." alt="" coords="21,80,139,107"/>
+<area shape="rect" id="node4" href="$Meat_8h.html" title="Declaration of the Meat class. This file contains the declaration of the Meat class,..." alt="" coords="171,80,274,107"/>
+<area shape="rect" id="node3" href="$Cheese_8cpp.html" title="Implementation file for the Cheese class. This file contains the implementation of methods to cook Ch..." alt="" coords="5,155,139,181"/>
+<area shape="rect" id="node5" href="$Meat_8cpp.html" title="Implementation file for the Meat class. This file contains the implementation of methods to cook Meat..." alt="" coords="163,155,282,181"/>
+<area shape="rect" id="node6" href="$ToppingChef_8cpp.html" title="Implementation file for the ToppingChef class. This file contains the implementation of methods to cr..." alt="" coords="306,155,470,181"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Main/LinkedList.h" name="Main/LinkedList.h">
+<area shape="rect" id="node1" title="Declaration of the LinkedList class. This file contains the declaration of the LinkedList class,..." alt="" coords="168,5,303,32"/>
+<area shape="rect" id="node2" href="$Entrance_8h.html" title="Declaration of the Entrance class. This file contains the declaration of the Entrance class,..." alt="" coords="91,80,217,107"/>
+<area shape="rect" id="node5" href="$LinkedList_8cpp.html" title="Implementation file for the LinkedList class. This file contains the implementation of methods to man..." alt="" coords="241,80,392,107"/>
+<area shape="rect" id="node3" href="$Entrance_8cpp.html" title="Implementation file for the Entrance class. This file contains the implementation of methods related ..." alt="" coords="5,155,148,181"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="Main file for the pizzeria simulation program. This file contains the entry point of the program and ..." alt="" coords="172,155,291,181"/>
+</map>

@@ -1,0 +1,250 @@
+\hypertarget{classCustomer}{}\doxysection{Customer Class Reference}
+\label{classCustomer}\index{Customer@{Customer}}
+
+
+Represents a customer inheriting from \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}}.  
+
+
+
+
+{\ttfamily \#include $<$Customer.\+h$>$}
+
+
+
+Inheritance diagram for Customer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classCustomer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Customer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classCustomer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCustomer_af8588de52a4b4adf808ea8e96da0063a}{Customer}} (std\+::string name, int id)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classCustomer}{Customer}} class. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCustomer_aeea76d1bc95b67d4e7b1acd2220c0a41}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the size of the customer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOrder}{Order}} $\ast$ \mbox{\hyperlink{classCustomer_ade45d77e8ddbf1365df31ca536a9a5ce}{get\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Gets the order for the customer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomer_a326415308f4027d2973de48a0cfe08de}{give\+Plate}} (\mbox{\hyperlink{classPlate}{Plate}} $\ast$plate)
+\begin{DoxyCompactList}\small\item\em Gives a plate to the customer. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCustomer_a4564927e17d6cea720272b83e1108f90}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the customer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomer_aa8398b47b3ca9825ba6f7f14026641be}{set\+Table\+ID}} (int id)
+\begin{DoxyCompactList}\small\item\em Sets the table ID for the customer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCustomer_ad5c2d2cc1848c1902ed4bdef9ace405b}{get\+Happiness}} ()
+\begin{DoxyCompactList}\small\item\em Gets the happiness level of the customer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomer_aac2d9f9f9bbc77ac63bf0627d779a6ac}{pay\+Bill}} (double amount, bool split)
+\begin{DoxyCompactList}\small\item\em Pays the bill for the customer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomer_ae8e0a51ee2e1b722040a292f82dc5943}{chef\+Visit}} ()
+\begin{DoxyCompactList}\small\item\em Simulates a visit from the chef. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a customer inheriting from \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCustomer_af8588de52a4b4adf808ea8e96da0063a}\label{classCustomer_af8588de52a4b4adf808ea8e96da0063a}} 
+\index{Customer@{Customer}!Customer@{Customer}}
+\index{Customer@{Customer}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{Customer()}{Customer()}}
+{\footnotesize\ttfamily Customer\+::\+Customer (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classCustomer}{Customer}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the customer. \\
+\hline
+{\em id} & The unique identifier for the customer. Initializes a new instance of \mbox{\hyperlink{classCustomer}{Customer}} with the given name and ID.\\
+\hline
+{\em name} & The name of the customer. \\
+\hline
+{\em id} & The unique identifier for the customer. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCustomer_ae8e0a51ee2e1b722040a292f82dc5943}\label{classCustomer_ae8e0a51ee2e1b722040a292f82dc5943}} 
+\index{Customer@{Customer}!chefVisit@{chefVisit}}
+\index{chefVisit@{chefVisit}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{chefVisit()}{chefVisit()}}
+{\footnotesize\ttfamily void Customer\+::chef\+Visit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Simulates a visit from the chef. 
+
+Increases customer\textquotesingle{}s happiness when the chef visits the customer. 
+
+Implements \mbox{\hyperlink{classCustomerComponent_a16aad7b0a5f2a2c41edfe4ac84beccbe}{Customer\+Component}}.
+
+\mbox{\Hypertarget{classCustomer_ad5c2d2cc1848c1902ed4bdef9ace405b}\label{classCustomer_ad5c2d2cc1848c1902ed4bdef9ace405b}} 
+\index{Customer@{Customer}!getHappiness@{getHappiness}}
+\index{getHappiness@{getHappiness}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getHappiness()}{getHappiness()}}
+{\footnotesize\ttfamily int Customer\+::get\+Happiness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the happiness level of the customer. 
+
+Gets the current happiness level of the customer.
+
+\begin{DoxyReturn}{Returns}
+The happiness level of the customer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCustomerComponent_a22c3f052ef488f3d5f2ad76cfbab67bf}{Customer\+Component}}.
+
+\mbox{\Hypertarget{classCustomer_a4564927e17d6cea720272b83e1108f90}\label{classCustomer_a4564927e17d6cea720272b83e1108f90}} 
+\index{Customer@{Customer}!getName@{getName}}
+\index{getName@{getName}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Customer\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the name of the customer. 
+
+\begin{DoxyReturn}{Returns}
+The name of the customer. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCustomerComponent_a2c1ecf88a19500139691d39cb64de8f4}{Customer\+Component}}.
+
+\mbox{\Hypertarget{classCustomer_ade45d77e8ddbf1365df31ca536a9a5ce}\label{classCustomer_ade45d77e8ddbf1365df31ca536a9a5ce}} 
+\index{Customer@{Customer}!getOrder@{getOrder}}
+\index{getOrder@{getOrder}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getOrder()}{getOrder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOrder}{Order}} $\ast$ Customer\+::get\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the order for the customer. 
+
+Generates a random order for the customer and returns an \mbox{\hyperlink{classOrder}{Order}} object. The order includes a base ingredient and a random number of toppings.
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{classOrder}{Order}} object for the customer.
+
+Pointer to the generated \mbox{\hyperlink{classOrder}{Order}} object. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCustomerComponent_a1dc3d6bf823e62fea7ea8a21b890c803}{Customer\+Component}}.
+
+\mbox{\Hypertarget{classCustomer_aeea76d1bc95b67d4e7b1acd2220c0a41}\label{classCustomer_aeea76d1bc95b67d4e7b1acd2220c0a41}} 
+\index{Customer@{Customer}!getSize@{getSize}}
+\index{getSize@{getSize}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Customer\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the size of the customer. 
+
+Gets the size of the customer, which is 1 (atomic leaf node).
+
+\begin{DoxyReturn}{Returns}
+The size of the customer.
+
+1, indicating the size of the customer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCustomerComponent_a34033b2b0aa4c6128836dc2de4f0def0}{Customer\+Component}}.
+
+\mbox{\Hypertarget{classCustomer_a326415308f4027d2973de48a0cfe08de}\label{classCustomer_a326415308f4027d2973de48a0cfe08de}} 
+\index{Customer@{Customer}!givePlate@{givePlate}}
+\index{givePlate@{givePlate}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{givePlate()}{givePlate()}}
+{\footnotesize\ttfamily void Customer\+::give\+Plate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlate}{Plate}} $\ast$}]{plate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gives a plate to the customer. 
+
+Processes the plate received from the chef. Evaluates the quality of the food and adjusts the customer\textquotesingle{}s happiness accordingly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em plate} & Pointer to the \mbox{\hyperlink{classPlate}{Plate}} object to be given to the customer.\\
+\hline
+{\em plate} & Pointer to the \mbox{\hyperlink{classPlate}{Plate}} object containing cooked food items. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCustomerComponent_ae128bab5394b5b288cdf9307ad3d9698}{Customer\+Component}}.
+
+\mbox{\Hypertarget{classCustomer_aac2d9f9f9bbc77ac63bf0627d779a6ac}\label{classCustomer_aac2d9f9f9bbc77ac63bf0627d779a6ac}} 
+\index{Customer@{Customer}!payBill@{payBill}}
+\index{payBill@{payBill}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{payBill()}{payBill()}}
+{\footnotesize\ttfamily void Customer\+::pay\+Bill (\begin{DoxyParamCaption}\item[{double}]{amount,  }\item[{bool}]{split }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Pays the bill for the customer. 
+
+Pays the bill and calculates the tip based on the customer\textquotesingle{}s happiness level. Adjusts the happiness level and prints the payment details.
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The amount to be paid. \\
+\hline
+{\em split} & Flag indicating whether the bill is split or not.\\
+\hline
+{\em amount} & The total amount of the bill. \\
+\hline
+{\em split} & A boolean indicating whether the bill is being split (not used in the current implementation). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCustomerComponent_aaeafbea2bfe492e3210d2958c05a1609}{Customer\+Component}}.
+
+\mbox{\Hypertarget{classCustomer_aa8398b47b3ca9825ba6f7f14026641be}\label{classCustomer_aa8398b47b3ca9825ba6f7f14026641be}} 
+\index{Customer@{Customer}!setTableID@{setTableID}}
+\index{setTableID@{setTableID}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{setTableID()}{setTableID()}}
+{\footnotesize\ttfamily void Customer\+::set\+Table\+ID (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the table ID for the customer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The table ID to be set for the customer. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCustomerComponent_a2dca8c8a296acc7e469703beee8c9868}{Customer\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{Customer_8h}{Customer.\+h}}\item 
+Main/\mbox{\hyperlink{Customer_8cpp}{Customer.\+cpp}}\end{DoxyCompactItemize}

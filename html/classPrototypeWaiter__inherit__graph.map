@@ -1,0 +1,4 @@
+<map id="PrototypeWaiter" name="PrototypeWaiter">
+<area shape="rect" id="node1" title="Represents a prototype waiter interface with clone and signal methods." alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node2" href="$classWaiter.html" title="Represents a waiter in the restaurant derived from PrototypeWaiter." alt="" coords="37,80,101,107"/>
+</map>

@@ -1,0 +1,91 @@
+\hypertarget{classCheese}{}\doxysection{Cheese Class Reference}
+\label{classCheese}\index{Cheese@{Cheese}}
+
+
+Represents a type of non-\/vegan food derived from \mbox{\hyperlink{classNonvegan}{Nonvegan}} class.  
+
+
+
+
+{\ttfamily \#include $<$Cheese.\+h$>$}
+
+
+
+Inheritance diagram for Cheese\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{classCheese__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Cheese\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classCheese__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCheese_a5974713e78e37220ee4728bf1ad17cef}{Cheese}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{classCheese}{Cheese}} class. Initializes a new instance of \mbox{\hyperlink{classCheese}{Cheese}} with default values. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCheese_a7ebeea37160a7a2edacab3868f8c38b9}{cook\+Food}} (std\+::vector$<$ std\+::string $>$ order\+Details, \mbox{\hyperlink{classPlate}{Plate}} $\ast$plate) override
+\begin{DoxyCompactList}\small\item\em Cooks the food based on the provided order details and plate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a type of non-\/vegan food derived from \mbox{\hyperlink{classNonvegan}{Nonvegan}} class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCheese_a5974713e78e37220ee4728bf1ad17cef}\label{classCheese_a5974713e78e37220ee4728bf1ad17cef}} 
+\index{Cheese@{Cheese}!Cheese@{Cheese}}
+\index{Cheese@{Cheese}!Cheese@{Cheese}}
+\doxysubsubsection{\texorpdfstring{Cheese()}{Cheese()}}
+{\footnotesize\ttfamily Cheese\+::\+Cheese (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \mbox{\hyperlink{classCheese}{Cheese}} class. Initializes a new instance of \mbox{\hyperlink{classCheese}{Cheese}} with default values. 
+
+Default constructor for the \mbox{\hyperlink{classCheese}{Cheese}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCheese_a7ebeea37160a7a2edacab3868f8c38b9}\label{classCheese_a7ebeea37160a7a2edacab3868f8c38b9}} 
+\index{Cheese@{Cheese}!cookFood@{cookFood}}
+\index{cookFood@{cookFood}!Cheese@{Cheese}}
+\doxysubsubsection{\texorpdfstring{cookFood()}{cookFood()}}
+{\footnotesize\ttfamily void Cheese\+::cook\+Food (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{order\+Details,  }\item[{\mbox{\hyperlink{classPlate}{Plate}} $\ast$}]{plate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Cooks the food based on the provided order details and plate. 
+
+Cooks \mbox{\hyperlink{classCheese}{Cheese}} food items based on order details and adds them to the plate. Checks the quality of the cooked food and categorizes it as burnt, fine, or great.
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Details} & The details of the food order. \\
+\hline
+{\em plate} & Pointer to the \mbox{\hyperlink{classPlate}{Plate}} object where the cooked food is placed. Cooks the Cheese-\/based food using the provided order details and places it on the plate.\\
+\hline
+{\em order\+Details} & The vector containing order details for different food items. \\
+\hline
+{\em plate} & Pointer to the \mbox{\hyperlink{classPlate}{Plate}} object where cooked food items are added. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classPizzaCreator_ac6983aab4af664ccffbaf2a4b11ea501}{Pizza\+Creator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{Cheese_8h}{Cheese.\+h}}\item 
+Main/\mbox{\hyperlink{Cheese_8cpp}{Cheese.\+cpp}}\end{DoxyCompactItemize}

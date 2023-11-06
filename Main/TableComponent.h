@@ -51,7 +51,7 @@ public:
 
     /**
     * @brief Occupies the table component with the provided customer component.
-    * @param customer Pointer to the CustomerComponent object to occupy the table.
+    * @param Customers Pointer to the CustomerComponent object to occupy the table.
     */
     void occupy(CustomerComponent* Customers);
 

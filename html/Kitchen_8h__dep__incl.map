@@ -1,0 +1,27 @@
+<map id="Main/Kitchen.h" name="Main/Kitchen.h">
+<area shape="rect" id="node1" title="Declaration of the Kitchen class. This file contains the declaration of the Kitchen class,..." alt="" coords="1118,5,1237,32"/>
+<area shape="rect" id="node2" href="$Waiter_8h.html" title="Declaration of the Waiter class. This file contains the declaration of the Waiter class,..." alt="" coords="1122,80,1233,107"/>
+<area shape="rect" id="node7" href="$main_8cpp.html" title="Main file for the pizzeria simulation program. This file contains the entry point of the program and ..." alt="" coords="1074,528,1193,555"/>
+<area shape="rect" id="node21" href="$Kitchen_8cpp.html" title="Implementation file for the Kitchen class. This file contains the implementation of methods to handle..." alt="" coords="749,453,883,480"/>
+<area shape="rect" id="node22" href="$Waiter_8cpp.html" title="Implementation file for the Waiter class. This file contains the implementation of methods to handle ..." alt="" coords="1178,453,1305,480"/>
+<area shape="rect" id="node3" href="$CustomerComponent_8h.html" title="Declaration of the CustomerComponent class. This file contains the declaration of the CustomerCompone..." alt="" coords="636,155,844,181"/>
+<area shape="rect" id="node20" href="$floor_8h_source.html" title=" " alt="" coords="972,379,1071,405"/>
+<area shape="rect" id="node4" href="$Chef_8cpp.html" title="Implementation file for the Chef class. This file contains the implementation of methods related to c..." alt="" coords="43,229,157,256"/>
+<area shape="rect" id="node5" href="$Customer_8h.html" title="Declaration of the Customer class. This file contains the declaration of the Customer class,..." alt="" coords="182,229,314,256"/>
+<area shape="rect" id="node8" href="$CustomerComponent_8cpp.html" title="Implementation file for the CustomerComponent class. This file contains the implementation of methods..." alt="" coords="518,229,741,256"/>
+<area shape="rect" id="node9" href="$CustomerGroup_8h.html" title="Declaration of the CustomerGroup class. This file contains the declaration of the CustomerGroup class..." alt="" coords="765,229,937,256"/>
+<area shape="rect" id="node15" href="$GroupIterator_8h.html" title="Declaration of the GroupIterator class. This file contains the declaration of the GroupIterator class..." alt="" coords="266,304,422,331"/>
+<area shape="rect" id="node17" href="$Node_8h.html" title="Declaration of the Node class. This file contains the declaration of the Node class,..." alt="" coords="389,229,493,256"/>
+<area shape="rect" id="node19" href="$TableComponent_8h.html" title="Declaration of the TableComponent class. This file contains the declaration of the TableComponent cla..." alt="" coords="961,229,1140,256"/>
+<area shape="rect" id="node6" href="$Customer_8cpp.html" title="Implementation file for the Customer class. This file contains the implementation of methods related ..." alt="" coords="95,304,241,331"/>
+<area shape="rect" id="node10" href="$CustomerGroup_8cpp.html" title="Implementation file for the CustomerGroup class. This file contains the implementation of methods rel..." alt="" coords="692,304,879,331"/>
+<area shape="rect" id="node11" href="$LinkedList_8h.html" title="Declaration of the LinkedList class. This file contains the declaration of the LinkedList class,..." alt="" coords="581,379,715,405"/>
+<area shape="rect" id="node12" href="$Entrance_8h.html" title="Declaration of the Entrance class. This file contains the declaration of the Entrance class,..." alt="" coords="909,453,1035,480"/>
+<area shape="rect" id="node14" href="$LinkedList_8cpp.html" title="Implementation file for the LinkedList class. This file contains the implementation of methods to man..." alt="" coords="573,453,723,480"/>
+<area shape="rect" id="node13" href="$Entrance_8cpp.html" title="Implementation file for the Entrance class. This file contains the implementation of methods related ..." alt="" coords="901,528,1043,555"/>
+<area shape="rect" id="node16" href="$GroupIterator_8cpp.html" title="Implementation file for the GroupIterator class. This file contains the implementation of the GroupIt..." alt="" coords="381,379,552,405"/>
+<area shape="rect" id="node18" href="$Node_8cpp.html" title="Implementation file for the Node class. This file contains the implementation of methods to manage no..." alt="" coords="498,304,617,331"/>
+<area shape="rect" id="node23" href="$TableGroup_8h.html" title="Declaration of the TableGroup class. This file contains the declaration of the TableGroup class,..." alt="" coords="903,304,1046,331"/>
+<area shape="rect" id="node25" href="$Table_8h.html" title="Declaration of the Table class. This file contains the declaration of the Table class,..." alt="" coords="1095,379,1199,405"/>
+<area shape="rect" id="node24" href="$TableGroup_8cpp.html" title="Implementation file for the TableGroup class. This file contains the implementation of methods to han..." alt="" coords="789,379,947,405"/>
+</map>

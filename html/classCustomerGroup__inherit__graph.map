@@ -1,0 +1,4 @@
+<map id="CustomerGroup" name="CustomerGroup">
+<area shape="rect" id="node1" title="Represents a group of customers inheriting from CustomerComponent." alt="" coords="23,80,147,107"/>
+<area shape="rect" id="node2" href="$classCustomerComponent.html" title="Represents a component of the customer, such as a customer or a group of customers." alt="" coords="5,5,165,32"/>
+</map>

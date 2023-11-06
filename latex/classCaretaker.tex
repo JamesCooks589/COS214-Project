@@ -1,0 +1,104 @@
+\hypertarget{classCaretaker}{}\doxysection{Caretaker Class Reference}
+\label{classCaretaker}\index{Caretaker@{Caretaker}}
+
+
+Represents the caretaker responsible for managing order mementos.  
+
+
+
+
+{\ttfamily \#include $<$Caretaker.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCaretaker_a23d0ec8b11ee87458dda2263ba8fe395}{add\+Memento}} (const \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} \&memento)
+\begin{DoxyCompactList}\small\item\em Adds a new order memento to the caretaker\textquotesingle{}s collection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOrderMemento}{Order\+Memento}} \mbox{\hyperlink{classCaretaker_ae8b70b24de8dff4dcf186820a3869a5b}{get\+Memento}} (int id)
+\begin{DoxyCompactList}\small\item\em Retrieves an order memento based on the provided order ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classCaretaker}{Caretaker}} \& \mbox{\hyperlink{classCaretaker_a52ac1e806cb5ed84e2c84b4e53bb2670}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance of \mbox{\hyperlink{classCaretaker}{Caretaker}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the caretaker responsible for managing order mementos. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCaretaker_a23d0ec8b11ee87458dda2263ba8fe395}\label{classCaretaker_a23d0ec8b11ee87458dda2263ba8fe395}} 
+\index{Caretaker@{Caretaker}!addMemento@{addMemento}}
+\index{addMemento@{addMemento}!Caretaker@{Caretaker}}
+\doxysubsubsection{\texorpdfstring{addMemento()}{addMemento()}}
+{\footnotesize\ttfamily void Caretaker\+::add\+Memento (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} \&}]{m }\end{DoxyParamCaption})}
+
+
+
+Adds a new order memento to the caretaker\textquotesingle{}s collection. 
+
+Adds a new \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} to the caretaker\textquotesingle{}s collection, removing any existing memento for the same table number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em memento} & The \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} object to be added.\\
+\hline
+{\em m} & The \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCaretaker_a52ac1e806cb5ed84e2c84b4e53bb2670}\label{classCaretaker_a52ac1e806cb5ed84e2c84b4e53bb2670}} 
+\index{Caretaker@{Caretaker}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Caretaker@{Caretaker}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCaretaker}{Caretaker}} \& Caretaker\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the singleton instance of \mbox{\hyperlink{classCaretaker}{Caretaker}}. 
+
+Static method to get the singleton instance of \mbox{\hyperlink{classCaretaker}{Caretaker}}.
+
+\begin{DoxyReturn}{Returns}
+The singleton instance of \mbox{\hyperlink{classCaretaker}{Caretaker}}.
+
+Reference to the \mbox{\hyperlink{classCaretaker}{Caretaker}} instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCaretaker_ae8b70b24de8dff4dcf186820a3869a5b}\label{classCaretaker_ae8b70b24de8dff4dcf186820a3869a5b}} 
+\index{Caretaker@{Caretaker}!getMemento@{getMemento}}
+\index{getMemento@{getMemento}!Caretaker@{Caretaker}}
+\doxysubsubsection{\texorpdfstring{getMemento()}{getMemento()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} Caretaker\+::get\+Memento (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Retrieves an order memento based on the provided order ID. 
+
+Retrieves the \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} for the given table number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique identifier for the order memento. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} object corresponding to the given order ID.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The table number for which the \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} is to be retrieved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} object corresponding to the given table number. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if no matching \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} is found for the given ID. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{Caretaker_8h}{Caretaker.\+h}}\item 
+Main/\mbox{\hyperlink{Caretaker_8cpp}{Caretaker.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,233 @@
+\hypertarget{classCustomerGroup}{}\doxysection{Customer\+Group Class Reference}
+\label{classCustomerGroup}\index{CustomerGroup@{CustomerGroup}}
+
+
+Represents a group of customers inheriting from \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}}.  
+
+
+
+
+{\ttfamily \#include $<$Customer\+Group.\+h$>$}
+
+
+
+Inheritance diagram for Customer\+Group\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classCustomerGroup__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Customer\+Group\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classCustomerGroup__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCustomerGroup_a07ede0ed5af36e5e28e4cac8d768c518}{Customer\+Group}} (int id)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classCustomerGroup}{Customer\+Group}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomerGroup_ad25b0b18e4a43304b1b38d0034172284}\label{classCustomerGroup_ad25b0b18e4a43304b1b38d0034172284}} 
+\mbox{\hyperlink{classCustomerGroup_ad25b0b18e4a43304b1b38d0034172284}{$\sim$\+Customer\+Group}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classCustomerGroup}{Customer\+Group}} class. Cleans up resources and performs necessary cleanup operations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomerGroup_a91f803866cc4e0b18ddd8e6cd815ecf8}{add\+To\+Group}} (\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$customer)
+\begin{DoxyCompactList}\small\item\em Adds an individual customer to the customer group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomerGroup_ad657b980067fa691cda1f48c0f1bb3d3}{give\+Plate}} (\mbox{\hyperlink{classPlate}{Plate}} $\ast$plate)
+\begin{DoxyCompactList}\small\item\em Gives a plate to the customer group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomerGroup_acd799ce318f2b3af23684d66f511eeee}{set\+Table\+ID}} (int id)
+\begin{DoxyCompactList}\small\item\em Sets the table ID for the customer group. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCustomerGroup_a606f3cc5dfcb76546188ba7564eb5d1c}{get\+Happiness}} ()
+\begin{DoxyCompactList}\small\item\em Gets the overall happiness level of the customer group. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOrder}{Order}} $\ast$ \mbox{\hyperlink{classCustomerGroup_adec9a0126bb3d6b80f959cc352a87256}{get\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Gets the overall happiness level of the customer group. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCustomerGroup_a15d3d19a8e451ed6fbd049f3332274ba}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the total number of customers in the group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomerGroup_ab33f8f13886ab33737d8ee89cc1664ee}{pay\+Bill}} (double amount, bool \mbox{\hyperlink{classCustomerGroup_a564582a900f15f11fede917224648554}{split}})
+\begin{DoxyCompactList}\small\item\em Pays the bill for the customer group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomerGroup_a564582a900f15f11fede917224648554}{split}} (double total)
+\begin{DoxyCompactList}\small\item\em Splits the bill among customers based on their individual orders. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomerGroup_a88b67ede732cc1d5902032ee611b9dbb}\label{classCustomerGroup_a88b67ede732cc1d5902032ee611b9dbb}} 
+void \mbox{\hyperlink{classCustomerGroup_a88b67ede732cc1d5902032ee611b9dbb}{chef\+Visit}} ()
+\begin{DoxyCompactList}\small\item\em Simulates a visit from the chef for the customer group. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a group of customers inheriting from \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCustomerGroup_a07ede0ed5af36e5e28e4cac8d768c518}\label{classCustomerGroup_a07ede0ed5af36e5e28e4cac8d768c518}} 
+\index{CustomerGroup@{CustomerGroup}!CustomerGroup@{CustomerGroup}}
+\index{CustomerGroup@{CustomerGroup}!CustomerGroup@{CustomerGroup}}
+\doxysubsubsection{\texorpdfstring{CustomerGroup()}{CustomerGroup()}}
+{\footnotesize\ttfamily Customer\+Group\+::\+Customer\+Group (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classCustomerGroup}{Customer\+Group}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique identifier for the customer group. Initializes a new instance of \mbox{\hyperlink{classCustomerGroup}{Customer\+Group}} with the given ID. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCustomerGroup_a91f803866cc4e0b18ddd8e6cd815ecf8}\label{classCustomerGroup_a91f803866cc4e0b18ddd8e6cd815ecf8}} 
+\index{CustomerGroup@{CustomerGroup}!addToGroup@{addToGroup}}
+\index{addToGroup@{addToGroup}!CustomerGroup@{CustomerGroup}}
+\doxysubsubsection{\texorpdfstring{addToGroup()}{addToGroup()}}
+{\footnotesize\ttfamily void Customer\+Group\+::add\+To\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$}]{customer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds an individual customer to the customer group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object to be added to the group. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classCustomerComponent_a960ca46e0c1bf1c288ba42dabb7a4234}{Customer\+Component}}.
+
+\mbox{\Hypertarget{classCustomerGroup_a606f3cc5dfcb76546188ba7564eb5d1c}\label{classCustomerGroup_a606f3cc5dfcb76546188ba7564eb5d1c}} 
+\index{CustomerGroup@{CustomerGroup}!getHappiness@{getHappiness}}
+\index{getHappiness@{getHappiness}!CustomerGroup@{CustomerGroup}}
+\doxysubsubsection{\texorpdfstring{getHappiness()}{getHappiness()}}
+{\footnotesize\ttfamily int Customer\+Group\+::get\+Happiness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the overall happiness level of the customer group. 
+
+\begin{DoxyReturn}{Returns}
+The average happiness level of the customers in the group. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCustomerComponent_a22c3f052ef488f3d5f2ad76cfbab67bf}{Customer\+Component}}.
+
+\mbox{\Hypertarget{classCustomerGroup_adec9a0126bb3d6b80f959cc352a87256}\label{classCustomerGroup_adec9a0126bb3d6b80f959cc352a87256}} 
+\index{CustomerGroup@{CustomerGroup}!getOrder@{getOrder}}
+\index{getOrder@{getOrder}!CustomerGroup@{CustomerGroup}}
+\doxysubsubsection{\texorpdfstring{getOrder()}{getOrder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOrder}{Order}} $\ast$ Customer\+Group\+::get\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the overall happiness level of the customer group. 
+
+\begin{DoxyReturn}{Returns}
+The average happiness level of the customers in the group. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCustomerComponent_a1dc3d6bf823e62fea7ea8a21b890c803}{Customer\+Component}}.
+
+\mbox{\Hypertarget{classCustomerGroup_a15d3d19a8e451ed6fbd049f3332274ba}\label{classCustomerGroup_a15d3d19a8e451ed6fbd049f3332274ba}} 
+\index{CustomerGroup@{CustomerGroup}!getSize@{getSize}}
+\index{getSize@{getSize}!CustomerGroup@{CustomerGroup}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Customer\+Group\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the total number of customers in the group. 
+
+\begin{DoxyReturn}{Returns}
+The total number of customers in the group. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCustomerComponent_a34033b2b0aa4c6128836dc2de4f0def0}{Customer\+Component}}.
+
+\mbox{\Hypertarget{classCustomerGroup_ad657b980067fa691cda1f48c0f1bb3d3}\label{classCustomerGroup_ad657b980067fa691cda1f48c0f1bb3d3}} 
+\index{CustomerGroup@{CustomerGroup}!givePlate@{givePlate}}
+\index{givePlate@{givePlate}!CustomerGroup@{CustomerGroup}}
+\doxysubsubsection{\texorpdfstring{givePlate()}{givePlate()}}
+{\footnotesize\ttfamily void Customer\+Group\+::give\+Plate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlate}{Plate}} $\ast$}]{plate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gives a plate to the customer group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plate} & Pointer to the \mbox{\hyperlink{classPlate}{Plate}} object to be given to the customer group. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCustomerComponent_ae128bab5394b5b288cdf9307ad3d9698}{Customer\+Component}}.
+
+\mbox{\Hypertarget{classCustomerGroup_ab33f8f13886ab33737d8ee89cc1664ee}\label{classCustomerGroup_ab33f8f13886ab33737d8ee89cc1664ee}} 
+\index{CustomerGroup@{CustomerGroup}!payBill@{payBill}}
+\index{payBill@{payBill}!CustomerGroup@{CustomerGroup}}
+\doxysubsubsection{\texorpdfstring{payBill()}{payBill()}}
+{\footnotesize\ttfamily void Customer\+Group\+::pay\+Bill (\begin{DoxyParamCaption}\item[{double}]{amount,  }\item[{bool}]{split }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Pays the bill for the customer group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The total amount to be paid. \\
+\hline
+{\em split} & Flag indicating whether the bill is split among customers or not. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCustomerComponent_aaeafbea2bfe492e3210d2958c05a1609}{Customer\+Component}}.
+
+\mbox{\Hypertarget{classCustomerGroup_acd799ce318f2b3af23684d66f511eeee}\label{classCustomerGroup_acd799ce318f2b3af23684d66f511eeee}} 
+\index{CustomerGroup@{CustomerGroup}!setTableID@{setTableID}}
+\index{setTableID@{setTableID}!CustomerGroup@{CustomerGroup}}
+\doxysubsubsection{\texorpdfstring{setTableID()}{setTableID()}}
+{\footnotesize\ttfamily void Customer\+Group\+::set\+Table\+ID (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the table ID for the customer group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The table ID to be set for the customer group. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCustomerComponent_a2dca8c8a296acc7e469703beee8c9868}{Customer\+Component}}.
+
+\mbox{\Hypertarget{classCustomerGroup_a564582a900f15f11fede917224648554}\label{classCustomerGroup_a564582a900f15f11fede917224648554}} 
+\index{CustomerGroup@{CustomerGroup}!split@{split}}
+\index{split@{split}!CustomerGroup@{CustomerGroup}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily void Customer\+Group\+::split (\begin{DoxyParamCaption}\item[{double}]{total }\end{DoxyParamCaption})}
+
+
+
+Splits the bill among customers based on their individual orders. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em total} & The total bill amount to be split among customers. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{CustomerGroup_8h}{Customer\+Group.\+h}}\item 
+Main/\mbox{\hyperlink{CustomerGroup_8cpp}{Customer\+Group.\+cpp}}\end{DoxyCompactItemize}

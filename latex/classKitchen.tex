@@ -1,0 +1,109 @@
+\hypertarget{classKitchen}{}\doxysection{Kitchen Class Reference}
+\label{classKitchen}\index{Kitchen@{Kitchen}}
+
+
+Represents the kitchen area of the restaurant with chefs and orders.  
+
+
+
+
+{\ttfamily \#include $<$Kitchen.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKitchen_ae4003b1e4f7c71562b6a6ebd9ebe4bbd}\label{classKitchen_ae4003b1e4f7c71562b6a6ebd9ebe4bbd}} 
+\mbox{\hyperlink{classKitchen_ae4003b1e4f7c71562b6a6ebd9ebe4bbd}{Kitchen}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classKitchen}{Kitchen}} class. Initializes a new instance of \mbox{\hyperlink{classKitchen}{Kitchen}} with default values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKitchen_a45a8b292b8a8b83e264c3fa521d3a4dd}\label{classKitchen_a45a8b292b8a8b83e264c3fa521d3a4dd}} 
+\mbox{\hyperlink{classKitchen_a45a8b292b8a8b83e264c3fa521d3a4dd}{$\sim$\+Kitchen}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classKitchen}{Kitchen}} class. Cleans up resources and performs necessary cleanup operations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKitchen_a2bab53bdd87b2e32300732698aa9b8fd}{set\+Order}} (\mbox{\hyperlink{classOrder}{Order}} $\ast$order, \mbox{\hyperlink{classPrototypeWaiter}{Prototype\+Waiter}} $\ast$waiter)
+\begin{DoxyCompactList}\small\item\em Sets the current order and associated waiter for the kitchen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKitchen_a5271194c30e213ed5fa12daad5e7dc0e}{set\+Floor}} (\mbox{\hyperlink{classFloor}{Floor}} $\ast$floor)
+\begin{DoxyCompactList}\small\item\em Sets the \mbox{\hyperlink{classFloor}{Floor}} object where chefs deliver plates. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classPlate}{Plate}} $\ast$ $>$ \mbox{\hyperlink{classKitchen_a0ab28e7a1c33114a242113947b46aa10}{get\+Plates}} ()
+\begin{DoxyCompactList}\small\item\em Gets the vector of plates containing cooked food. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classKitchen_ad96410c51425da43c61b4b85dd3da91c}{split\+Order}} (int current\+Row)
+\begin{DoxyCompactList}\small\item\em Splits the order based on the current row number. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKitchen_aab0f586ff09bccd9579f39499e1552b8}\label{classKitchen_aab0f586ff09bccd9579f39499e1552b8}} 
+void \mbox{\hyperlink{classKitchen_aab0f586ff09bccd9579f39499e1552b8}{create\+Plates}} ()
+\begin{DoxyCompactList}\small\item\em Creates plates for the prepared food. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKitchen_a8735d531989b13297e3b7a9a86d4b65e}\label{classKitchen_a8735d531989b13297e3b7a9a86d4b65e}} 
+void \mbox{\hyperlink{classKitchen_a8735d531989b13297e3b7a9a86d4b65e}{let\+Chef\+Visit\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Allows the chef to visit the table and deliver food. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the kitchen area of the restaurant with chefs and orders. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKitchen_a0ab28e7a1c33114a242113947b46aa10}\label{classKitchen_a0ab28e7a1c33114a242113947b46aa10}} 
+\index{Kitchen@{Kitchen}!getPlates@{getPlates}}
+\index{getPlates@{getPlates}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{getPlates()}{getPlates()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classPlate}{Plate}} $\ast$ $>$ Kitchen\+::get\+Plates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the vector of plates containing cooked food. 
+
+\begin{DoxyReturn}{Returns}
+Vector of pointers to \mbox{\hyperlink{classPlate}{Plate}} objects representing cooked food. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKitchen_a5271194c30e213ed5fa12daad5e7dc0e}\label{classKitchen_a5271194c30e213ed5fa12daad5e7dc0e}} 
+\index{Kitchen@{Kitchen}!setFloor@{setFloor}}
+\index{setFloor@{setFloor}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{setFloor()}{setFloor()}}
+{\footnotesize\ttfamily void Kitchen\+::set\+Floor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFloor}{Floor}} $\ast$}]{floor }\end{DoxyParamCaption})}
+
+
+
+Sets the \mbox{\hyperlink{classFloor}{Floor}} object where chefs deliver plates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em floor} & Pointer to the \mbox{\hyperlink{classFloor}{Floor}} object where chefs deliver plates. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKitchen_a2bab53bdd87b2e32300732698aa9b8fd}\label{classKitchen_a2bab53bdd87b2e32300732698aa9b8fd}} 
+\index{Kitchen@{Kitchen}!setOrder@{setOrder}}
+\index{setOrder@{setOrder}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{setOrder()}{setOrder()}}
+{\footnotesize\ttfamily void Kitchen\+::set\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOrder}{Order}} $\ast$}]{order,  }\item[{\mbox{\hyperlink{classPrototypeWaiter}{Prototype\+Waiter}} $\ast$}]{waiter }\end{DoxyParamCaption})}
+
+
+
+Sets the current order and associated waiter for the kitchen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & Pointer to the \mbox{\hyperlink{classOrder}{Order}} object representing the current order. \\
+\hline
+{\em waiter} & Pointer to the \mbox{\hyperlink{classPrototypeWaiter}{Prototype\+Waiter}} object associated with the order. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKitchen_ad96410c51425da43c61b4b85dd3da91c}\label{classKitchen_ad96410c51425da43c61b4b85dd3da91c}} 
+\index{Kitchen@{Kitchen}!splitOrder@{splitOrder}}
+\index{splitOrder@{splitOrder}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{splitOrder()}{splitOrder()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Kitchen\+::split\+Order (\begin{DoxyParamCaption}\item[{int}]{current\+Row }\end{DoxyParamCaption})}
+
+
+
+Splits the order based on the current row number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Row} & The current row number indicating the progress of order preparation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of strings representing the split portion of the order. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{Kitchen_8h}{Kitchen.\+h}}\item 
+Main/\mbox{\hyperlink{Kitchen_8cpp}{Kitchen.\+cpp}}\end{DoxyCompactItemize}

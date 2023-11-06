@@ -1,0 +1,150 @@
+\hypertarget{classChef}{}\doxysection{Chef Class Reference}
+\label{classChef}\index{Chef@{Chef}}
+
+
+Represents a chef capable of cooking food and handling orders.  
+
+
+
+
+{\ttfamily \#include $<$Chef.\+h$>$}
+
+
+
+Inheritance diagram for Chef\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classChef__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Chef\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{classChef__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classChef_ad0c323baebe44970f64d824aa7f20d35}{Chef}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{classChef}{Chef}} class. Initializes a new instance of \mbox{\hyperlink{classChef}{Chef}} with default values. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classChef_a01e11f9b766172fc8099573a01990386}{$\sim$\+Chef}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \mbox{\hyperlink{classChef}{Chef}} class. Cleans up resources and performs necessary cleanup operations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classChef_a95b87e8bfdaea769109a4f89fdb3eefa}{Add}} (\mbox{\hyperlink{classChef}{Chef}} $\ast$chef)
+\begin{DoxyCompactList}\small\item\em Adds a chef to the chain of responsibility. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classChef_ac5836452c420c4ba533163b9241aa5db}{cook\+Food}} (std\+::vector$<$ std\+::string $>$ order\+Details, \mbox{\hyperlink{classPlate}{Plate}} $\ast$plate)
+\begin{DoxyCompactList}\small\item\em Cooks the food based on the provided order details and plate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classChef_af83c5531e9660cc05440ed6965067dad}{visit}} (\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$visit\+Candidate)
+\begin{DoxyCompactList}\small\item\em Visits a customer component using the visitor pattern. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classChef_af9238cf0911131d9f4e3588356256214}\label{classChef_af9238cf0911131d9f4e3588356256214}} 
+\mbox{\hyperlink{classChef}{Chef}} $\ast$ \mbox{\hyperlink{classChef_af9238cf0911131d9f4e3588356256214}{next}}
+\begin{DoxyCompactList}\small\item\em Pointer to the next chef in the chain. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a chef capable of cooking food and handling orders. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classChef_ad0c323baebe44970f64d824aa7f20d35}\label{classChef_ad0c323baebe44970f64d824aa7f20d35}} 
+\index{Chef@{Chef}!Chef@{Chef}}
+\index{Chef@{Chef}!Chef@{Chef}}
+\doxysubsubsection{\texorpdfstring{Chef()}{Chef()}}
+{\footnotesize\ttfamily Chef\+::\+Chef (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \mbox{\hyperlink{classChef}{Chef}} class. Initializes a new instance of \mbox{\hyperlink{classChef}{Chef}} with default values. 
+
+Default constructor for the \mbox{\hyperlink{classChef}{Chef}} class. Initializes the next chef in the chain as nullptr. \mbox{\Hypertarget{classChef_a01e11f9b766172fc8099573a01990386}\label{classChef_a01e11f9b766172fc8099573a01990386}} 
+\index{Chef@{Chef}!````~Chef@{$\sim$Chef}}
+\index{````~Chef@{$\sim$Chef}!Chef@{Chef}}
+\doxysubsubsection{\texorpdfstring{$\sim$Chef()}{~Chef()}}
+{\footnotesize\ttfamily Chef\+::$\sim$\+Chef (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor for the \mbox{\hyperlink{classChef}{Chef}} class. Cleans up resources and performs necessary cleanup operations. 
+
+Destructor for the \mbox{\hyperlink{classChef}{Chef}} class. Deletes the next chef in the chain if it exists. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classChef_a95b87e8bfdaea769109a4f89fdb3eefa}\label{classChef_a95b87e8bfdaea769109a4f89fdb3eefa}} 
+\index{Chef@{Chef}!Add@{Add}}
+\index{Add@{Add}!Chef@{Chef}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void Chef\+::\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classChef}{Chef}} $\ast$}]{chef }\end{DoxyParamCaption})}
+
+
+
+Adds a chef to the chain of responsibility. 
+
+Adds a chef to the chain of chefs. If there is no next chef, sets the given chef as the next chef. Otherwise, delegates to the next chef.
+
+
+\begin{DoxyParams}{Parameters}
+{\em chef} & Pointer to the \mbox{\hyperlink{classChef}{Chef}} object to be added.\\
+\hline
+{\em chef} & Pointer to the \mbox{\hyperlink{classChef}{Chef}} object to be added to the chain. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classChef_ac5836452c420c4ba533163b9241aa5db}\label{classChef_ac5836452c420c4ba533163b9241aa5db}} 
+\index{Chef@{Chef}!cookFood@{cookFood}}
+\index{cookFood@{cookFood}!Chef@{Chef}}
+\doxysubsubsection{\texorpdfstring{cookFood()}{cookFood()}}
+{\footnotesize\ttfamily void Chef\+::cook\+Food (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{order\+Details,  }\item[{\mbox{\hyperlink{classPlate}{Plate}} $\ast$}]{plate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Cooks the food based on the provided order details and plate. 
+
+Cooks food based on the given order details and adds them to the plate.
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Details} & The details of the food order. \\
+\hline
+{\em plate} & Pointer to the \mbox{\hyperlink{classPlate}{Plate}} object where the cooked food is placed. Cooks the food using the provided order details and places it on the plate.\\
+\hline
+{\em order\+Details} & The vector containing order details for different food items. \\
+\hline
+{\em plate} & Pointer to the \mbox{\hyperlink{classPlate}{Plate}} object where cooked food items are added. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classFlour_a32fd36750a78d6a8514e8ec44e526f20}{Flour}}, \mbox{\hyperlink{classMeat_ad823a247a391d6e6e669c4865250a636}{Meat}}, \mbox{\hyperlink{classCheese_a7ebeea37160a7a2edacab3868f8c38b9}{Cheese}}, \mbox{\hyperlink{classPizzaCreator_ac6983aab4af664ccffbaf2a4b11ea501}{Pizza\+Creator}}, \mbox{\hyperlink{classVegan_a1754ab7f36ea793e3ef6a7670bee0f29}{Vegan}}, and \mbox{\hyperlink{classVeggies_ad34329ff442a9707716e09267fee0b25}{Veggies}}.
+
+\mbox{\Hypertarget{classChef_af83c5531e9660cc05440ed6965067dad}\label{classChef_af83c5531e9660cc05440ed6965067dad}} 
+\index{Chef@{Chef}!visit@{visit}}
+\index{visit@{visit}!Chef@{Chef}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}}
+{\footnotesize\ttfamily void Chef\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$}]{visit }\end{DoxyParamCaption})}
+
+
+
+Visits a customer component using the visitor pattern. 
+
+Visits a customer table and performs chef-\/related actions. There is a random chance that the chef will visit the customer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em visit\+Candidate} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object to be visited. Visits the customer component using the visitor pattern.\\
+\hline
+{\em visit} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} representing the customer table to be visited. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{Chef_8h}{Chef.\+h}}\item 
+Main/\mbox{\hyperlink{Chef_8cpp}{Chef.\+cpp}}\end{DoxyCompactItemize}

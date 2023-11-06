@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classChefCreator.html" title="Represents a creator class responsible for creating chefs capable of cooking pizzas." alt="" coords="5,31,105,57"/>
+<area shape="rect" id="node2" href="$classBaseChef.html" title="Represents a base chef class that creates vegan and non&#45;vegan pizzas. This class is a subclass of Che..." alt="" coords="163,5,247,32"/>
+<area shape="rect" id="node3" href="$classToppingChef.html" title="Represents a chef creator for pizza toppings derived from ChefCreator." alt="" coords="153,56,256,83"/>
+</map>

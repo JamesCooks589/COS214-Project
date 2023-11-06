@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classCustomerComponent.html" title="Represents a component of the customer, such as a customer or a group of customers." alt="" coords="5,31,165,57"/>
+<area shape="rect" id="node2" href="$classCustomer.html" title="Represents a customer inheriting from CustomerComponent." alt="" coords="233,5,318,32"/>
+<area shape="rect" id="node3" href="$classCustomerGroup.html" title="Represents a group of customers inheriting from CustomerComponent." alt="" coords="213,56,337,83"/>
+</map>

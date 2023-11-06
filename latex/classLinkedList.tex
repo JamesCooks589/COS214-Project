@@ -1,0 +1,114 @@
+\hypertarget{classLinkedList}{}\doxysection{Linked\+List Class Reference}
+\label{classLinkedList}\index{LinkedList@{LinkedList}}
+
+
+Represents a linked list to store customer groups.  
+
+
+
+
+{\ttfamily \#include $<$Linked\+List.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLinkedList_afe7f78983e173f8018927cf2ad11a5aa}\label{classLinkedList_afe7f78983e173f8018927cf2ad11a5aa}} 
+\mbox{\hyperlink{classLinkedList_afe7f78983e173f8018927cf2ad11a5aa}{Linked\+List}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classLinkedList}{Linked\+List}} class. Initializes a new instance of \mbox{\hyperlink{classLinkedList}{Linked\+List}} with default values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLinkedList_a35811ed58ff0d8d9cc9b309b8d8f5111}\label{classLinkedList_a35811ed58ff0d8d9cc9b309b8d8f5111}} 
+\mbox{\hyperlink{classLinkedList_a35811ed58ff0d8d9cc9b309b8d8f5111}{$\sim$\+Linked\+List}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classLinkedList}{Linked\+List}} class. Cleans up resources and performs necessary cleanup operations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGroupIterator}{Group\+Iterator}} $\ast$ \mbox{\hyperlink{classLinkedList_a96f412e9f62dd917222a14f4264106ac}{get\+Iterator}} ()
+\begin{DoxyCompactList}\small\item\em Gets the iterator for the linked list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLinkedList_a7c893e263e6d94ab35a129763279b1ed}{add}} (\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$group)
+\begin{DoxyCompactList}\small\item\em Adds a customer group to the linked list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLinkedList_a5f5d618e4a279df3befaaa19230d3d3b}{remove}} (\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$group)
+\begin{DoxyCompactList}\small\item\em Removes a customer group from the linked list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLinkedList_ac96230938fd74a4efeb4efe8c995ee53}\label{classLinkedList_ac96230938fd74a4efeb4efe8c995ee53}} 
+void \mbox{\hyperlink{classLinkedList_ac96230938fd74a4efeb4efe8c995ee53}{print\+List}} ()
+\begin{DoxyCompactList}\small\item\em Prints the contents of the linked list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ \mbox{\hyperlink{classLinkedList_a1cba1fc059374f4d263bf5bece9fa136}{get\+Head}} ()
+\begin{DoxyCompactList}\small\item\em Gets the head node of the linked list. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLinkedList_a03ff22f881325da2d37f640ab2380bf2}{is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the linked list is empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a linked list to store customer groups. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLinkedList_a7c893e263e6d94ab35a129763279b1ed}\label{classLinkedList_a7c893e263e6d94ab35a129763279b1ed}} 
+\index{LinkedList@{LinkedList}!add@{add}}
+\index{add@{add}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Linked\+List\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$}]{group }\end{DoxyParamCaption})}
+
+
+
+Adds a customer group to the linked list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object representing the group to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLinkedList_a1cba1fc059374f4d263bf5bece9fa136}\label{classLinkedList_a1cba1fc059374f4d263bf5bece9fa136}} 
+\index{LinkedList@{LinkedList}!getHead@{getHead}}
+\index{getHead@{getHead}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{getHead()}{getHead()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNode}{Node}} $\ast$ Linked\+List\+::get\+Head (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the head node of the linked list. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the head node of the linked list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLinkedList_a96f412e9f62dd917222a14f4264106ac}\label{classLinkedList_a96f412e9f62dd917222a14f4264106ac}} 
+\index{LinkedList@{LinkedList}!getIterator@{getIterator}}
+\index{getIterator@{getIterator}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{getIterator()}{getIterator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGroupIterator}{Group\+Iterator}} $\ast$ Linked\+List\+::get\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the iterator for the linked list. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{classGroupIterator}{Group\+Iterator}} object for traversing the linked list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLinkedList_a03ff22f881325da2d37f640ab2380bf2}\label{classLinkedList_a03ff22f881325da2d37f640ab2380bf2}} 
+\index{LinkedList@{LinkedList}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Linked\+List\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the linked list is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the linked list is empty, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLinkedList_a5f5d618e4a279df3befaaa19230d3d3b}\label{classLinkedList_a5f5d618e4a279df3befaaa19230d3d3b}} 
+\index{LinkedList@{LinkedList}!remove@{remove}}
+\index{remove@{remove}!LinkedList@{LinkedList}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Linked\+List\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$}]{group }\end{DoxyParamCaption})}
+
+
+
+Removes a customer group from the linked list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object representing the group to be removed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{LinkedList_8h}{Linked\+List.\+h}}\item 
+Main/\mbox{\hyperlink{LinkedList_8cpp}{Linked\+List.\+cpp}}\end{DoxyCompactItemize}

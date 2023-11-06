@@ -1,0 +1,166 @@
+\hypertarget{classTableGroup}{}\doxysection{Table\+Group Class Reference}
+\label{classTableGroup}\index{TableGroup@{TableGroup}}
+
+
+Represents a group of tables in the restaurant derived from \mbox{\hyperlink{classTableComponent}{Table\+Component}}.  
+
+
+
+
+{\ttfamily \#include $<$Table\+Group.\+h$>$}
+
+
+
+Inheritance diagram for Table\+Group\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classTableGroup__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Table\+Group\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classTableGroup__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTableGroup_ad08f01a9197f9d280506fd5441f3798f}{Table\+Group}} (int id)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classTableGroup}{Table\+Group}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTableGroup_a3746fdc171a40161e1a285b337400ba3}{add\+To\+Group}} (\mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$table\+To\+Add)
+\begin{DoxyCompactList}\small\item\em Adds a table component to the group. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTableGroup_a89b1d699cb8c95463be90e7de823ae52}{get\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Gets the combined capacity of all tables in the group. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ \mbox{\hyperlink{classTableGroup_adc595cb34936cc9891f2a8bb42f61e99}{remove\+From\+Group}} ()
+\begin{DoxyCompactList}\small\item\em Removes a table component from the group. \end{DoxyCompactList}\item 
+virtual vector$<$ \mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ $>$ \mbox{\hyperlink{classTableGroup_a500cb8156dea9931e86a285a4e1a7b30}{split\+Group}} () override
+\begin{DoxyCompactList}\small\item\em Splits the group into individual table components. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTableGroup_a5ca04a9b090ae1111937a0c074387776}{is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the table group is empty (does not contain any tables). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTableGroup_ac46ee16b86e75112ac70e9eac0f70866}\label{classTableGroup_ac46ee16b86e75112ac70e9eac0f70866}} 
+\mbox{\hyperlink{classTableGroup_ac46ee16b86e75112ac70e9eac0f70866}{$\sim$\+Table\+Group}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classTableGroup}{Table\+Group}} class. Cleans up resources and performs necessary cleanup operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a group of tables in the restaurant derived from \mbox{\hyperlink{classTableComponent}{Table\+Component}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTableGroup_ad08f01a9197f9d280506fd5441f3798f}\label{classTableGroup_ad08f01a9197f9d280506fd5441f3798f}} 
+\index{TableGroup@{TableGroup}!TableGroup@{TableGroup}}
+\index{TableGroup@{TableGroup}!TableGroup@{TableGroup}}
+\doxysubsubsection{\texorpdfstring{TableGroup()}{TableGroup()}}
+{\footnotesize\ttfamily Table\+Group\+::\+Table\+Group (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for the \mbox{\hyperlink{classTableGroup}{Table\+Group}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique identifier of the table group. Initializes a new instance of \mbox{\hyperlink{classTableGroup}{Table\+Group}} with the given ID and an empty vector of tables. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTableGroup_a3746fdc171a40161e1a285b337400ba3}\label{classTableGroup_a3746fdc171a40161e1a285b337400ba3}} 
+\index{TableGroup@{TableGroup}!addToGroup@{addToGroup}}
+\index{addToGroup@{addToGroup}!TableGroup@{TableGroup}}
+\doxysubsubsection{\texorpdfstring{addToGroup()}{addToGroup()}}
+{\footnotesize\ttfamily void Table\+Group\+::add\+To\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$}]{table\+To\+Add }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds a table component to the group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+To\+Add} & Pointer to the \mbox{\hyperlink{classTableComponent}{Table\+Component}} object to be added to the group. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classTableComponent_a01287d1a8c7ba2406f610fe2beeb93fa}{Table\+Component}}.
+
+\mbox{\Hypertarget{classTableGroup_a89b1d699cb8c95463be90e7de823ae52}\label{classTableGroup_a89b1d699cb8c95463be90e7de823ae52}} 
+\index{TableGroup@{TableGroup}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!TableGroup@{TableGroup}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily int Table\+Group\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the combined capacity of all tables in the group. 
+
+\begin{DoxyReturn}{Returns}
+The total capacity of the table group. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classTableComponent_a7e7cb3629f25558318ed7c8ed2c9763d}{Table\+Component}}.
+
+\mbox{\Hypertarget{classTableGroup_a5ca04a9b090ae1111937a0c074387776}\label{classTableGroup_a5ca04a9b090ae1111937a0c074387776}} 
+\index{TableGroup@{TableGroup}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!TableGroup@{TableGroup}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Table\+Group\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the table group is empty (does not contain any tables). 
+
+\begin{DoxyReturn}{Returns}
+True if the table group does not contain any tables, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTableComponent_aa23bcc74e58a947697800f2ff1b1a7d9}{Table\+Component}}.
+
+\mbox{\Hypertarget{classTableGroup_adc595cb34936cc9891f2a8bb42f61e99}\label{classTableGroup_adc595cb34936cc9891f2a8bb42f61e99}} 
+\index{TableGroup@{TableGroup}!removeFromGroup@{removeFromGroup}}
+\index{removeFromGroup@{removeFromGroup}!TableGroup@{TableGroup}}
+\doxysubsubsection{\texorpdfstring{removeFromGroup()}{removeFromGroup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ Table\+Group\+::remove\+From\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Removes a table component from the group. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the removed \mbox{\hyperlink{classTableComponent}{Table\+Component}} object. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTableComponent_a87dfeccafd48005efa66910c245be051}{Table\+Component}}.
+
+\mbox{\Hypertarget{classTableGroup_a500cb8156dea9931e86a285a4e1a7b30}\label{classTableGroup_a500cb8156dea9931e86a285a4e1a7b30}} 
+\index{TableGroup@{TableGroup}!splitGroup@{splitGroup}}
+\index{splitGroup@{splitGroup}!TableGroup@{TableGroup}}
+\doxysubsubsection{\texorpdfstring{splitGroup()}{splitGroup()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ $>$ Table\+Group\+::split\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Splits the group into individual table components. 
+
+\begin{DoxyReturn}{Returns}
+Vector of pointers to individual \mbox{\hyperlink{classTableComponent}{Table\+Component}} objects split from the group. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classTableComponent_aa4f14a15df0fa5907e553d7de1d4e9b0}{Table\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{TableGroup_8h}{Table\+Group.\+h}}\item 
+Main/\mbox{\hyperlink{TableGroup_8cpp}{Table\+Group.\+cpp}}\end{DoxyCompactItemize}

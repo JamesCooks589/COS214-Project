@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classTableComponent.html" title="Represents a component of a table in the restaurant derived from CustomerComponent." alt="" coords="5,31,136,57"/>
+<area shape="rect" id="node2" href="$classTable.html" title="Represents a table in the restaurant derived from TableComponent." alt="" coords="203,5,259,32"/>
+<area shape="rect" id="node3" href="$classTableGroup.html" title="Represents a group of tables in the restaurant derived from TableComponent." alt="" coords="184,56,279,83"/>
+</map>

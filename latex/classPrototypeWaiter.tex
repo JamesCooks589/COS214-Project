@@ -1,0 +1,142 @@
+\hypertarget{classPrototypeWaiter}{}\doxysection{Prototype\+Waiter Class Reference}
+\label{classPrototypeWaiter}\index{PrototypeWaiter@{PrototypeWaiter}}
+
+
+Represents a prototype waiter interface with clone and signal methods.  
+
+
+
+
+{\ttfamily \#include $<$Waiter.\+h$>$}
+
+
+
+Inheritance diagram for Prototype\+Waiter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classPrototypeWaiter__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classPrototypeWaiter}{Prototype\+Waiter}} $\ast$ \mbox{\hyperlink{classPrototypeWaiter_a2175dc09053d597564a981635ad57686}{clone}} ()=0
+\begin{DoxyCompactList}\small\item\em Creates a clone of the prototype waiter. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classPrototypeWaiter_a54833486044bb8df3e1d3b847ebbf358}{set\+Name}} (string name)=0
+\begin{DoxyCompactList}\small\item\em Sets the name of the waiter. \end{DoxyCompactList}\item 
+virtual string \mbox{\hyperlink{classPrototypeWaiter_ac0a4278c8e319bcb916abf18c1f14653}{get\+Name}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the name of the waiter. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classPrototypeWaiter_a1fe4f1d550b6d064c8e3319bcc8d9e51}{order\+Signal}} (\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$customer)=0
+\begin{DoxyCompactList}\small\item\em Notifies the waiter about a customer\textquotesingle{}s order. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classPrototypeWaiter_af5edd51380caec663a48b0ec1874be8f}{bill\+Signal}} (\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$customer)=0
+\begin{DoxyCompactList}\small\item\em Notifies the waiter to generate a bill for a customer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPrototypeWaiter_aeb237f3d846d409f23cdf591c71c3ee6}\label{classPrototypeWaiter_aeb237f3d846d409f23cdf591c71c3ee6}} 
+virtual void \mbox{\hyperlink{classPrototypeWaiter_aeb237f3d846d409f23cdf591c71c3ee6}{signal\+Ready\+Order}} ()=0
+\begin{DoxyCompactList}\small\item\em Notifies the waiter that an order is ready to be served. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPrototypeWaiter_a140d326cb1c8c383fb64290474de40e9}\label{classPrototypeWaiter_a140d326cb1c8c383fb64290474de40e9}} 
+virtual \mbox{\hyperlink{classPrototypeWaiter_a140d326cb1c8c383fb64290474de40e9}{$\sim$\+Prototype\+Waiter}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classPrototypeWaiter}{Prototype\+Waiter}} class. Cleans up resources and performs necessary cleanup operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a prototype waiter interface with clone and signal methods. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPrototypeWaiter_af5edd51380caec663a48b0ec1874be8f}\label{classPrototypeWaiter_af5edd51380caec663a48b0ec1874be8f}} 
+\index{PrototypeWaiter@{PrototypeWaiter}!billSignal@{billSignal}}
+\index{billSignal@{billSignal}!PrototypeWaiter@{PrototypeWaiter}}
+\doxysubsubsection{\texorpdfstring{billSignal()}{billSignal()}}
+{\footnotesize\ttfamily virtual void Prototype\+Waiter\+::bill\+Signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$}]{customer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Notifies the waiter to generate a bill for a customer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object for billing. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classWaiter_a5e58056fc5818614fee569a3ab31b4f6}{Waiter}}.
+
+\mbox{\Hypertarget{classPrototypeWaiter_a2175dc09053d597564a981635ad57686}\label{classPrototypeWaiter_a2175dc09053d597564a981635ad57686}} 
+\index{PrototypeWaiter@{PrototypeWaiter}!clone@{clone}}
+\index{clone@{clone}!PrototypeWaiter@{PrototypeWaiter}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classPrototypeWaiter}{Prototype\+Waiter}}$\ast$ Prototype\+Waiter\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a clone of the prototype waiter. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the cloned \mbox{\hyperlink{classPrototypeWaiter}{Prototype\+Waiter}} object. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWaiter_af83aedfcdf95bb38e36c0aae91863c16}{Waiter}}.
+
+\mbox{\Hypertarget{classPrototypeWaiter_ac0a4278c8e319bcb916abf18c1f14653}\label{classPrototypeWaiter_ac0a4278c8e319bcb916abf18c1f14653}} 
+\index{PrototypeWaiter@{PrototypeWaiter}!getName@{getName}}
+\index{getName@{getName}!PrototypeWaiter@{PrototypeWaiter}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual string Prototype\+Waiter\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the name of the waiter. 
+
+\begin{DoxyReturn}{Returns}
+The name of the waiter. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWaiter_a6b2e2da03b23552760de8949b80d616c}{Waiter}}.
+
+\mbox{\Hypertarget{classPrototypeWaiter_a1fe4f1d550b6d064c8e3319bcc8d9e51}\label{classPrototypeWaiter_a1fe4f1d550b6d064c8e3319bcc8d9e51}} 
+\index{PrototypeWaiter@{PrototypeWaiter}!orderSignal@{orderSignal}}
+\index{orderSignal@{orderSignal}!PrototypeWaiter@{PrototypeWaiter}}
+\doxysubsubsection{\texorpdfstring{orderSignal()}{orderSignal()}}
+{\footnotesize\ttfamily virtual void Prototype\+Waiter\+::order\+Signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$}]{customer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Notifies the waiter about a customer\textquotesingle{}s order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object placing the order. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classWaiter_a848c6cece51c9f01c86d450351269ae2}{Waiter}}.
+
+\mbox{\Hypertarget{classPrototypeWaiter_a54833486044bb8df3e1d3b847ebbf358}\label{classPrototypeWaiter_a54833486044bb8df3e1d3b847ebbf358}} 
+\index{PrototypeWaiter@{PrototypeWaiter}!setName@{setName}}
+\index{setName@{setName}!PrototypeWaiter@{PrototypeWaiter}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily virtual void Prototype\+Waiter\+::set\+Name (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the name of the waiter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the waiter. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classWaiter_acc216312b9ed0cab77021150f02ad931}{Waiter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{Waiter_8h}{Waiter.\+h}}\end{DoxyCompactItemize}

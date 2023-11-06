@@ -1,0 +1,110 @@
+\hypertarget{classEntrance}{}\doxysection{Entrance Class Reference}
+\label{classEntrance}\index{Entrance@{Entrance}}
+
+
+Represents the entrance area for customers entering the restaurant.  
+
+
+
+
+{\ttfamily \#include $<$Entrance.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEntrance_ad3d7634d02e9dc7af6aa40bdced690d0}{Entrance}} (\mbox{\hyperlink{classFloor}{Floor}} $\ast$floor)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classEntrance}{Entrance}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEntrance_a4789adec5e5305237dcf7f402465ce27}{add\+Group}} (\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$group)
+\begin{DoxyCompactList}\small\item\em Adds a customer group to the entrance queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEntrance_a87c64f9a5e6896a162926acadcfe9480}{remove\+Group}} (\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$group)
+\begin{DoxyCompactList}\small\item\em Removes a customer group from the entrance queue. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEntrance_a6e2062dda83ea0d24075ec7127c78bde}{seat\+Group}} ()
+\begin{DoxyCompactList}\small\item\em Seats a customer group from the entrance queue on the restaurant floor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEntrance_a91cf63e140467a6dcc11bded80191c39}{is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the entrance queue is empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the entrance area for customers entering the restaurant. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEntrance_ad3d7634d02e9dc7af6aa40bdced690d0}\label{classEntrance_ad3d7634d02e9dc7af6aa40bdced690d0}} 
+\index{Entrance@{Entrance}!Entrance@{Entrance}}
+\index{Entrance@{Entrance}!Entrance@{Entrance}}
+\doxysubsubsection{\texorpdfstring{Entrance()}{Entrance()}}
+{\footnotesize\ttfamily Entrance\+::\+Entrance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFloor}{Floor}} $\ast$}]{floor }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classEntrance}{Entrance}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em floor} & Pointer to the \mbox{\hyperlink{classFloor}{Floor}} object where customers will be seated. Initializes a new instance of \mbox{\hyperlink{classEntrance}{Entrance}} with the given floor. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEntrance_a4789adec5e5305237dcf7f402465ce27}\label{classEntrance_a4789adec5e5305237dcf7f402465ce27}} 
+\index{Entrance@{Entrance}!addGroup@{addGroup}}
+\index{addGroup@{addGroup}!Entrance@{Entrance}}
+\doxysubsubsection{\texorpdfstring{addGroup()}{addGroup()}}
+{\footnotesize\ttfamily void Entrance\+::add\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$}]{group }\end{DoxyParamCaption})}
+
+
+
+Adds a customer group to the entrance queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object representing the group to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEntrance_a91cf63e140467a6dcc11bded80191c39}\label{classEntrance_a91cf63e140467a6dcc11bded80191c39}} 
+\index{Entrance@{Entrance}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Entrance@{Entrance}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Entrance\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the entrance queue is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the entrance queue is empty, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntrance_a87c64f9a5e6896a162926acadcfe9480}\label{classEntrance_a87c64f9a5e6896a162926acadcfe9480}} 
+\index{Entrance@{Entrance}!removeGroup@{removeGroup}}
+\index{removeGroup@{removeGroup}!Entrance@{Entrance}}
+\doxysubsubsection{\texorpdfstring{removeGroup()}{removeGroup()}}
+{\footnotesize\ttfamily void Entrance\+::remove\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$}]{group }\end{DoxyParamCaption})}
+
+
+
+Removes a customer group from the entrance queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object representing the group to be removed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEntrance_a6e2062dda83ea0d24075ec7127c78bde}\label{classEntrance_a6e2062dda83ea0d24075ec7127c78bde}} 
+\index{Entrance@{Entrance}!seatGroup@{seatGroup}}
+\index{seatGroup@{seatGroup}!Entrance@{Entrance}}
+\doxysubsubsection{\texorpdfstring{seatGroup()}{seatGroup()}}
+{\footnotesize\ttfamily bool Entrance\+::seat\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Seats a customer group from the entrance queue on the restaurant floor. 
+
+\begin{DoxyReturn}{Returns}
+True if a group is successfully seated, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{Entrance_8h}{Entrance.\+h}}\item 
+Main/\mbox{\hyperlink{Entrance_8cpp}{Entrance.\+cpp}}\end{DoxyCompactItemize}

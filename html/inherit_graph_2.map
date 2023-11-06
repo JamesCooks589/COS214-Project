@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classChef.html" title="Represents a chef capable of cooking food and handling orders." alt="" coords="5,81,57,108"/>
+<area shape="rect" id="node2" href="$classPizzaCreator.html" title="Represents a pizza creator derived from the Chef class." alt="" coords="105,81,209,108"/>
+<area shape="rect" id="node3" href="$classNonvegan.html" title="Represents a type of pizza creator for non&#45;vegan pizzas." alt="" coords="257,56,345,83"/>
+<area shape="rect" id="node6" href="$classVegan.html" title="Represents a vegan pizza derived from PizzaCreator." alt="" coords="270,107,333,133"/>
+<area shape="rect" id="node4" href="$classCheese.html" title="Represents a type of non&#45;vegan food derived from Nonvegan class." alt="" coords="395,5,465,32"/>
+<area shape="rect" id="node5" href="$classMeat.html" title="Represents a type of non&#45;vegan food derived from Nonvegan class." alt="" coords="403,56,457,83"/>
+<area shape="rect" id="node7" href="$classFlour.html" title="Represents a type of vegan food derived from Vegan class." alt="" coords="403,107,457,133"/>
+<area shape="rect" id="node8" href="$classVeggies.html" title="Represents a vegan pizza with vegetables derived from Vegan." alt="" coords="393,157,467,184"/>
+</map>

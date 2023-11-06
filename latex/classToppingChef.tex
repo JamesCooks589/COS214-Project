@@ -1,0 +1,92 @@
+\hypertarget{classToppingChef}{}\doxysection{Topping\+Chef Class Reference}
+\label{classToppingChef}\index{ToppingChef@{ToppingChef}}
+
+
+Represents a chef creator for pizza toppings derived from \mbox{\hyperlink{classChefCreator}{Chef\+Creator}}.  
+
+
+
+
+{\ttfamily \#include $<$Topping\+Chef.\+h$>$}
+
+
+
+Inheritance diagram for Topping\+Chef\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classToppingChef__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Topping\+Chef\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classToppingChef__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classChef}{Chef}} $\ast$ \mbox{\hyperlink{classToppingChef_a5fdf127ac68af81d83579f022af2b2ae}{create\+Vegan\+Pizza}} () override
+\begin{DoxyCompactList}\small\item\em Creates a vegan pizza with toppings. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classChef}{Chef}} $\ast$ \mbox{\hyperlink{classToppingChef_a8ed1e4041cb3570031faf52453212d1e}{create\+Nonvegan\+Pizza}} () override
+\begin{DoxyCompactList}\small\item\em Creates a non-\/vegan pizza with toppings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a chef creator for pizza toppings derived from \mbox{\hyperlink{classChefCreator}{Chef\+Creator}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classToppingChef_a8ed1e4041cb3570031faf52453212d1e}\label{classToppingChef_a8ed1e4041cb3570031faf52453212d1e}} 
+\index{ToppingChef@{ToppingChef}!createNonveganPizza@{createNonveganPizza}}
+\index{createNonveganPizza@{createNonveganPizza}!ToppingChef@{ToppingChef}}
+\doxysubsubsection{\texorpdfstring{createNonveganPizza()}{createNonveganPizza()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classChef}{Chef}} $\ast$ Topping\+Chef\+::create\+Nonvegan\+Pizza (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a non-\/vegan pizza with toppings. 
+
+Create a non-\/vegan pizza with meat toppings.
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{classChef}{Chef}} object representing the created non-\/vegan pizza.
+
+A pointer to a \mbox{\hyperlink{classChef}{Chef}} object representing a non-\/vegan pizza. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classChefCreator_a97f37c69602d2273e84be95e2a9bf491}{Chef\+Creator}}.
+
+\mbox{\Hypertarget{classToppingChef_a5fdf127ac68af81d83579f022af2b2ae}\label{classToppingChef_a5fdf127ac68af81d83579f022af2b2ae}} 
+\index{ToppingChef@{ToppingChef}!createVeganPizza@{createVeganPizza}}
+\index{createVeganPizza@{createVeganPizza}!ToppingChef@{ToppingChef}}
+\doxysubsubsection{\texorpdfstring{createVeganPizza()}{createVeganPizza()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classChef}{Chef}} $\ast$ Topping\+Chef\+::create\+Vegan\+Pizza (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a vegan pizza with toppings. 
+
+Create a vegan pizza with vegetable toppings.
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{classChef}{Chef}} object representing the created vegan pizza.
+
+A pointer to a \mbox{\hyperlink{classChef}{Chef}} object representing a vegan pizza. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classChefCreator_afec96d6d179cf87c56524116cec5385f}{Chef\+Creator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{ToppingChef_8h}{Topping\+Chef.\+h}}\item 
+Main/\mbox{\hyperlink{ToppingChef_8cpp}{Topping\+Chef.\+cpp}}\end{DoxyCompactItemize}

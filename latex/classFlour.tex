@@ -1,0 +1,73 @@
+\hypertarget{classFlour}{}\doxysection{Flour Class Reference}
+\label{classFlour}\index{Flour@{Flour}}
+
+
+Represents a type of vegan food derived from \mbox{\hyperlink{classVegan}{Vegan}} class.  
+
+
+
+
+{\ttfamily \#include $<$Flour.\+h$>$}
+
+
+
+Inheritance diagram for Flour\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{classFlour__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flour\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classFlour__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFlour_ae09d800aa00629806eecd80af8450576}\label{classFlour_ae09d800aa00629806eecd80af8450576}} 
+\mbox{\hyperlink{classFlour_ae09d800aa00629806eecd80af8450576}{Flour}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{classFlour}{Flour}} class. Initializes a new instance of \mbox{\hyperlink{classFlour}{Flour}} with default values. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFlour_a32fd36750a78d6a8514e8ec44e526f20}{cook\+Food}} (std\+::vector$<$ std\+::string $>$ order\+Details, \mbox{\hyperlink{classPlate}{Plate}} $\ast$plate) override
+\begin{DoxyCompactList}\small\item\em Cooks the food based on the provided order details and plate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a type of vegan food derived from \mbox{\hyperlink{classVegan}{Vegan}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFlour_a32fd36750a78d6a8514e8ec44e526f20}\label{classFlour_a32fd36750a78d6a8514e8ec44e526f20}} 
+\index{Flour@{Flour}!cookFood@{cookFood}}
+\index{cookFood@{cookFood}!Flour@{Flour}}
+\doxysubsubsection{\texorpdfstring{cookFood()}{cookFood()}}
+{\footnotesize\ttfamily void Flour\+::cook\+Food (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{order\+Details,  }\item[{\mbox{\hyperlink{classPlate}{Plate}} $\ast$}]{plate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Cooks the food based on the provided order details and plate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Details} & The details of the food order. \\
+\hline
+{\em plate} & Pointer to the \mbox{\hyperlink{classPlate}{Plate}} object where the cooked food is placed. Cooks the Flour-\/based food using the provided order details and places it on the plate. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classVegan_a1754ab7f36ea793e3ef6a7670bee0f29}{Vegan}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{Flour_8h}{Flour.\+h}}\item 
+Main/\mbox{\hyperlink{Flour_8cpp}{Flour.\+cpp}}\end{DoxyCompactItemize}

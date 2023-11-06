@@ -1,0 +1,73 @@
+\hypertarget{classMeat}{}\doxysection{Meat Class Reference}
+\label{classMeat}\index{Meat@{Meat}}
+
+
+Represents a type of non-\/vegan food derived from \mbox{\hyperlink{classNonvegan}{Nonvegan}} class.  
+
+
+
+
+{\ttfamily \#include $<$Meat.\+h$>$}
+
+
+
+Inheritance diagram for Meat\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{classMeat__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Meat\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classMeat__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMeat_a9fcdcd6b5874971548ed62365fffdc37}\label{classMeat_a9fcdcd6b5874971548ed62365fffdc37}} 
+\mbox{\hyperlink{classMeat_a9fcdcd6b5874971548ed62365fffdc37}{Meat}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{classMeat}{Meat}} class. Initializes a new instance of \mbox{\hyperlink{classMeat}{Meat}} with default values. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMeat_ad823a247a391d6e6e669c4865250a636}{cook\+Food}} (std\+::vector$<$ std\+::string $>$ order\+Details, \mbox{\hyperlink{classPlate}{Plate}} $\ast$plate) override
+\begin{DoxyCompactList}\small\item\em Cooks the food based on the provided order details and plate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a type of non-\/vegan food derived from \mbox{\hyperlink{classNonvegan}{Nonvegan}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMeat_ad823a247a391d6e6e669c4865250a636}\label{classMeat_ad823a247a391d6e6e669c4865250a636}} 
+\index{Meat@{Meat}!cookFood@{cookFood}}
+\index{cookFood@{cookFood}!Meat@{Meat}}
+\doxysubsubsection{\texorpdfstring{cookFood()}{cookFood()}}
+{\footnotesize\ttfamily void Meat\+::cook\+Food (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{order\+Details,  }\item[{\mbox{\hyperlink{classPlate}{Plate}} $\ast$}]{plate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Cooks the food based on the provided order details and plate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Details} & The details of the food order. \\
+\hline
+{\em plate} & Pointer to the \mbox{\hyperlink{classPlate}{Plate}} object where the cooked food is placed. Cooks the Meat-\/based food using the provided order details and places it on the plate. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classPizzaCreator_ac6983aab4af664ccffbaf2a4b11ea501}{Pizza\+Creator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{Meat_8h}{Meat.\+h}}\item 
+Main/\mbox{\hyperlink{Meat_8cpp}{Meat.\+cpp}}\end{DoxyCompactItemize}

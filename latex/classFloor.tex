@@ -1,0 +1,316 @@
+\hypertarget{classFloor}{}\doxysection{Floor Class Reference}
+\label{classFloor}\index{Floor@{Floor}}
+
+
+Represents the floor of the restaurant with tables and waiters.  
+
+
+
+
+{\ttfamily \#include $<$floor.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFloor_a9aaef86e0590fa1c6b8382b648aa25d1}{Floor}} (int num\+Waiters, \mbox{\hyperlink{classKitchen}{Kitchen}} $\ast$kitchen)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classFloor}{Floor}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFloor_ae1b805579f18a76fe2754a3601202e80}\label{classFloor_ae1b805579f18a76fe2754a3601202e80}} 
+\mbox{\hyperlink{classFloor_ae1b805579f18a76fe2754a3601202e80}{$\sim$\+Floor}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classFloor}{Floor}} class. Cleans up resources and performs necessary cleanup operations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ \mbox{\hyperlink{classFloor_a770f94e8b74a484cceac89d420070165}{get\+Table}} (int table\+ID)
+\begin{DoxyCompactList}\small\item\em Gets the table component based on the table ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFloor_af3c1e65c57c097040fd1fcb623f5f515}{add\+Table}} (\mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$table)
+\begin{DoxyCompactList}\small\item\em Adds a table to the floor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFloor_af70c29198092d3367f54497b775696ad}{remove\+Table}} (\mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$table)
+\begin{DoxyCompactList}\small\item\em Removes a table from the floor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFloor_a74c429a035a09036835602cd0a4516c5}{split\+Tables}} (int id)
+\begin{DoxyCompactList}\small\item\em Splits a table based on the group size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ \mbox{\hyperlink{classFloor_a990c3aa6d8ae3e609a08ddbbf6f18f26}{merge\+Tables}} (int group\+Size)
+\begin{DoxyCompactList}\small\item\em Merges tables based on the group size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFloor_a15055e84ac10ecf8df542b03e5be6ce6}\label{classFloor_a15055e84ac10ecf8df542b03e5be6ce6}} 
+void \mbox{\hyperlink{classFloor_a15055e84ac10ecf8df542b03e5be6ce6}{print\+Tables}} ()
+\begin{DoxyCompactList}\small\item\em Prints the status of the tables on the floor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFloor_a50bd691d5f9d36335ba720205547fb92}{get\+Vacant\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of vacant tables on the floor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFloor_ad7391ddff45d467d93098cfad45be5ae}{get\+Is\+Full}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the floor is fully occupied. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFloor_a48668e258a965e8f8cc319faea538bf5}{set\+Is\+Full}} (bool is\+Full)
+\begin{DoxyCompactList}\small\item\em Sets the occupancy status of the floor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ \mbox{\hyperlink{classFloor_a05e5677a1455b136abea1e630794caa2}{get\+First\+Vacant\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Gets the first vacant table on the floor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFloor_a5ac1c42d905309111236e2d4f325fec6}{attach\+Random\+Waiter}} (\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$customers)
+\begin{DoxyCompactList}\small\item\em Attaches a random waiter to the customer group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFloor_a02c8dc746443a19bb278abe421dd1476}{vacate\+Table}} (int table\+ID)
+\begin{DoxyCompactList}\small\item\em Vacates a table based on the table ID. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classFloor_a18968051ec00a025fba8dc8881d8b221}{get\+M\+A\+X\+\_\+\+T\+A\+B\+L\+ES}} ()
+\begin{DoxyCompactList}\small\item\em Gets the maximum number of tables allowed on the floor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ \mbox{\hyperlink{classFloor_a52b8b1d224fbcbb628279ff41c8b07d2}{get\+Random\+Occupied\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Gets a random occupied table from the floor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFloor_aa4eb398f40fd200e3377c5c5a80ea29d}{get\+Num\+Vacant\+Tables}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of vacant tables on the floor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFloor_af119be3c6f53535fe72f512c89c54850}{get\+Num\+Occupied\+Tables}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of occupied tables on the floor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFloor_ae44b7f2c5119397d7cdb52a6b4cf10cf}{get\+Num\+Tables}} ()
+\begin{DoxyCompactList}\small\item\em Gets the total number of tables on the floor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the floor of the restaurant with tables and waiters. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFloor_a9aaef86e0590fa1c6b8382b648aa25d1}\label{classFloor_a9aaef86e0590fa1c6b8382b648aa25d1}} 
+\index{Floor@{Floor}!Floor@{Floor}}
+\index{Floor@{Floor}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{Floor()}{Floor()}}
+{\footnotesize\ttfamily Floor\+::\+Floor (\begin{DoxyParamCaption}\item[{int}]{num\+Waiters,  }\item[{\mbox{\hyperlink{classKitchen}{Kitchen}} $\ast$}]{kitchen }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classFloor}{Floor}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Waiters} & The number of waiters available on the floor. \\
+\hline
+{\em kitchen} & Pointer to the \mbox{\hyperlink{classKitchen}{Kitchen}} object associated with the floor. Initializes a new instance of \mbox{\hyperlink{classFloor}{Floor}} with the given number of waiters and kitchen. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFloor_af3c1e65c57c097040fd1fcb623f5f515}\label{classFloor_af3c1e65c57c097040fd1fcb623f5f515}} 
+\index{Floor@{Floor}!addTable@{addTable}}
+\index{addTable@{addTable}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{addTable()}{addTable()}}
+{\footnotesize\ttfamily void Floor\+::add\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+
+
+Adds a table to the floor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & Pointer to the \mbox{\hyperlink{classTableComponent}{Table\+Component}} object to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFloor_a5ac1c42d905309111236e2d4f325fec6}\label{classFloor_a5ac1c42d905309111236e2d4f325fec6}} 
+\index{Floor@{Floor}!attachRandomWaiter@{attachRandomWaiter}}
+\index{attachRandomWaiter@{attachRandomWaiter}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{attachRandomWaiter()}{attachRandomWaiter()}}
+{\footnotesize\ttfamily void Floor\+::attach\+Random\+Waiter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$}]{customers }\end{DoxyParamCaption})}
+
+
+
+Attaches a random waiter to the customer group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customers} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object representing the customers. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFloor_a05e5677a1455b136abea1e630794caa2}\label{classFloor_a05e5677a1455b136abea1e630794caa2}} 
+\index{Floor@{Floor}!getFirstVacantTable@{getFirstVacantTable}}
+\index{getFirstVacantTable@{getFirstVacantTable}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{getFirstVacantTable()}{getFirstVacantTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ Floor\+::get\+First\+Vacant\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the first vacant table on the floor. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the first vacant \mbox{\hyperlink{classTableComponent}{Table\+Component}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFloor_ad7391ddff45d467d93098cfad45be5ae}\label{classFloor_ad7391ddff45d467d93098cfad45be5ae}} 
+\index{Floor@{Floor}!getIsFull@{getIsFull}}
+\index{getIsFull@{getIsFull}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{getIsFull()}{getIsFull()}}
+{\footnotesize\ttfamily bool Floor\+::get\+Is\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the floor is fully occupied. 
+
+\begin{DoxyReturn}{Returns}
+True if the floor is fully occupied, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFloor_a18968051ec00a025fba8dc8881d8b221}\label{classFloor_a18968051ec00a025fba8dc8881d8b221}} 
+\index{Floor@{Floor}!getMAX\_TABLES@{getMAX\_TABLES}}
+\index{getMAX\_TABLES@{getMAX\_TABLES}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{getMAX\_TABLES()}{getMAX\_TABLES()}}
+{\footnotesize\ttfamily const int Floor\+::get\+M\+A\+X\+\_\+\+T\+A\+B\+L\+ES (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the maximum number of tables allowed on the floor. 
+
+\begin{DoxyReturn}{Returns}
+The maximum number of tables allowed on the floor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFloor_af119be3c6f53535fe72f512c89c54850}\label{classFloor_af119be3c6f53535fe72f512c89c54850}} 
+\index{Floor@{Floor}!getNumOccupiedTables@{getNumOccupiedTables}}
+\index{getNumOccupiedTables@{getNumOccupiedTables}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{getNumOccupiedTables()}{getNumOccupiedTables()}}
+{\footnotesize\ttfamily int Floor\+::get\+Num\+Occupied\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the number of occupied tables on the floor. 
+
+\begin{DoxyReturn}{Returns}
+The number of occupied tables on the floor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFloor_ae44b7f2c5119397d7cdb52a6b4cf10cf}\label{classFloor_ae44b7f2c5119397d7cdb52a6b4cf10cf}} 
+\index{Floor@{Floor}!getNumTables@{getNumTables}}
+\index{getNumTables@{getNumTables}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{getNumTables()}{getNumTables()}}
+{\footnotesize\ttfamily int Floor\+::get\+Num\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the total number of tables on the floor. 
+
+\begin{DoxyReturn}{Returns}
+The total number of tables on the floor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFloor_aa4eb398f40fd200e3377c5c5a80ea29d}\label{classFloor_aa4eb398f40fd200e3377c5c5a80ea29d}} 
+\index{Floor@{Floor}!getNumVacantTables@{getNumVacantTables}}
+\index{getNumVacantTables@{getNumVacantTables}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{getNumVacantTables()}{getNumVacantTables()}}
+{\footnotesize\ttfamily int Floor\+::get\+Num\+Vacant\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the number of vacant tables on the floor. 
+
+\begin{DoxyReturn}{Returns}
+The number of vacant tables on the floor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFloor_a52b8b1d224fbcbb628279ff41c8b07d2}\label{classFloor_a52b8b1d224fbcbb628279ff41c8b07d2}} 
+\index{Floor@{Floor}!getRandomOccupiedTable@{getRandomOccupiedTable}}
+\index{getRandomOccupiedTable@{getRandomOccupiedTable}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{getRandomOccupiedTable()}{getRandomOccupiedTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ Floor\+::get\+Random\+Occupied\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets a random occupied table from the floor. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the random occupied \mbox{\hyperlink{classTableComponent}{Table\+Component}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFloor_a770f94e8b74a484cceac89d420070165}\label{classFloor_a770f94e8b74a484cceac89d420070165}} 
+\index{Floor@{Floor}!getTable@{getTable}}
+\index{getTable@{getTable}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{getTable()}{getTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ Floor\+::get\+Table (\begin{DoxyParamCaption}\item[{int}]{table\+ID }\end{DoxyParamCaption})}
+
+
+
+Gets the table component based on the table ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+ID} & The unique identifier for the table. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{classTableComponent}{Table\+Component}} object corresponding to the given table ID. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFloor_a50bd691d5f9d36335ba720205547fb92}\label{classFloor_a50bd691d5f9d36335ba720205547fb92}} 
+\index{Floor@{Floor}!getVacantCapacity@{getVacantCapacity}}
+\index{getVacantCapacity@{getVacantCapacity}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{getVacantCapacity()}{getVacantCapacity()}}
+{\footnotesize\ttfamily int Floor\+::get\+Vacant\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the number of vacant tables on the floor. 
+
+\begin{DoxyReturn}{Returns}
+The number of vacant tables on the floor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFloor_a990c3aa6d8ae3e609a08ddbbf6f18f26}\label{classFloor_a990c3aa6d8ae3e609a08ddbbf6f18f26}} 
+\index{Floor@{Floor}!mergeTables@{mergeTables}}
+\index{mergeTables@{mergeTables}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{mergeTables()}{mergeTables()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ Floor\+::merge\+Tables (\begin{DoxyParamCaption}\item[{int}]{group\+Size }\end{DoxyParamCaption})}
+
+
+
+Merges tables based on the group size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group\+Size} & The size of the group for which tables need to be merged. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the merged \mbox{\hyperlink{classTableComponent}{Table\+Component}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFloor_af70c29198092d3367f54497b775696ad}\label{classFloor_af70c29198092d3367f54497b775696ad}} 
+\index{Floor@{Floor}!removeTable@{removeTable}}
+\index{removeTable@{removeTable}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{removeTable()}{removeTable()}}
+{\footnotesize\ttfamily void Floor\+::remove\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+
+
+Removes a table from the floor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & Pointer to the \mbox{\hyperlink{classTableComponent}{Table\+Component}} object to be removed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFloor_a48668e258a965e8f8cc319faea538bf5}\label{classFloor_a48668e258a965e8f8cc319faea538bf5}} 
+\index{Floor@{Floor}!setIsFull@{setIsFull}}
+\index{setIsFull@{setIsFull}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{setIsFull()}{setIsFull()}}
+{\footnotesize\ttfamily void Floor\+::set\+Is\+Full (\begin{DoxyParamCaption}\item[{bool}]{is\+Full }\end{DoxyParamCaption})}
+
+
+
+Sets the occupancy status of the floor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Full} & Flag indicating whether the floor is fully occupied or not. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFloor_a74c429a035a09036835602cd0a4516c5}\label{classFloor_a74c429a035a09036835602cd0a4516c5}} 
+\index{Floor@{Floor}!splitTables@{splitTables}}
+\index{splitTables@{splitTables}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{splitTables()}{splitTables()}}
+{\footnotesize\ttfamily void Floor\+::split\+Tables (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Splits a table based on the group size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique identifier for the table to be split. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFloor_a02c8dc746443a19bb278abe421dd1476}\label{classFloor_a02c8dc746443a19bb278abe421dd1476}} 
+\index{Floor@{Floor}!vacateTable@{vacateTable}}
+\index{vacateTable@{vacateTable}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{vacateTable()}{vacateTable()}}
+{\footnotesize\ttfamily void Floor\+::vacate\+Table (\begin{DoxyParamCaption}\item[{int}]{table\+ID }\end{DoxyParamCaption})}
+
+
+
+Vacates a table based on the table ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+ID} & The unique identifier for the table to be vacated. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/floor.\+h\item 
+Main/floor.\+cpp\end{DoxyCompactItemize}

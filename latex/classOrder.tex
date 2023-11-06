@@ -1,0 +1,168 @@
+\hypertarget{classOrder}{}\doxysection{Order Class Reference}
+\label{classOrder}\index{Order@{Order}}
+
+
+Represents a customer order in a restaurant.  
+
+
+
+
+{\ttfamily \#include $<$Order.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOrder_aa309d5eed56980e065a9b12bab6dabba}{Order}} (int table\+Number, vector$<$ vector$<$ string $>$$>$ customer\+Orders)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classOrder}{Order}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOrderMemento}{Order\+Memento}} \mbox{\hyperlink{classOrder_a5ed513981d041cfa60ef217565bb1ab2}{create\+Memento}} ()
+\begin{DoxyCompactList}\small\item\em Creates a memento for the current order state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOrder_a9540b8c07b1e434995bf6816f61b30d2}{restore\+From\+Memento}} (const \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} \&memento)
+\begin{DoxyCompactList}\small\item\em Restores the order state from a memento. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOrder_a0a0ffa4b438fc3f8b5847da148c7c868}\label{classOrder_a0a0ffa4b438fc3f8b5847da148c7c868}} 
+void \mbox{\hyperlink{classOrder_a0a0ffa4b438fc3f8b5847da148c7c868}{print\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Prints the details of the order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classOrder_a99ea64b45b38c884325176ab4b56484b}{get\+Table\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Gets the table number associated with the order. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ string $>$ $>$ \mbox{\hyperlink{classOrder_a3fd1f0fb693887a10985f0e1d814c3d1}{get\+Customer\+Orders}} ()
+\begin{DoxyCompactList}\small\item\em Gets the vector of vectors representing customer orders. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classOrder_abe9c7efc3b241e10ef7fff5e22d2a361}{get\+Order\+Details}} ()
+\begin{DoxyCompactList}\small\item\em Gets the order details as a formatted string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classOrder_a3f9141f85e94eb575fcfc3283b4c3c3f}{Is\+Valid\+Order\+Details}} (vector$<$ string $>$ customer\+Order)
+\begin{DoxyCompactList}\small\item\em Checks if the customer order details are valid. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classOrder_a462616cd46ae4a3b069027d249f0760e}{trim}} (const string \&str)
+\begin{DoxyCompactList}\small\item\em Trims leading and trailing whitespace from a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a customer order in a restaurant. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classOrder_aa309d5eed56980e065a9b12bab6dabba}\label{classOrder_aa309d5eed56980e065a9b12bab6dabba}} 
+\index{Order@{Order}!Order@{Order}}
+\index{Order@{Order}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{Order()}{Order()}}
+{\footnotesize\ttfamily Order\+::\+Order (\begin{DoxyParamCaption}\item[{int}]{table\+Number,  }\item[{vector$<$ vector$<$ string $>$$>$}]{customer\+Orders }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classOrder}{Order}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Number} & The table number associated with the order. \\
+\hline
+{\em customer\+Orders} & Vector of vectors representing the items in the order. Initializes a new instance of \mbox{\hyperlink{classOrder}{Order}} with the given table number and customer orders. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classOrder_a5ed513981d041cfa60ef217565bb1ab2}\label{classOrder_a5ed513981d041cfa60ef217565bb1ab2}} 
+\index{Order@{Order}!createMemento@{createMemento}}
+\index{createMemento@{createMemento}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{createMemento()}{createMemento()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} Order\+::create\+Memento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a memento for the current order state. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classOrderMemento}{Order\+Memento}} object representing the current state of the order. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOrder_a3fd1f0fb693887a10985f0e1d814c3d1}\label{classOrder_a3fd1f0fb693887a10985f0e1d814c3d1}} 
+\index{Order@{Order}!getCustomerOrders@{getCustomerOrders}}
+\index{getCustomerOrders@{getCustomerOrders}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getCustomerOrders()}{getCustomerOrders()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ string $>$ $>$ Order\+::get\+Customer\+Orders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the vector of vectors representing customer orders. 
+
+\begin{DoxyReturn}{Returns}
+Vector of vectors containing customer order details. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOrder_abe9c7efc3b241e10ef7fff5e22d2a361}\label{classOrder_abe9c7efc3b241e10ef7fff5e22d2a361}} 
+\index{Order@{Order}!getOrderDetails@{getOrderDetails}}
+\index{getOrderDetails@{getOrderDetails}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getOrderDetails()}{getOrderDetails()}}
+{\footnotesize\ttfamily string Order\+::get\+Order\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the order details as a formatted string. 
+
+\begin{DoxyReturn}{Returns}
+Formatted string containing order details. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOrder_a99ea64b45b38c884325176ab4b56484b}\label{classOrder_a99ea64b45b38c884325176ab4b56484b}} 
+\index{Order@{Order}!getTableNumber@{getTableNumber}}
+\index{getTableNumber@{getTableNumber}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getTableNumber()}{getTableNumber()}}
+{\footnotesize\ttfamily int Order\+::get\+Table\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the table number associated with the order. 
+
+\begin{DoxyReturn}{Returns}
+The table number of the order. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOrder_a3f9141f85e94eb575fcfc3283b4c3c3f}\label{classOrder_a3f9141f85e94eb575fcfc3283b4c3c3f}} 
+\index{Order@{Order}!IsValidOrderDetails@{IsValidOrderDetails}}
+\index{IsValidOrderDetails@{IsValidOrderDetails}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{IsValidOrderDetails()}{IsValidOrderDetails()}}
+{\footnotesize\ttfamily bool Order\+::\+Is\+Valid\+Order\+Details (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{customer\+Order }\end{DoxyParamCaption})}
+
+
+
+Checks if the customer order details are valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer\+Order} & Vector of strings representing the customer order. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the order details are valid, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOrder_a9540b8c07b1e434995bf6816f61b30d2}\label{classOrder_a9540b8c07b1e434995bf6816f61b30d2}} 
+\index{Order@{Order}!restoreFromMemento@{restoreFromMemento}}
+\index{restoreFromMemento@{restoreFromMemento}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{restoreFromMemento()}{restoreFromMemento()}}
+{\footnotesize\ttfamily void Order\+::restore\+From\+Memento (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} \&}]{memento }\end{DoxyParamCaption})}
+
+
+
+Restores the order state from a memento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memento} & The \mbox{\hyperlink{classOrderMemento}{Order\+Memento}} object containing the state to be restored. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classOrder_a462616cd46ae4a3b069027d249f0760e}\label{classOrder_a462616cd46ae4a3b069027d249f0760e}} 
+\index{Order@{Order}!trim@{trim}}
+\index{trim@{trim}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily string Order\+::trim (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Trims leading and trailing whitespace from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The input string to be trimmed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Trimmed string with leading and trailing whitespace removed. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{Order_8h}{Order.\+h}}\item 
+Main/\mbox{\hyperlink{Order_8cpp}{Order.\+cpp}}\end{DoxyCompactItemize}

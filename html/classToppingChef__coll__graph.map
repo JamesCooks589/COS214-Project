@@ -1,0 +1,4 @@
+<map id="ToppingChef" name="ToppingChef">
+<area shape="rect" id="node1" title="Represents a chef creator for pizza toppings derived from ChefCreator." alt="" coords="5,80,108,107"/>
+<area shape="rect" id="node2" href="$classChefCreator.html" title="Represents a creator class responsible for creating chefs capable of cooking pizzas." alt="" coords="7,5,107,32"/>
+</map>

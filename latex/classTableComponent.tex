@@ -1,0 +1,233 @@
+\hypertarget{classTableComponent}{}\doxysection{Table\+Component Class Reference}
+\label{classTableComponent}\index{TableComponent@{TableComponent}}
+
+
+Represents a component of a table in the restaurant derived from \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}}.  
+
+
+
+
+{\ttfamily \#include $<$Table\+Component.\+h$>$}
+
+
+
+Inheritance diagram for Table\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classTableComponent__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTableComponent_acb218ee2809c9c68289b9d2044a5ad02}{Table\+Component}} (int id)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classTableComponent}{Table\+Component}} class. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classTableComponent_a7e7cb3629f25558318ed7c8ed2c9763d}{get\+Capacity}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the capacity of the table component (number of seats available). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTableComponent_ad6ea6c638d0dbabf999d9361df523b98}{get\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Gets the unique identifier of the table component. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTableComponent_ae9135dc8f6a4c5b111e88988e7a93f2e}{is\+Occupied}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the table component is occupied. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTableComponent_acfce8c4a5ed2d7d2e139522ba0ddda9d}{occupy}} (\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$Customers)
+\begin{DoxyCompactList}\small\item\em Occupies the table component with the provided customer component. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$ \mbox{\hyperlink{classTableComponent_aac30c0903c16d8aaf2b160ec83d52264}{get\+Customers}} ()
+\begin{DoxyCompactList}\small\item\em Gets the customer component occupying the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$ \mbox{\hyperlink{classTableComponent_abedfac190807a441a4c85be9e7439ae2}{vacate}} ()
+\begin{DoxyCompactList}\small\item\em Vacates the table component, returning the customer component that was occupying it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTableComponent_a1db7d683d8a1276695423879c95b2442}\label{classTableComponent_a1db7d683d8a1276695423879c95b2442}} 
+virtual \mbox{\hyperlink{classTableComponent_a1db7d683d8a1276695423879c95b2442}{$\sim$\+Table\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classTableComponent}{Table\+Component}} class. Cleans up resources and performs necessary cleanup operations. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTableComponent_a01287d1a8c7ba2406f610fe2beeb93fa}{add\+To\+Group}} (\mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$table\+To\+Add)
+\begin{DoxyCompactList}\small\item\em Adds a table component to a group. \end{DoxyCompactList}\item 
+virtual vector$<$ \mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ $>$ \mbox{\hyperlink{classTableComponent_aa4f14a15df0fa5907e553d7de1d4e9b0}{split\+Group}} ()
+\begin{DoxyCompactList}\small\item\em Splits the group into individual table components. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ \mbox{\hyperlink{classTableComponent_a87dfeccafd48005efa66910c245be051}{remove\+From\+Group}} ()
+\begin{DoxyCompactList}\small\item\em Removes the table component from the group. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classTableComponent_aa23bcc74e58a947697800f2ff1b1a7d9}{is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the table component is empty (not part of any group). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a component of a table in the restaurant derived from \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTableComponent_acb218ee2809c9c68289b9d2044a5ad02}\label{classTableComponent_acb218ee2809c9c68289b9d2044a5ad02}} 
+\index{TableComponent@{TableComponent}!TableComponent@{TableComponent}}
+\index{TableComponent@{TableComponent}!TableComponent@{TableComponent}}
+\doxysubsubsection{\texorpdfstring{TableComponent()}{TableComponent()}}
+{\footnotesize\ttfamily Table\+Component\+::\+Table\+Component (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classTableComponent}{Table\+Component}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique identifier of the table component. Initializes a new instance of \mbox{\hyperlink{classTableComponent}{Table\+Component}} with the given ID. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTableComponent_a01287d1a8c7ba2406f610fe2beeb93fa}\label{classTableComponent_a01287d1a8c7ba2406f610fe2beeb93fa}} 
+\index{TableComponent@{TableComponent}!addToGroup@{addToGroup}}
+\index{addToGroup@{addToGroup}!TableComponent@{TableComponent}}
+\doxysubsubsection{\texorpdfstring{addToGroup()}{addToGroup()}}
+{\footnotesize\ttfamily void Table\+Component\+::add\+To\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$}]{table\+To\+Add }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds a table component to a group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+To\+Add} & Pointer to the \mbox{\hyperlink{classTableComponent}{Table\+Component}} object to be added to the group. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classTableGroup_a3746fdc171a40161e1a285b337400ba3}{Table\+Group}}.
+
+\mbox{\Hypertarget{classTableComponent_a7e7cb3629f25558318ed7c8ed2c9763d}\label{classTableComponent_a7e7cb3629f25558318ed7c8ed2c9763d}} 
+\index{TableComponent@{TableComponent}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!TableComponent@{TableComponent}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily virtual int Table\+Component\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the capacity of the table component (number of seats available). 
+
+\begin{DoxyReturn}{Returns}
+The capacity of the table component. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classTableGroup_a89b1d699cb8c95463be90e7de823ae52}{Table\+Group}}, and \mbox{\hyperlink{classTable_a4e32a8981d47615478503512bcc58b09}{Table}}.
+
+\mbox{\Hypertarget{classTableComponent_aac30c0903c16d8aaf2b160ec83d52264}\label{classTableComponent_aac30c0903c16d8aaf2b160ec83d52264}} 
+\index{TableComponent@{TableComponent}!getCustomers@{getCustomers}}
+\index{getCustomers@{getCustomers}!TableComponent@{TableComponent}}
+\doxysubsubsection{\texorpdfstring{getCustomers()}{getCustomers()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$ Table\+Component\+::get\+Customers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the customer component occupying the table. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object occupying the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTableComponent_ad6ea6c638d0dbabf999d9361df523b98}\label{classTableComponent_ad6ea6c638d0dbabf999d9361df523b98}} 
+\index{TableComponent@{TableComponent}!getID@{getID}}
+\index{getID@{getID}!TableComponent@{TableComponent}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily int Table\+Component\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the unique identifier of the table component. 
+
+\begin{DoxyReturn}{Returns}
+The ID of the table component. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTableComponent_aa23bcc74e58a947697800f2ff1b1a7d9}\label{classTableComponent_aa23bcc74e58a947697800f2ff1b1a7d9}} 
+\index{TableComponent@{TableComponent}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!TableComponent@{TableComponent}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Table\+Component\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the table component is empty (not part of any group). 
+
+\begin{DoxyReturn}{Returns}
+True if the table component is not part of any group, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTableGroup_a5ca04a9b090ae1111937a0c074387776}{Table\+Group}}.
+
+\mbox{\Hypertarget{classTableComponent_ae9135dc8f6a4c5b111e88988e7a93f2e}\label{classTableComponent_ae9135dc8f6a4c5b111e88988e7a93f2e}} 
+\index{TableComponent@{TableComponent}!isOccupied@{isOccupied}}
+\index{isOccupied@{isOccupied}!TableComponent@{TableComponent}}
+\doxysubsubsection{\texorpdfstring{isOccupied()}{isOccupied()}}
+{\footnotesize\ttfamily bool Table\+Component\+::is\+Occupied (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the table component is occupied. 
+
+\begin{DoxyReturn}{Returns}
+True if the table component is occupied, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTableComponent_acfce8c4a5ed2d7d2e139522ba0ddda9d}\label{classTableComponent_acfce8c4a5ed2d7d2e139522ba0ddda9d}} 
+\index{TableComponent@{TableComponent}!occupy@{occupy}}
+\index{occupy@{occupy}!TableComponent@{TableComponent}}
+\doxysubsubsection{\texorpdfstring{occupy()}{occupy()}}
+{\footnotesize\ttfamily void Table\+Component\+::occupy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$}]{Customers }\end{DoxyParamCaption})}
+
+
+
+Occupies the table component with the provided customer component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer} & Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object to occupy the table. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTableComponent_a87dfeccafd48005efa66910c245be051}\label{classTableComponent_a87dfeccafd48005efa66910c245be051}} 
+\index{TableComponent@{TableComponent}!removeFromGroup@{removeFromGroup}}
+\index{removeFromGroup@{removeFromGroup}!TableComponent@{TableComponent}}
+\doxysubsubsection{\texorpdfstring{removeFromGroup()}{removeFromGroup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ Table\+Component\+::remove\+From\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Removes the table component from the group. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the removed \mbox{\hyperlink{classTableComponent}{Table\+Component}} object. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTableGroup_adc595cb34936cc9891f2a8bb42f61e99}{Table\+Group}}.
+
+\mbox{\Hypertarget{classTableComponent_aa4f14a15df0fa5907e553d7de1d4e9b0}\label{classTableComponent_aa4f14a15df0fa5907e553d7de1d4e9b0}} 
+\index{TableComponent@{TableComponent}!splitGroup@{splitGroup}}
+\index{splitGroup@{splitGroup}!TableComponent@{TableComponent}}
+\doxysubsubsection{\texorpdfstring{splitGroup()}{splitGroup()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classTableComponent}{Table\+Component}} $\ast$ $>$ Table\+Component\+::split\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Splits the group into individual table components. 
+
+\begin{DoxyReturn}{Returns}
+Vector of pointers to individual \mbox{\hyperlink{classTableComponent}{Table\+Component}} objects split from the group. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classTableGroup_a500cb8156dea9931e86a285a4e1a7b30}{Table\+Group}}.
+
+\mbox{\Hypertarget{classTableComponent_abedfac190807a441a4c85be9e7439ae2}\label{classTableComponent_abedfac190807a441a4c85be9e7439ae2}} 
+\index{TableComponent@{TableComponent}!vacate@{vacate}}
+\index{vacate@{vacate}!TableComponent@{TableComponent}}
+\doxysubsubsection{\texorpdfstring{vacate()}{vacate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} $\ast$ Table\+Component\+::vacate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Vacates the table component, returning the customer component that was occupying it. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{classCustomerComponent}{Customer\+Component}} object that was occupying the table. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{TableComponent_8h}{Table\+Component.\+h}}\item 
+Main/Table\+Component.\+cpp\end{DoxyCompactItemize}

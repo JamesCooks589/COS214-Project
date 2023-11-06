@@ -1,0 +1,5 @@
+<map id="Main/Entrance.h" name="Main/Entrance.h">
+<area shape="rect" id="node1" title="Declaration of the Entrance class. This file contains the declaration of the Entrance class,..." alt="" coords="91,5,217,32"/>
+<area shape="rect" id="node2" href="$Entrance_8cpp.html" title="Implementation file for the Entrance class. This file contains the implementation of methods related ..." alt="" coords="5,80,148,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="Main file for the pizzeria simulation program. This file contains the entry point of the program and ..." alt="" coords="172,80,291,107"/>
+</map>

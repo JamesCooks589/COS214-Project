@@ -1,0 +1,128 @@
+\hypertarget{classPlate}{}\doxysection{Plate Class Reference}
+\label{classPlate}\index{Plate@{Plate}}
+
+
+Represents a plate containing food items for a customer order.  
+
+
+
+
+{\ttfamily \#include $<$Plate.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlate_acbfd5cc5db71bc9a9ef311e101f62803}{Plate}} (int table\+ID, string customer\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classPlate}{Plate}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlate}{Plate}} $\ast$ \mbox{\hyperlink{classPlate_aa1be81df007eba82dde71da2b27a6783}{clone}} ()
+\begin{DoxyCompactList}\small\item\em Creates a clone of the plate. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classPlate_a689445c3e092f49adf3883841c046bc7}{get\+Customer\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the customer associated with the plate. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{classPlate_af579e6a196803a798ca3de79b46e2cf3}{get\+Food}} ()
+\begin{DoxyCompactList}\small\item\em Gets the vector of food items on the plate. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlate_a1e13f092c9934a3cbcc69e284ae1290b}{get\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Gets the table ID associated with the plate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlate_ace7878a0c6480c939a603d492a6c6699}{add\+Food}} (string food)
+\begin{DoxyCompactList}\small\item\em Adds a food item to the plate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlate_a4f13fc3e24dca8397c92c0a349e46802}\label{classPlate_a4f13fc3e24dca8397c92c0a349e46802}} 
+void \mbox{\hyperlink{classPlate_a4f13fc3e24dca8397c92c0a349e46802}{print\+Plate}} ()
+\begin{DoxyCompactList}\small\item\em Prints the details of the plate including food items and customer information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a plate containing food items for a customer order. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPlate_acbfd5cc5db71bc9a9ef311e101f62803}\label{classPlate_acbfd5cc5db71bc9a9ef311e101f62803}} 
+\index{Plate@{Plate}!Plate@{Plate}}
+\index{Plate@{Plate}!Plate@{Plate}}
+\doxysubsubsection{\texorpdfstring{Plate()}{Plate()}}
+{\footnotesize\ttfamily Plate\+::\+Plate (\begin{DoxyParamCaption}\item[{int}]{table\+ID,  }\item[{string}]{customer\+Name }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classPlate}{Plate}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+ID} & The table ID associated with the plate. \\
+\hline
+{\em customer\+Name} & The name of the customer associated with the plate. Initializes a new instance of \mbox{\hyperlink{classPlate}{Plate}} with the given table ID and customer name. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPlate_ace7878a0c6480c939a603d492a6c6699}\label{classPlate_ace7878a0c6480c939a603d492a6c6699}} 
+\index{Plate@{Plate}!addFood@{addFood}}
+\index{addFood@{addFood}!Plate@{Plate}}
+\doxysubsubsection{\texorpdfstring{addFood()}{addFood()}}
+{\footnotesize\ttfamily void Plate\+::add\+Food (\begin{DoxyParamCaption}\item[{string}]{food }\end{DoxyParamCaption})}
+
+
+
+Adds a food item to the plate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em food} & The food item to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlate_aa1be81df007eba82dde71da2b27a6783}\label{classPlate_aa1be81df007eba82dde71da2b27a6783}} 
+\index{Plate@{Plate}!clone@{clone}}
+\index{clone@{clone}!Plate@{Plate}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlate}{Plate}} $\ast$ Plate\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a clone of the plate. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the cloned \mbox{\hyperlink{classPlate}{Plate}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlate_a689445c3e092f49adf3883841c046bc7}\label{classPlate_a689445c3e092f49adf3883841c046bc7}} 
+\index{Plate@{Plate}!getCustomerName@{getCustomerName}}
+\index{getCustomerName@{getCustomerName}!Plate@{Plate}}
+\doxysubsubsection{\texorpdfstring{getCustomerName()}{getCustomerName()}}
+{\footnotesize\ttfamily string Plate\+::get\+Customer\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the name of the customer associated with the plate. 
+
+\begin{DoxyReturn}{Returns}
+The name of the customer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlate_af579e6a196803a798ca3de79b46e2cf3}\label{classPlate_af579e6a196803a798ca3de79b46e2cf3}} 
+\index{Plate@{Plate}!getFood@{getFood}}
+\index{getFood@{getFood}!Plate@{Plate}}
+\doxysubsubsection{\texorpdfstring{getFood()}{getFood()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Plate\+::get\+Food (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the vector of food items on the plate. 
+
+\begin{DoxyReturn}{Returns}
+Vector of strings representing food items. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlate_a1e13f092c9934a3cbcc69e284ae1290b}\label{classPlate_a1e13f092c9934a3cbcc69e284ae1290b}} 
+\index{Plate@{Plate}!getID@{getID}}
+\index{getID@{getID}!Plate@{Plate}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily int Plate\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the table ID associated with the plate. 
+
+\begin{DoxyReturn}{Returns}
+The table ID. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\mbox{\hyperlink{Plate_8h}{Plate.\+h}}\item 
+Main/\mbox{\hyperlink{Plate_8cpp}{Plate.\+cpp}}\end{DoxyCompactItemize}
