@@ -4,7 +4,7 @@
 *        This file contains the declaration of the Cheese class,
 *        which represents a type of non-vegan food and inherits from Nonvegan class.
 * @author James Cooks and Monica Hung
-* @date 27/10/2023
+* @date 22/10/2023
 */
 
 #pragma once
