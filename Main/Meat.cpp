@@ -2,8 +2,8 @@
  * @file Meat.cpp
  * @brief Implementation file for the Meat class.
  *        This file contains the implementation of methods to cook Meat-based dishes and add them to the plate.
- * @author [Author Name]
- * @date [Creation Date]
+* @author James Cooks and Monica Hung
+* @date 22/10/2023
  */
 
 #include "Meat.h"
