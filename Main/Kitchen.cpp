@@ -2,8 +2,8 @@
  * @file Kitchen.cpp
  * @brief Implementation file for the Kitchen class.
  *        This file contains the implementation of methods to handle orders and manage the kitchen operations.
- * @author [Author Name]
- * @date [Creation Date]
+ * @author James Cooks and Lloyd Creighton
+ * @date 30/10/2023
  */
 
 #include "Kitchen.h"
