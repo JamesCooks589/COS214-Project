@@ -5,7 +5,7 @@
 *        which represents the entrance area for customers entering the restaurant.
 *        It manages customer groups in a queue and handles seating them on the floor.
 * @author Qwinton Knocklein
-* @date 23/10/2023
+* @date 27/10/2023
 */
 
 #pragma once
