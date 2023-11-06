@@ -2,8 +2,8 @@
  * @file Plate.cpp
  * @brief Implementation file for the Plate class.
  *        This file contains the implementation of methods to handle plate information.
- * @author [Author Name]
- * @date [Creation Date]
+ * @author James Cooks
+ * @date 30/10/2023
  */
 
 #include "Plate.h"
